@@ -120,7 +120,7 @@ public class PlayerMovements : MonoBehaviour
         float acceleration = (lastOnGroundTime>0.0f) ? maxAcceleration : maxAirAcceleration;
         float maxSpeedChange = acceleration * Time.deltaTime;
 
-        EasingFunction.Ease ease = EasingFunction.Ease.EaseInOutQuad;
+        EasingFunction.Ease ease = EasingFunction.Ease.EaseInOutCubic;
         EasingFunction.Function func = GetEasingFunction(ease);
 
         float newX = func(currentX, desiredVelocity.x, maxSpeedChange);
