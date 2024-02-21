@@ -123,8 +123,10 @@ public class PlayerMovements : MonoBehaviour
         EasingFunction.Ease ease = EasingFunction.Ease.EaseInOutCubic;
         EasingFunction.Function func = GetEasingFunction(ease);
 
-        float newX = func(currentX, desiredVelocity.x, maxSpeedChange);
-		float newZ = func(currentZ, desiredVelocity.z, maxSpeedChange);
+        // float newX = func(currentX, desiredVelocity.x, maxSpeedChange);
+		// float newZ = func(currentZ, desiredVelocity.z, maxSpeedChange);
+        float newX = Mathf.MoveTowards(currentX, desiredVelocity.x, maxSpeedChange);
+        float newZ = Mathf.MoveTowards(currentZ, desiredVelocity.z, maxSpeedChange);
 
         velocity += xAxis * (newX - currentX) + zAxis * (newZ - currentZ);
 	}

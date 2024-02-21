@@ -161,9 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a60d41f57379e3893e4741e36e0b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 20
-  maxAcceleration: 25
-  maxAirAcceleration: 15
+  maxSpeed: 10
+  maxAcceleration: 80
+  maxAirAcceleration: 20
   jumpHeight: 20
   gravity: 60
   coyoteTime: 0.2
