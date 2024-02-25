@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using static DrawArrow;
 using static EasingFunction;
 
-public class PlayerMovements : MonoBehaviour
+public class PlayerMovements : NetworkBehaviour
 {
 
     [SerializeField, Range(0f, 100f)]
@@ -48,12 +49,14 @@ public class PlayerMovements : MonoBehaviour
 	}
 
     void Update () {
+        if (!IsOwner) return;
         lastOnGroundTime -= Time.deltaTime;
         getInputs();
 	}
 
     void FixedUpdate()
     {
+        if (!IsOwner) return;
         Run();
     }
 
