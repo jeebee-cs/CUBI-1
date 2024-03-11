@@ -11,6 +11,7 @@ public class PlayerOrientation : MonoBehaviour
     void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Camera = GameManager.instance.cameraManager.mainCamera.transform;
     }
 
     void Update()
