@@ -91,7 +91,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3817742143562676374}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0a5a9fdfbce27065f9d4acf822031f79, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

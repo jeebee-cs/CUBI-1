@@ -3,21 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using UnityEngine.SceneManagement;
 
 public class NetworkManagerUI : MonoBehaviour
 {
-    [SerializeField] Button _hostButton;
-    [SerializeField] Button _clientButton;
 
-    void Awake() {
-        _hostButton.onClick.AddListener(() =>
-        {
-            NetworkManager.Singleton.StartHost();
-        });
+    public void HostGame()
+    {
+        GameManager.instance.StartCoroutine(HostGameCoroutine());
+    }
 
-        _clientButton.onClick.AddListener(() =>
+    public void JoinClient()
+    {
+        GameManager.instance.StartCoroutine(JoinClientCoroutine());
+    }
+
+    IEnumerator HostGameCoroutine()
+    {
+        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("Game");
+        while (!asyncLoadLevel.isDone)
         {
-            NetworkManager.Singleton.StartClient();
-        });
+            Debug.Log("a");
+            yield return null;
+        }
+        NetworkManager.Singleton.StartHost();
+    }
+
+    IEnumerator JoinClientCoroutine()
+    {
+        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("Game");
+        while (!asyncLoadLevel.isDone)
+        {
+            yield return null;
+        }
+        NetworkManager.Singleton.StartClient();
     }
 }

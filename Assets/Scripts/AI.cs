@@ -20,7 +20,6 @@ public class AI : MonoBehaviour
         {
 
         }
-
         if (Vector3.Distance(GameManager.instance.playerMovement.transform.position, transform.position) > _distanceToFlight)
         {
             _mode = AIMode.Flight;
