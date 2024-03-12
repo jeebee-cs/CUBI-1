@@ -49,14 +49,12 @@ public class PlayerMovements : NetworkBehaviour
 	}
 
     void Update () {
-        if (!IsOwner) return;
         lastOnGroundTime -= Time.deltaTime;
         getInputs();
 	}
 
     void FixedUpdate()
     {
-        if (!IsOwner) return;
         Run();
     }
 

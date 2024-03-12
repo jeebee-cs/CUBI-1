@@ -87,9 +87,6 @@ public class voxelMap : MonoBehaviour {
                 GameObject blockObject = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
                 blockObject.transform.position = absolutePosition;
                 blockObject.transform.rotation = Quaternion.identity;
-
-                // Set the scale of the block
-                blockObject.transform.localScale = blockData.scale;
             }
             else
             {
@@ -97,6 +94,7 @@ public class voxelMap : MonoBehaviour {
             }
         }
     }
+
     private void childsToMatrix()
     {
         foreach (Transform child in transform)
@@ -158,7 +156,7 @@ public class voxelMap : MonoBehaviour {
 
     //classes serializable afin de stocker les maps en format json
     [System.Serializable]
-    private class MapData
+    public class MapData
     {
         public int width;
         public int height;
