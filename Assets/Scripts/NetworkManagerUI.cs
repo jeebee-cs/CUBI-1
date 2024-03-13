@@ -23,7 +23,6 @@ public class NetworkManagerUI : MonoBehaviour
         AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("Game");
         while (!asyncLoadLevel.isDone)
         {
-            Debug.Log("a");
             yield return null;
         }
         NetworkManager.Singleton.StartHost();

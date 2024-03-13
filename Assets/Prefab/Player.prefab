@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8755219453667122245}
   - component: {fileID: 7324337708787399561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 8755219453667122246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8755219454147957016}
@@ -64,12 +64,12 @@ GameObject:
   - component: {fileID: 8755219454147957016}
   - component: {fileID: 8755219454147957020}
   - component: {fileID: 8755219454147957021}
-  - component: {fileID: 8755219454147957022}
+  - component: {fileID: 2972257557349909178}
   - component: {fileID: 8755219454147957091}
   - component: {fileID: 8755219454147957023}
   - component: {fileID: 2673811440924519855}
   - component: {fileID: 157928484579131704}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8755219454147957017}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &8755219454147957021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -142,19 +142,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8755219454147957022
-CapsuleCollider:
+--- !u!135 &2972257557349909178
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8755219454147957017}
-  m_Material: {fileID: 13400000, guid: 0a5a9fdfbce27065f9d4acf822031f79, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8755219454147957091
 Rigidbody:
@@ -246,7 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8755219454248842233}
   - component: {fileID: 8755219454248842232}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
