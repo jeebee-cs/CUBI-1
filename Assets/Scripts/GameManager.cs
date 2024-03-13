@@ -10,13 +10,14 @@ public class GameManager : MonoBehaviour
     public UIManager uIManager { get => _uIManager; }
     [SerializeField] PlayerMovements _playerMovement;
     public PlayerMovements playerMovement { get => _playerMovement; }
-    
+
     static GameManager _instance;
     public static GameManager instance { get => _instance; }
     void Awake()
     {
         if (_instance != null && _instance != this)
         {
+            _instance.OnSceneLoaded(_cameraManager, _uIManager);
             Destroy(gameObject);
             return;
         }
@@ -24,7 +25,13 @@ public class GameManager : MonoBehaviour
         {
             DontDestroyOnLoad(this);
             _instance = this;
+            OnSceneLoaded(_cameraManager, _uIManager);
         }
         Time.timeScale = 1;
+    }
+    public void OnSceneLoaded(CameraManager cameraManager, UIManager uIManager)
+    {
+        _cameraManager = cameraManager;
+        _uIManager = uIManager;
     }
 }

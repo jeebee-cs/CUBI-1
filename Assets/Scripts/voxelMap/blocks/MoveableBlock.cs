@@ -17,18 +17,16 @@ public class MoveableBlock : ABlock
             Vector3 directionToOther = other.gameObject.transform.position - transform.position;
             Vector3 directionToPush;
 
-            if (directionToOther.y > 1) return;
+            if (Mathf.Abs(directionToOther.y) > .5f) return;
 
             directionToOther = directionToOther.normalized;
 
             Debug.Log(directionToOther);
-            directionToOther.x = Mathf.Round(directionToOther.x);
-            directionToOther.z = Mathf.Round(directionToOther.z);
+            directionToOther.x = Mathf.Round(directionToOther.x * .6f);
+            directionToOther.z = Mathf.Round(directionToOther.z * .6f);
             directionToOther.y = 0;
 
-
             directionToPush = directionToOther * -1;
-
 
             if (Physics.Raycast(transform.position, directionToPush, 1f, _layerBlock)) return;
 

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4055326392
+  GlobalObjectIdHash: 256912811
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -183,15 +183,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a60d41f57379e3893e4741e36e0b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 4
   maxAcceleration: 80
-  maxAirAcceleration: 20
-  jumpHeight: 20
-  gravity: 60
+  maxAirAcceleration: 40
+  jumpHeight: 10
+  gravity: 40
   coyoteTime: 0.2
   jumpBufferTime: 0.2
   JumpCount: 0
-  maxGroundAngle: 30
+  maxGroundAngle: 50
   orientation: {fileID: 8755219454248842233}
 --- !u!114 &2673811440924519855
 MonoBehaviour:
