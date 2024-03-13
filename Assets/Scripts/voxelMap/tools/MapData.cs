@@ -28,17 +28,18 @@ public class MapData : SerializedScriptableObject
         {
             List<voxelMap.ABlockData> blockDataList = new List<voxelMap.ABlockData>();
 
-            for (int i = 0; i < depth; i++)
+            for (int i = 0; i < width; i++)
             {
-                for (int j = 0; j < depth; j++)
+                for (int j = 0; j < height; j++)
                 {
                     for (int k = 0; k < depth; k++)
                     {
                         if (layers[i].LabledTable[j, k] != 0)
                         {
-                            Vector3 cubePos = new Vector3(i-1, j-1, k-1) * layers[i].LabledTable[j, k];
-                            Vector3 cubeSize = Vector3.one * layers[i].LabledTable[j, k];
-                            blockDataList.Add(new voxelMap.ABlockData(cubePos, cubeSize, cube, true));
+                            Vector3 cubePos = new Vector3(j-1, i-1, k-1); //* layers[i].LabledTable[j, k];
+                            Vector3 cubeSize = Vector3.one;// * layers[i].LabledTable[j, k];
+                            Quaternion cubeRotation = Quaternion.Euler(-90,0,0);
+                            blockDataList.Add(new voxelMap.ABlockData(cubePos,cubeRotation, cubeSize, cube, true));
                         }
                     }
                 }

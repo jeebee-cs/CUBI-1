@@ -21,7 +21,7 @@ public class voxelMap : MonoBehaviour {
 
     void Awake()
     {
-        offset = transform.position - new Vector3(width, height, depth) * 0.5f + new Vector3(0.5f,0.5f,0.5f);
+        offset = transform.position;
         voxelMatrix = new ABlock[width,height,depth];
         childsToMatrix();
     }
@@ -51,7 +51,7 @@ public class voxelMap : MonoBehaviour {
                 Vector3 relativePosition = child.position - transform.position;
                 Debug.Log(relativePosition);
 
-                blockDataList.Add(new ABlockData(relativePosition, child.localScale, prefab, isMovable));
+                blockDataList.Add(new ABlockData(relativePosition, child.rotation, child.localScale, prefab, isMovable));
             }
         }
 
@@ -64,7 +64,7 @@ public class voxelMap : MonoBehaviour {
 
     public void LoadMapFromFile(string filePath)
     {
-        offset = transform.position - new Vector3(width, height, depth) * 0.5f + new Vector3(0.5f, 0.5f, 0.5f);
+        offset = transform.position;
         string json = File.ReadAllText(filePath);
 
         MapData mapData = JsonUtility.FromJson<MapData>(json);
@@ -77,7 +77,7 @@ public class voxelMap : MonoBehaviour {
 
         foreach (ABlockData blockData in mapData.blockDataArray)
         {
-            Vector3 absolutePosition = blockData.position + offset + new Vector3(width, height, depth) * 0.5f - new Vector3(0.5f, 0.5f, 0.5f) ;
+            Vector3 absolutePosition = blockData.position + offset + new Vector3(1.5f,1.5f,1.5f);
 
             GameObject prefab = blockData.prefab;
 
@@ -86,7 +86,7 @@ public class voxelMap : MonoBehaviour {
                 // Place the prefab in the scene at the specified position
                 GameObject blockObject = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
                 blockObject.transform.position = absolutePosition;
-                blockObject.transform.rotation = Quaternion.identity;
+                blockObject.transform.rotation = blockData.rotation;
             }
             else
             {
@@ -99,7 +99,7 @@ public class voxelMap : MonoBehaviour {
     {
         foreach (Transform child in transform)
         {
-            Vector3 inMatrixPos = child.position -transform.position + new Vector3(width, height, depth) * 0.5f + new Vector3(0.5f,0.5f,0.5f);
+            Vector3 inMatrixPos = child.position - offset;
 
             if(IsWithinBounds(inMatrixPos))
             {
@@ -146,7 +146,7 @@ public class voxelMap : MonoBehaviour {
        float voxelSize = 1f;
 
         // Calculer l'origine de la boîte de gizmo
-        Vector3 origin = transform.position - new Vector3(width, height, depth) * voxelSize * 0.5f;
+        Vector3 origin = transform.position;
 
         // Dessiner une boîte autour de la matrice 3D
         Gizmos.color = Color.cyan;
@@ -177,12 +177,15 @@ public class voxelMap : MonoBehaviour {
     {
         public Vector3 position;
         public Vector3 scale;
+
+        public Quaternion rotation;
         public GameObject prefab; // Reference to the prefab
         public bool isMovable;
 
-        public ABlockData(Vector3 position, Vector3 scale, GameObject prefab, bool isMovable)
+        public ABlockData(Vector3 position, Quaternion rotation, Vector3 scale, GameObject prefab, bool isMovable)
         {
             this.position = position;
+            this.rotation = rotation;
             this.scale = scale;
             this.prefab = prefab;
             this.isMovable = isMovable;
