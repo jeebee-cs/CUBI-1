@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
 public class voxelMapEditorWindow : EditorWindow
 {
     private voxelMap voxelMap;
@@ -49,3 +50,4 @@ public class voxelMapEditorWindow : EditorWindow
         }
     }
 }
+#endif

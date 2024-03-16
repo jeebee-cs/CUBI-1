@@ -34,6 +34,7 @@ public class voxelMap : MonoBehaviour {
         block.cube.transform.parent = transform;
     }
 
+#if UNITY_EDITOR
     // Fonction pour sauvegarder la map dans un fichier JSON
     public void SaveMapToFile(string filePath)
     {
@@ -61,6 +62,7 @@ public class voxelMap : MonoBehaviour {
 
         Debug.Log("Voxel map saved to file: " + filePath);
     }
+#endif
 
     public void LoadMapFromFile(string filePath)
     {
@@ -84,7 +86,11 @@ public class voxelMap : MonoBehaviour {
             if (prefab != null)
             {
                 // Place the prefab in the scene at the specified position
+                #if UNITY_EDITOR
                 GameObject blockObject = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
+                #else
+                GameObject blockObject = Instantiate(prefab, transform.position, Quaternion.identity);
+                #endif
                 blockObject.transform.position = absolutePosition;
                 blockObject.transform.rotation = blockData.rotation;
             }

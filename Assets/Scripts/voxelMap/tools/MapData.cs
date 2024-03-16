@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using System.IO;
 
+#if UNITY_EDITOR
 [CreateAssetMenu(fileName = "NewMapData", menuName = "Custom/MapData")]
 public class MapData : SerializedScriptableObject
 {
@@ -87,3 +88,4 @@ public class MapDataLayer
         LabledTable = new int[width, height];
     }
 }
+#endif
