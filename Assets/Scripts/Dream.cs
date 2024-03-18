@@ -13,10 +13,6 @@ public class Dream : MonoBehaviour
 
         if (dreamType == 0)
         {
-            if (this == null)
-            {
-                //GameManager.instance.neutralDreamCollection = DreamCollection.DreamCollectionList(0);
-            }
             GameManager.instance.neutralDreamCollection.DreamNCollect();
         }
         gameObject.SetActive(false);
