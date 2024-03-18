@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Ambience" ID="{20DEB7DE-B64F-4B5F-9685-BD458014ECEB}" ShortID="453777511">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Dream_Ambience" ID="{C6A41B81-CF0E-4215-B180-11967F6DAF8F}">
+							<ChildrenList>
+								<Action Name="" ID="{A98B775C-BB4F-49F4-9EAE-76D6ED0D64B8}" ShortID="391004973">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AMB_Dream" ID="{6CD7DB55-592E-4618-AA12-1080CDB9A97A}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{BE78F2B3-16D7-47DE-8999-D018F0567DB1}" ShortID="941444667">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="3"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Music_Start" ID="{1FA9D68C-0712-4215-A8E6-F9255D0CBCC7}">
+							<ChildrenList>
+								<Action Name="" ID="{820BB015-299E-4653-AE1A-570BC0D97049}" ShortID="958483838">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUS_Level" ID="{CCB12EA4-2434-44E4-AAFB-8232C9D19764}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music_Stop" ID="{E512BBFA-FB5F-43CD-9490-1F4E20B70EDF}">
+							<ChildrenList>
+								<Action Name="" ID="{925B77AA-644E-4B9D-B9F8-CF3BFDB54718}" ShortID="504199508">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUS_Level" ID="{CCB12EA4-2434-44E4-AAFB-8232C9D19764}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{293F340D-6969-4F9B-AF54-637E0C14B9A9}" ShortID="961680559">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="20"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Block_Push" ID="{BAB83EDE-5DC3-48AA-8F2E-541208BCC869}">
+							<ChildrenList>
+								<Action Name="" ID="{644D320B-BEE9-46FB-B1B0-7263552BB2AE}" ShortID="687179254">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Block_Push" ID="{BF89B25E-6D1C-4EAF-8088-DCBAC2A572D5}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Dream_Get" ID="{950CD853-D9DD-40F1-A524-0123A47551F0}">
+							<ChildrenList>
+								<Action Name="" ID="{1AEA9754-EDD6-4A7C-AD79-327209A8E058}" ShortID="953411722">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Dream_Get" ID="{8FABEB4E-A28F-4952-B7A4-3685752D73A3}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_FS" ID="{1A1C83CE-945B-4594-80F3-9D5DFD5D54C5}">
+							<ChildrenList>
+								<Action Name="" ID="{5618A974-1CF7-4708-9151-67237B50CE5D}" ShortID="859607751">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player Footsteps" ID="{B7172FB0-2AA7-47E4-85A5-5433AE518ADE}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Jump" ID="{89DDC8AD-C27F-412F-BF47-0C5A92106A8C}">
+							<ChildrenList>
+								<Action Name="" ID="{84F5D7F4-8BB4-4FF6-874F-82E781C30D43}" ShortID="415856044">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Player_Jump" ID="{1C157CAD-F665-4C4C-83A2-FA79501397F4}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Rococo" ID="{3580534C-F799-4457-A07E-F7926872951E}" ShortID="491789752">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="AI_Dream_Get" ID="{6DA11540-3261-4AED-AB1C-CB6DC493E2C1}">
+							<ChildrenList>
+								<Action Name="" ID="{F8EFB571-2ACF-4CB0-AD5A-4FD21D9036D5}" ShortID="409711157">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_AI_Dream_Get" ID="{FBA5BE51-61AC-4EED-8339-36DD7A78F392}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="AI_FS" ID="{D555F2C5-46B9-491E-AC56-C7A0A6D6D05C}">
+							<ChildrenList>
+								<Action Name="" ID="{FADDD680-3074-41F8-A059-70CC5D9DB938}" ShortID="579134777">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AI Footsteps" ID="{DB2DF34A-424D-4DE9-82C1-D54050612229}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="AI_Jump" ID="{39327727-B0E5-44CF-8FC3-3C9F166A0915}">
+							<ChildrenList>
+								<Action Name="" ID="{A2421645-A87A-43BC-A83E-F1CAC1AE461E}" ShortID="523834120">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_AI_Jump" ID="{80E7A8CE-ED7F-4551-8711-4E8236C6467E}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

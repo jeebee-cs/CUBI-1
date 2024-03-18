@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2B430B91-5EDC-4FAC-9290-D4AFF05A6823}" SchemaVersion="119">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{2B430B91-5EDC-4FAC-9290-D4AFF05A6823}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{D6DBB52D-5C67-4AAB-BE82-98BB350A3E88}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Rococo" ID="{3580534C-F799-4457-A07E-F7926872951E}" WorkUnitID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{BE78F2B3-16D7-47DE-8999-D018F0567DB1}" WorkUnitID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambience" ID="{20DEB7DE-B64F-4B5F-9685-BD458014ECEB}" WorkUnitID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player" ID="{293F340D-6969-4F9B-AF54-637E0C14B9A9}" WorkUnitID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
