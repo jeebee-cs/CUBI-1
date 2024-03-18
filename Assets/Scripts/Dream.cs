@@ -5,10 +5,20 @@ using UnityEngine;
 public class Dream : MonoBehaviour
 {
     [SerializeField] float dreamPoint;
+    [SerializeField] int dreamType; //0 neutral, 1 positive, 2 negative
 
     void OnTriggerEnter(Collider other)
     {
         GameManager.instance.uIManager.dreamBar.value += dreamPoint;
+
+        if (dreamType == 0)
+        {
+            if (this == null)
+            {
+                //GameManager.instance.neutralDreamCollection = DreamCollection.DreamCollectionList(0);
+            }
+            GameManager.instance.neutralDreamCollection.DreamNCollect();
+        }
         gameObject.SetActive(false);
     }
 }
