@@ -504,7 +504,10 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="AMB_Dream" ID="{6CD7DB55-592E-4618-AA12-1080CDB9A97A}" ShortID="375185328">
+						<BlendContainer Name="Dream Ambience" ID="{5225F988-2E0E-4E71-A0A3-6537057D30AC}" ShortID="448232813">
+							<PropertyList>
+								<Property Name="BlendBehavior" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
@@ -513,7 +516,285 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
 								</Reference>
 							</ReferenceList>
-						</Sound>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Dream Sparkle" ID="{AB59D1DE-2878-47C3-AF40-BCC718FB40D1}" ShortID="776559595">
+									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="AMB_Dream_Sparkle" ID="{0E092934-2C54-4EDC-8B72-6525A3A49520}" ShortID="825313662">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>52</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>580</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="AMB_Dream_Sparkle1" ID="{194AB396-EBC2-464C-9E9B-99B6CB0C5D5D}" ShortID="790798092">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Dream_Sparkle1" ID="{C8A53AF6-EC99-44B8-AF30-B8B50B9E0191}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0611480865224626"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.218386023294509"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.259151414309484"/>
+																<Property Name="TrimEnd" Type="Real64" Value="6.83402662229617"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>AMB_Dream_Sparkle1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="612497349"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Dream_Sparkle1" ID="{C8A53AF6-EC99-44B8-AF30-B8B50B9E0191}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Dream_Sparkle2" ID="{A83E4AA3-F28B-48B6-B74B-6B15CF5EC202}" ShortID="172826572">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Dream_Sparkle2" ID="{009E786A-2FF5-43D5-9C9A-0C5C77B7241A}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0436772046589018"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.262063227953411"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.371256239600665"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>AMB_Dream_Sparkle2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1038143987"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Dream_Sparkle2" ID="{009E786A-2FF5-43D5-9C9A-0C5C77B7241A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Dream_Sparkle3" ID="{CFDE1C76-FCC7-4ACE-8707-D0624BDAEF1A}" ShortID="470035376">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Dream_Sparkle3" ID="{D21DA49E-02FE-42E1-A101-2B208355E94F}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0748752079866888"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.258943427620633"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.349417637271214"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>AMB_Dream_Sparkle3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="78465695"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Dream_Sparkle3" ID="{D21DA49E-02FE-42E1-A101-2B208355E94F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Dream_Sparkle4" ID="{1A0BA57B-0FE4-44A4-868E-7EC1DC267A57}" ShortID="662915455">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Dream_Sparkle4" ID="{29067708-2796-4144-8554-CCF1F6C40A77}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0434692179700499"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.228785357737105"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.187603993344426"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>AMB_Dream_Sparkle4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="672472105"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Dream_Sparkle4" ID="{29067708-2796-4144-8554-CCF1F6C40A77}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Dream_Sparkle5" ID="{4A05C942-43A8-4743-BD42-1970D499800D}" ShortID="960954505">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Dream_Sparkle5" ID="{FC707AE9-64C1-4F2C-BC26-42972B172B47}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0465890183028286"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.366888519134775"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.445507487520798"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>AMB_Dream_Sparkle5.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="839864948"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Dream_Sparkle5" ID="{FC707AE9-64C1-4F2C-BC26-42972B172B47}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Dream_Sparkle6" ID="{66907B18-B4F3-4BF7-866A-1422E4F4FC34}" ShortID="468463915">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Dream_Sparkle6" ID="{1CFA85BB-5613-423A-8E2E-6F849222B3C0}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0495008319467554"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.361064891846921"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.305740432612313"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>AMB_Dream_Sparkle6.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="952015348"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Dream_Sparkle6" ID="{1CFA85BB-5613-423A-8E2E-6F849222B3C0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="AMB_Dream_Sparkle7" ID="{56C08900-A99A-48D9-B4F3-561FB42A7D3C}" ShortID="924208750">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="AMB_Dream_Sparkle7" ID="{19E0FA34-E206-4C11-BCCB-FC27B2D690A7}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0436772046589018"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.267886855241264"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.355241264559068"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>AMB_Dream_Sparkle7.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="435943639"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="AMB_Dream_Sparkle7" ID="{19E0FA34-E206-4C11-BCCB-FC27B2D690A7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<Sound Name="Silence" ID="{E368F72E-6569-44B1-BD7C-70B1C99E8501}" ShortID="384677835">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Silence" ID="{13437239-7CF5-4AE4-9E32-13218CC398EE}" ShortID="8974985" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+													<PropertyList>
+														<Property Name="Length" Type="Real32" Value="6"/>
+														<Property Name="LengthMax" Type="Real32" Value="5"/>
+														<Property Name="LengthMin" Type="Real32" Value="-5"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Silence" ID="{13437239-7CF5-4AE4-9E32-13218CC398EE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Silence" ID="{E368F72E-6569-44B1-BD7C-70B1C99E8501}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="AMB_Dream_Sparkle" ID="{0E092934-2C54-4EDC-8B72-6525A3A49520}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Music" ID="{7C2A576A-2363-4C22-9BD3-6DD49FB0ED2B}" ShortID="858539874">

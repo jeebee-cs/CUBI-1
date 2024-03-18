@@ -14,7 +14,7 @@
 								<Action Name="" ID="{A98B775C-BB4F-49F4-9EAE-76D6ED0D64B8}" ShortID="391004973">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="AMB_Dream" ID="{6CD7DB55-592E-4618-AA12-1080CDB9A97A}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+											<ObjectRef Name="Dream Ambience" ID="{5225F988-2E0E-4E71-A0A3-6537057D30AC}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
