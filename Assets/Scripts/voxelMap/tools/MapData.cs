@@ -61,6 +61,7 @@ public class MapData : SerializedScriptableObject
         {
             layers[i] = new MapDataLayer(width, height, blockPrefabs);
         }
+        LoadBlockPrefabs();
     }
 
     private void LoadBlockPrefabs()
@@ -69,7 +70,7 @@ public class MapData : SerializedScriptableObject
         blockPrefabs.Clear();
 
         // Load prefabs from Assets/Prefabs/Blocks
-        string[] prefabPaths = Directory.GetFiles("Assets/Prefabs/Blocks", "*.prefab", SearchOption.AllDirectories);
+        string[] prefabPaths = Directory.GetFiles("Assets/Prefab/Blocs", "*.prefab", SearchOption.AllDirectories);
         foreach (string path in prefabPaths)
         {
             GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);
@@ -82,6 +83,15 @@ public class MapData : SerializedScriptableObject
         {
             Debug.LogWarning("No block prefabs found in the directory Assets/Prefabs/Blocks. Adding a default prefab.");
         }
+    }
+
+    [Button(ButtonSizes.Medium)]
+    private void CreateAsset()
+    {
+        string assetPath = "Assets/MapData.asset";
+        AssetDatabase.CreateAsset(this, assetPath);
+        AssetDatabase.SaveAssets();
+        Debug.Log("MapData asset created at path: " + assetPath);
     }
 
     private void OnValidate()
@@ -105,7 +115,7 @@ public class MapDataLayer
     public int[,] LabledTable;
     private List<GameObject> blockPrefabs;
 
-    private int DrawCell(Rect rect, int value)
+    private int DrawCell(Rect rect, int value = 0)
     {
         if (Event.current.type == EventType.MouseDown && rect.Contains(Event.current.mousePosition))
         {
@@ -114,7 +124,7 @@ public class MapDataLayer
             Event.current.Use();
         }
 
-        EditorGUI.DrawRect(rect.Padding(1), new Color(0.1f, 0.2f * value, 0.2f));
+        EditorGUI.DrawRect(rect.Padding(1), new Color(0.1f, 0.0f, 0.2f));
 
         if (value != 0){
             Object cubeObject = blockPrefabs[value - 1] as Object;
