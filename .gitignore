@@ -61,8 +61,8 @@ crashlytics-build.properties
 
 # Wwise
 /Dream-Catchers-Wwise/GeneratedSoundBanks/
-*.*.validationcache
-*.*.wsettings
+/Dream-Catchers-Wwise/*.*.validationcache
+/Dream-Catchers-Wwise/*.*.wsettings
 Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
 
 
