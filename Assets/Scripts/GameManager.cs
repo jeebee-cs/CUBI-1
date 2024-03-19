@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public UIManager uIManager { get => _uIManager; }
     [SerializeField] PlayerMovements _playerMovement;
     public PlayerMovements playerMovement { get => _playerMovement; }
+    [SerializeField] DreamCollection _neutralDreamCollection;
+    public DreamCollection neutralDreamCollection { get => _neutralDreamCollection; }
 
     static GameManager _instance;
     public static GameManager instance { get => _instance; }
@@ -33,5 +35,6 @@ public class GameManager : MonoBehaviour
     {
         _cameraManager = cameraManager;
         _uIManager = uIManager;
+        _neutralDreamCollection = new DreamCollection();
     }
 }
