@@ -86,10 +86,11 @@ public class voxelMap : MonoBehaviour {
             if (prefab != null)
             {
                 // Place the prefab in the scene at the specified position
+                GameObject blockObject;
                 #if UNITY_EDITOR
-                GameObject blockObject = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
+                    blockObject = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
                 #else
-                GameObject blockObject = Instantiate(prefab, transform.position, Quaternion.identity);
+                    blockObject = Instantiate(prefab, transform.position, Quaternion.identity);
                 #endif
                 blockObject.transform.position = absolutePosition;
                 blockObject.transform.rotation = blockData.rotation;
