@@ -31,6 +31,7 @@ public class MoveableBlock : ABlock
             if (Physics.Raycast(transform.position, directionToPush, 1f, _layerBlock)) return;
 
             transform.position += directionToPush;
+            AkSoundEngine.PostEvent("Block_Push", this.gameObject);
         }
     }
 }

@@ -48,6 +48,10 @@ public class PlayerMovements : NetworkBehaviour
         OnValidate();
 	}
 
+    void Start () {
+        AkSoundEngine.PostEvent("Music_Start", this.gameObject);
+    }
+
     void Update () {
         lastOnGroundTime -= Time.deltaTime;
         getInputs();
@@ -108,6 +112,7 @@ public class PlayerMovements : NetworkBehaviour
 			}
 			velocity += contactNormal * jumpSpeed;
             jumpBufferCounter = 0f;
+            AkSoundEngine.PostEvent("Player_Jump", this.gameObject);
         }
     }
 
