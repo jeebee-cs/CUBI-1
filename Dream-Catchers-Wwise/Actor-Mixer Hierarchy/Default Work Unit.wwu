@@ -816,7 +816,15 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="MUS_Level" ID="{CCB12EA4-2434-44E4-AAFB-8232C9D19764}" ShortID="385455524">
+						<Sound Name="MUS_Level" ID="{E4E80F1F-B827-4021-9AF7-BD8032F6B4D6}" ShortID="100510195">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{05AE59B1-295E-4116-8BAA-F8BBF35EE644}"/>
@@ -825,6 +833,21 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CUBI-test-3" ID="{E7CC4319-C6A4-4F0C-B2BF-9B566BBC6D34}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>CUBI-test-3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="295724818"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CUBI-test-3" ID="{E7CC4319-C6A4-4F0C-B2BF-9B566BBC6D34}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</ActorMixer>

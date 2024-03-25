@@ -33,7 +33,19 @@
 								<Action Name="" ID="{820BB015-299E-4653-AE1A-570BC0D97049}" ShortID="958483838">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="MUS_Level" ID="{CCB12EA4-2434-44E4-AAFB-8232C9D19764}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+											<ObjectRef Name="MUS_Level" ID="{E4E80F1F-B827-4021-9AF7-BD8032F6B4D6}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{949800D9-7FA3-4853-B6A0-E37A8FE282D8}" ShortID="482037513">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="36"/>
+										<Property Name="SeekTime" Type="Real64" Value="33.904"/>
+										<Property Name="SeekType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUS_Level" ID="{E4E80F1F-B827-4021-9AF7-BD8032F6B4D6}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

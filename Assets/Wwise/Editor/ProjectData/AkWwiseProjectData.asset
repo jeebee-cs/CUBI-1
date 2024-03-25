@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: a8ca54a46238d44dafdb41c9bfafafb3
     GuidInternal: 
-    m_lastTime: -8584902838173639553
+    m_lastTime: -8584902037290719594
     List:
     - name: AI_Dream_Get
       guid: 4015a16d6132ed4aab1ccb6dc493e2c1
@@ -211,8 +211,8 @@ MonoBehaviour:
         guid: 811ba4c60ecf1542b18011967f6daf8f
       Path: Events/Default Work Unit/Ambience/Dream_Ambience
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Music
       guid: b3f278bed716de478999d018f0567db1
       id: 3991942870
@@ -421,7 +421,7 @@ MonoBehaviour:
     m_lastTime: -8584908763419426153
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0d0000000e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
