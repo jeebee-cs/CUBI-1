@@ -60,6 +60,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Wwise
+/Dream-Catchers-Wwise/.cache/
 /Dream-Catchers-Wwise/GeneratedSoundBanks/
 /Dream-Catchers-Wwise/*.*.validationcache
 /Dream-Catchers-Wwise/*.*.wsettings
