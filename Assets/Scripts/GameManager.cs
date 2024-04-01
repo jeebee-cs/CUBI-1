@@ -10,9 +10,10 @@ public class GameManager : MonoBehaviour
     public UIManager uIManager { get => _uIManager; }
     [SerializeField] PlayerMovements _playerMovement;
     public PlayerMovements playerMovement { get => _playerMovement; }
-    [SerializeField] DreamCollection _neutralDreamCollection;
-    public DreamCollection neutralDreamCollection { get => _neutralDreamCollection; }
-
+    [SerializeField] DreamCollection _dreamCollection;
+    public DreamCollection dreamCollection { get => _dreamCollection; }
+    [SerializeField] WinLoose _winLoose;
+    public WinLoose winLoose { get => _winLoose; }
     static GameManager _instance;
     public static GameManager instance { get => _instance; }
     void Awake()
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         _cameraManager = cameraManager;
         _uIManager = uIManager;
-        _neutralDreamCollection = new DreamCollection();
+        _dreamCollection = new DreamCollection();
+        _winLoose = new WinLoose();
     }
 }

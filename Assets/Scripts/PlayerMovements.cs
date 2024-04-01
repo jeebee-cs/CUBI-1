@@ -55,7 +55,11 @@ public class PlayerMovements : NetworkBehaviour
     void Update () {
         lastOnGroundTime -= Time.deltaTime;
         getInputs();
-	}
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GameManager.instance.winLoose.Reset();
+        }
+    }
 
     void FixedUpdate()
     {
