@@ -48,5 +48,6 @@ public class MoveableBlock : ABlock
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
+            transform.position = newPosition;
     }
 }
