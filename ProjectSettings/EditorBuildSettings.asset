@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: abbf84042789b914ca15b90b18b28cfc
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/horloge.unity
     guid: 03b091645515ad14d9d1fa9f0b1ee6cc
   m_configObjects: {}
