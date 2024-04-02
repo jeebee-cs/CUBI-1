@@ -16,7 +16,7 @@ public class PlayerOrientation : MonoBehaviour
 
     void Update()
     {
-        viewDir = transform.position - new Vector3(Camera.position.x, transform.position.y, Camera.position.z);
-        transform.forward = viewDir.normalized;
+        transform.forward = new Vector3(Vector3.Dot(Camera.forward, new Vector3(1,0,0)),0,Vector3.Dot(Camera.forward, new Vector3(0,0,1)));
+        transform.forward.Normalize();
     }
 }

@@ -9,8 +9,8 @@ public class DreamSpawner : MonoBehaviour
 
     void Start()
     {
-        int index = isRandom ? Random.Range(0, dreamSpawnList.Count) : 0;
-        if (dreamSpawnList.Count > 0)
+        int index = isRandom ? Random.Range(-1, dreamSpawnList.Count) : 0;
+        if ( index > -1 && dreamSpawnList.Count > 0)
         {
             Instantiate(dreamSpawnList[index], transform.position, Quaternion.identity);
         }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NewMapData
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
+    SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects: []
     SerializedBytesString: 
@@ -24,5 +24,5 @@ MonoBehaviour:
   width: 5
   height: 5
   depth: 5
-  cube: {fileID: 1813912110282366629, guid: b1721468e51df234ba67cbeb45da03bd, type: 3}
+  cube: {fileID: 0}
   voxelMap: {fileID: 0}

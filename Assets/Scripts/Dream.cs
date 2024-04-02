@@ -9,11 +9,13 @@ public class Dream : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
         GameManager.instance.uIManager.dreamBar.value += dreamPoint;
+        GameManager.instance.winLoose.winCheck(dreamPoint);
 
         if (dreamType == 0)
         {
-            GameManager.instance.neutralDreamCollection.DreamNCollect();
+            GameManager.instance.dreamCollection.DreamNCollect();
         }
         gameObject.SetActive(false);
     }

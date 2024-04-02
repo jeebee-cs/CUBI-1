@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics/Default Work Unit
     guid: 44009add79522040972e9ae8d8890299
     GuidInternal: 
-    m_lastTime: -8584907948433267390
+    m_lastTime: -8584908763419423354
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: ef75e2676c64ea47b84a8ede7001c148
     GuidInternal: 
-    m_lastTime: -8584907948433633576
+    m_lastTime: -8584908763419507728
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 910b432bdc5eac4f9290d4aff05a6823
     GuidInternal: 
-    m_lastTime: -8584907948433356144
+    m_lastTime: -8584908763419436923
     List:
     - name: Main
       guid: 2db5dbd6675cab4abe8298bb350a3e88
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: a8ca54a46238d44dafdb41c9bfafafb3
     GuidInternal: 
-    m_lastTime: -8584907945990891321
+    m_lastTime: -8584902037290719594
     List:
     - name: AI_Dream_Get
       guid: 4015a16d6132ed4aab1ccb6dc493e2c1
@@ -114,8 +114,8 @@ MonoBehaviour:
         guid: 4015a16d6132ed4aab1ccb6dc493e2c1
       Path: Events/Default Work Unit/Rococo/AI_Dream_Get
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.2526593
+      minDuration: 0.23847862
     - name: AI_FS
       guid: c5f255d5b9461e49ac56c7a0a6d6d05c
       id: 3436755455
@@ -154,8 +154,8 @@ MonoBehaviour:
         guid: 27773239e5b0cf448fc33c9f166a0915
       Path: Events/Default Work Unit/Rococo/AI_Jump
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.092168495
+      minDuration: 0.09110984
     - name: Ambience
       guid: deb7de204fb65f4b9685bd458014eceb
       id: 85412153
@@ -191,8 +191,8 @@ MonoBehaviour:
         guid: de3eb8bac35daa488f2e541208bcc869
       Path: Events/Default Work Unit/Player/Block_Push
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.29303664
+      minDuration: 0.28469446
     - name: Dream_Ambience
       guid: 811ba4c60ecf1542b18011967f6daf8f
       id: 3982734893
@@ -248,8 +248,8 @@ MonoBehaviour:
         guid: 8cd6a91f12071542a8e6f9255d0cbcc7
       Path: Events/Default Work Unit/Music/Music_Start
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Music_Stop
       guid: fabb12e55ffbcd4394901f4e20b70edf
       id: 3227181061
@@ -268,8 +268,8 @@ MonoBehaviour:
         guid: fabb12e55ffbcd4394901f4e20b70edf
       Path: Events/Default Work Unit/Music/Music_Stop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Player
       guid: 0d343f2969699b4faf54637e0c14b9a9
       id: 1069431850
@@ -305,8 +305,8 @@ MonoBehaviour:
         guid: 53d80c95ddd9f140a5240123a47551f0
       Path: Events/Default Work Unit/Player/Player_Dream_Get
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.090455055
+      minDuration: 0.090455055
     - name: Player_FS
       guid: ce831c1a5b94944580f39d5dfd5d54c5
       id: 4276063004
@@ -345,8 +345,8 @@ MonoBehaviour:
         guid: adc8dd897fc22f41bf470c5a92106a8c
       Path: Events/Default Work Unit/Player/Player_Jump
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.067387685
+      minDuration: 0.067387685
     - name: Rococo
       guid: 4c53803599f75744a07ef7926872951e
       id: 439723924
@@ -376,7 +376,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: e249d3eff4b81a4c9262591e98ca6d13
     GuidInternal: 
-    m_lastTime: -8584907948433648479
+    m_lastTime: -8584908763419518491
     List: []
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
@@ -390,7 +390,7 @@ MonoBehaviour:
     ParentPath: States/Default Work Unit
     guid: 4649b031b8818946a6faebf6dd1231f2
     GuidInternal: 
-    m_lastTime: -8584907948433328819
+    m_lastTime: -8584908763419432405
     List: []
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
@@ -404,7 +404,7 @@ MonoBehaviour:
     ParentPath: Switches/Default Work Unit
     guid: 380fac530e481a4085a04c6529e90c5f
     GuidInternal: 
-    m_lastTime: -8584907948433281578
+    m_lastTime: -8584908763419429860
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
@@ -418,10 +418,10 @@ MonoBehaviour:
     ParentPath: Triggers/Default Work Unit
     guid: bab8cb4e0e1a834988e23f5891fd0957
     GuidInternal: 
-    m_lastTime: -8584907948433277990
+    m_lastTime: -8584908763419426153
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0d0000000e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
