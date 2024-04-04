@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class PlayerOrientation : MonoBehaviour
 {
-    public Transform Camera;
+    public Camera cam;
     private Vector3 viewDir;
 
     void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Camera = GameManager.instance.cameraManager.mainCamera.transform;
+        cam = Camera.main;
     }
 
     void Update()
     {
-        viewDir = transform.position - new Vector3(Camera.position.x, transform.position.y, Camera.position.z);
+        viewDir = transform.position - new Vector3(cam.transform.position.x, transform.position.y, cam.transform.position.z);
         transform.forward = viewDir.normalized;
     }
 }

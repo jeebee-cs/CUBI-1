@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6001624baaf46614e8721119d5269bed, type: 3}
+  m_Name: JungleTheme
+  m_EditorClassIdentifier: 
+  smallBlocks:
+  - {fileID: 919132149155446097, guid: 9cd06b7210aac33428b899216e1274e4, type: 3}
+  - {fileID: 919132149155446097, guid: 779a680c82969c742ae1e111218303ff, type: 3}
+  - {fileID: 919132149155446097, guid: d054ce1bf2cdd5246a83a192413150cb, type: 3}
+  - {fileID: 919132149155446097, guid: a8d6ab34f07e9c846ab47e54becce43b, type: 3}
+  - {fileID: 919132149155446097, guid: 062bfea406730fb4a97b1b3a13c88d51, type: 3}
+  bigBlocks:
+  - {fileID: 2969948248883634531, guid: 6f9235957f93cc94d83b178a75665811, type: 3}

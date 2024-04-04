@@ -13,9 +13,7 @@ public class MapData : SerializedScriptableObject
     public int height;
     public int depth;
 
-    public List<GameObject> blockPrefabs = new List<GameObject>();
-
-    public voxelMap voxelMap;
+    public MapTheme theme = MapTheme.JUNGLE;
 
     [ShowInInspector, HideReferenceObjectPicker]
     private MapDataLayer[] layers;
@@ -28,24 +26,30 @@ public class MapData : SerializedScriptableObject
         {
             List<voxelMap.ABlockData> blockDataList = new List<voxelMap.ABlockData>();
 
-            for (int i = 0; i < width; i++)
+            for (int i = 0; i < height; i++)
             {
-                for (int j = 0; j < height; j++)
+                for (int j = 0; j < width; j++)
                 {
                     for (int k = 0; k < depth; k++)
                     {
-                        if (layers[i].LabledTable[j, k] != 0)
+                        if (layers[i].LabledTable[j, k] == 1)
                         {
-                            Vector3 cubePos = new Vector3(j-1, i-1, -k+height-2); //* layers[i].LabledTable[j, k];
+                            Vector3 cubePos = new Vector3(j-1, i-1, k-1); //* layers[i].LabledTable[j, k];
                             Vector3 cubeSize = Vector3.one;// * layers[i].LabledTable[j, k];
                             Quaternion cubeRotation = Quaternion.Euler(-90, 0, 0);
-                            GameObject cube = blockPrefabs[layers[i].LabledTable[j, k] - 1];
-                            blockDataList.Add(new voxelMap.ABlockData(cubePos, cubeRotation, cubeSize, cube, true));
+                            blockDataList.Add(new voxelMap.ABlockData(cubePos, cubeRotation, cubeSize, true));
+                        }
+                        if (layers[i].LabledTable[j, k] == 2)
+                        {
+                            Vector3 cubePos = new Vector3(j - 1, i - 1, k - 1); //* layers[i].LabledTable[j, k];
+                            Vector3 cubeSize = Vector3.one *2;// * layers[i].LabledTable[j, k];
+                            Quaternion cubeRotation = Quaternion.Euler(-90, 0, 0);
+                            blockDataList.Add(new voxelMap.ABlockData(cubePos, cubeRotation, cubeSize, true));
                         }
                     }
                 }
             }
-            string json = JsonUtility.ToJson(new voxelMap.MapData(width, height, depth, blockDataList.ToArray()));
+            string json = JsonUtility.ToJson(new voxelMap.MapData(width, height, depth, theme, blockDataList.ToArray()));
 
             File.WriteAllText(filePath, json);
 
@@ -56,14 +60,14 @@ public class MapData : SerializedScriptableObject
     [Button(ButtonSizes.Medium)]
     private void UpdateTable()
     {
-        layers = new MapDataLayer[depth];
+        layers = new MapDataLayer[height];
         for (int i = 0; i < layers.Length; i++)
         {
-            layers[i] = new MapDataLayer(width, height, blockPrefabs);
+            layers[i] = new MapDataLayer(width, depth);
         }
-        LoadBlockPrefabs();
+        //LoadBlockPrefabs();
     }
-
+    /*
     private void LoadBlockPrefabs()
     {
         // Clear existing prefabs
@@ -83,7 +87,7 @@ public class MapData : SerializedScriptableObject
         {
             Debug.LogWarning("No block prefabs found in the directory Assets/Prefabs/Blocks. Adding a default prefab.");
         }
-    }
+    }*/
 
     [Button(ButtonSizes.Medium)]
     private void CreateAsset()
@@ -93,19 +97,6 @@ public class MapData : SerializedScriptableObject
         AssetDatabase.SaveAssets();
         Debug.Log("MapData asset created at path: " + assetPath);
     }
-
-    private void OnValidate()
-    {
-        // Ensure layers are initialized when values change in the Inspector
-        if (layers == null || layers.Length != depth)
-        {
-            layers = new MapDataLayer[depth];
-            for (int i = 0; i < layers.Length; i++)
-            {
-                layers[i] = new MapDataLayer(width, height, blockPrefabs);
-            }
-        }
-    }
 }
 
 [System.Serializable]
@@ -113,52 +104,29 @@ public class MapDataLayer
 {
     [TableMatrix(DrawElementMethod = "DrawCell", SquareCells = true)]
     public int[,] LabledTable;
-    private List<GameObject> blockPrefabs;
 
-    private int DrawCell(Rect rect, int value = 0)
+    private static int DrawCell(Rect rect, int value)
     {
         if (Event.current.type == EventType.MouseDown && rect.Contains(Event.current.mousePosition))
         {
-            value = (value + 1) % (blockPrefabs.Count + 1);
+            value = (value + 1) % 3;
             GUI.changed = true;
             Event.current.Use();
         }
 
-        EditorGUI.DrawRect(rect.Padding(1), new Color(0.1f, 0.0f, 0.2f));
-
-        if (value != 0){
-            Object cubeObject = blockPrefabs[value - 1] as Object;
-            var preview = AssetPreview.GetAssetPreview(cubeObject);
-            var transparentPreview = MakeGrayBackgroundTransparent(preview);
-            if (preview != null)
-                GUI.DrawTexture(rect, transparentPreview);
-        }
+        EditorGUI.DrawRect(rect.Padding(1), new Color(0.1f, 0.2f * value, 0.2f));
 
         return value;
     }
-
-    private static Texture2D MakeGrayBackgroundTransparent(Texture2D preview)
+    public MapDataLayer(int width, int depth)
     {
-        Color32[] pixels = preview.GetPixels32();
-        for (int i = 0; i < pixels.Length; i++)
-        {
-            if (pixels[i].r == pixels[i].g && pixels[i].g == pixels[i].b)
-            {
-                pixels[i].a = 0; //rend les pixels gris transparents
-            }
-        }
-
-        Texture2D transparentPreview = new Texture2D(preview.width, preview.height);
-        transparentPreview.SetPixels32(pixels);
-        transparentPreview.Apply();
-
-        return transparentPreview;
-    }
-
-    public MapDataLayer(int width, int height, List<GameObject> blockPrefabs)
-    {
-        LabledTable = new int[width, height];
-        this.blockPrefabs = blockPrefabs;
+        LabledTable = new int[width, depth];
     }
 }
 #endif
+public enum MapTheme
+{
+    JUNGLE,
+    CLOCK,
+    PASTEL
+}

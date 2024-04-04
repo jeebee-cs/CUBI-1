@@ -19,6 +19,12 @@ public class voxelMap : MonoBehaviour {
 
     private Vector3 offset;
 
+    private MapTheme mapTheme;
+
+    public BlockTheme jungleTheme;
+    public BlockTheme clockTheme;
+    public BlockTheme pastelTheme;
+
     void Awake()
     {
         offset = transform.position;
@@ -52,11 +58,11 @@ public class voxelMap : MonoBehaviour {
                 Vector3 relativePosition = child.position - transform.position;
                 Debug.Log(relativePosition);
 
-                blockDataList.Add(new ABlockData(relativePosition, child.rotation, child.localScale, prefab, isMovable));
+                blockDataList.Add(new ABlockData(relativePosition, Quaternion.Euler(90, 0, 0), child.localScale, isMovable));
             }
         }
 
-        string json = JsonUtility.ToJson(new MapData(width, height, depth, blockDataList.ToArray()));
+        string json = JsonUtility.ToJson(new MapData(width, height, depth, mapTheme,blockDataList.ToArray()));
 
         File.WriteAllText(filePath, json);
 
@@ -81,7 +87,11 @@ public class voxelMap : MonoBehaviour {
         {
             Vector3 absolutePosition = blockData.position + offset + new Vector3(1.5f,1.5f,1.5f);
 
-            GameObject prefab = blockData.prefab;
+            MapTheme currentTheme = mapData.mapTheme;
+
+            bool isBig = (blockData.scale == Vector3.one * 2) ? true : false;
+
+            GameObject prefab = RandomPrefabFromTheme(currentTheme, isBig);
 
             if (prefab != null)
             {
@@ -99,6 +109,21 @@ public class voxelMap : MonoBehaviour {
             {
                 Debug.LogWarning("Prefab is null for block data: " + blockData.ToString());
             }
+        }
+    }
+
+    public GameObject RandomPrefabFromTheme(MapTheme theme, bool isBig)
+    {
+        switch (theme)
+        {
+            case MapTheme.JUNGLE:
+                return (isBig)? jungleTheme.bigBlocks[Random.Range(0, jungleTheme.bigBlocks.Count)] : jungleTheme.smallBlocks[Random.Range(0, jungleTheme.smallBlocks.Count)];
+            case MapTheme.CLOCK:
+                return (isBig) ? clockTheme.bigBlocks[Random.Range(0, clockTheme.bigBlocks.Count)] : clockTheme.smallBlocks[Random.Range(0, clockTheme.smallBlocks.Count)];
+            case MapTheme.PASTEL:
+                return (isBig) ? pastelTheme.bigBlocks[Random.Range(0, pastelTheme.bigBlocks.Count)] : pastelTheme.smallBlocks[Random.Range(0, pastelTheme.smallBlocks.Count)];
+            default:
+                return (isBig) ? jungleTheme.bigBlocks[Random.Range(0, jungleTheme.bigBlocks.Count)] : jungleTheme.smallBlocks[Random.Range(0, jungleTheme.smallBlocks.Count)];
         }
     }
 
@@ -168,13 +193,15 @@ public class voxelMap : MonoBehaviour {
         public int width;
         public int height;
         public int depth;
+        public MapTheme mapTheme;
         public ABlockData[] blockDataArray;
 
-        public MapData(int width, int height, int depth, ABlockData[] blockDataArray)
+        public MapData(int width, int height, int depth, MapTheme theme,ABlockData[] blockDataArray)
         {
             this.width = width;
             this.height = height;
             this.depth = depth;
+            this.mapTheme = theme;
             this.blockDataArray = blockDataArray;
         }
     }
@@ -186,15 +213,13 @@ public class voxelMap : MonoBehaviour {
         public Vector3 scale;
 
         public Quaternion rotation;
-        public GameObject prefab; // Reference to the prefab
         public bool isMovable;
 
-        public ABlockData(Vector3 position, Quaternion rotation, Vector3 scale, GameObject prefab, bool isMovable)
+        public ABlockData(Vector3 position, Quaternion rotation, Vector3 scale, bool isMovable)
         {
             this.position = position;
             this.rotation = rotation;
             this.scale = scale;
-            this.prefab = prefab;
             this.isMovable = isMovable;
         }
     }
