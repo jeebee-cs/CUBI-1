@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public abstract class ABlock : MonoBehaviour
+public abstract class ABlock : NetworkBehaviour
 {
     // Propriétés communes à tous les blocs
     public Vector3 Position { get; set; }
