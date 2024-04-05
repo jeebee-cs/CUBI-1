@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8905266282018422595}
   - component: {fileID: 6685065548700410488}
   - component: {fileID: 688464368750179959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,12 +111,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsMoving: 0
   _layerCollision:
     serializedVersion: 2
     m_Bits: 8
   _layerBlock:
     serializedVersion: 2
     m_Bits: 64
+  deplacementTime: 0.5
 --- !u!114 &688464368750179959
 MonoBehaviour:
   m_ObjectHideFlags: 0

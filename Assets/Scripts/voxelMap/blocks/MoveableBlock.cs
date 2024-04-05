@@ -5,7 +5,7 @@ using static ABlock;
 
 public class MoveableBlock : ABlock
 {
-    public bool IsMoving { get; set; }
+    public bool IsMoving=false;
     private Vector3  directionToPush;
     [SerializeField] LayerMask _layerCollision;
     [SerializeField] LayerMask _layerBlock;
@@ -29,10 +29,14 @@ public class MoveableBlock : ABlock
 
         directionToPush = directionToOther * -1;
 
-        if (Physics.Raycast(transform.position, directionToPush, 1f, _layerBlock)) return;
+        if (Physics.Raycast(transform.position, directionToPush, 1f,_layerBlock))
+        {
+            Debug.Log("Block hit");
+            return;
+        }
 
         //AkSoundEngine.PostEvent("Block_Push", this.gameObject);
-
+        IsMoving = true;
         StartCoroutine(SmoothLerp(transform.position + directionToPush, deplacementTime));
     }
 
@@ -49,5 +53,6 @@ public class MoveableBlock : ABlock
                 yield return null;
             }
             transform.position = newPosition;
+            IsMoving = false;
     }
 }

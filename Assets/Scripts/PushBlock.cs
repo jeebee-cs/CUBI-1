@@ -36,7 +36,7 @@ public class PushBlock : MonoBehaviour
             MoveableBlock nearestBlock = FindNearestMoveableBlock();
 
             // Si un MoveableBlock est trouvé, appelle sa méthode MoveBlock
-            if (nearestBlock != null)
+            if (nearestBlock != null && !nearestBlock.IsMoving)
             {
                 nearestBlock.MoveBlock(transform.position);
             }
