@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dream : MonoBehaviour
 {
     [SerializeField] float dreamPoint;
-    [SerializeField] int dreamType; //0 neutral, 1 positive, 2 negative
+    [SerializeField] DreamType dreamType;
 
     void OnTriggerEnter(Collider other)
     {
@@ -19,4 +19,12 @@ public class Dream : MonoBehaviour
         }
         gameObject.SetActive(false);
     }
+}
+
+
+public enum DreamType
+{
+    NEUTRAL,
+    GOOD,
+    BAD
 }
