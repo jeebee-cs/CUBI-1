@@ -155,6 +155,9 @@ MonoBehaviour:
   width: 5
   height: 5
   depth: 5
+  jungleTheme: {fileID: 0}
+  clockTheme: {fileID: 0}
+  pastelTheme: {fileID: 0}
 --- !u!4 &35890966
 Transform:
   m_ObjectHideFlags: 0
@@ -404,6 +407,64 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 377174311}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &623272256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 623272258}
+  - component: {fileID: 623272257}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &623272257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623272256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c381ed17af62240bcb04c51cda532f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: a0dc3646c7c13465ea7f438b2517559f,
+    type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &623272258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623272256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &710640599
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,8 +659,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1067231196}
   - component: {fileID: 1067231195}
-  - component: {fileID: 1067231194}
   - component: {fileID: 1067231197}
+  - component: {fileID: 1067231199}
+  - component: {fileID: 1067231198}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -607,14 +669,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1067231194
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067231193}
-  m_Enabled: 1
 --- !u!20 &1067231195
 Camera:
   m_ObjectHideFlags: 0
@@ -706,6 +760,42 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1067231198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067231193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be060cb47522d4fe3b54453ed12f8106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &1067231199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067231193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76545102b2aa04cf3a897cd6cca6829c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &1129977651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1343,7 +1433,7 @@ PrefabInstance:
     - target: {fileID: 7324337708787399561, guid: 176d8bc72e298d46d9a54a2c3554f51b,
         type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 3215028983
+      value: 592888566
       objectReference: {fileID: 0}
     - target: {fileID: 8755219453667122245, guid: 176d8bc72e298d46d9a54a2c3554f51b,
         type: 3}
