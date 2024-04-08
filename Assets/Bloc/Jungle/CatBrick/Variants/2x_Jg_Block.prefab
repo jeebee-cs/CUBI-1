@@ -114,6 +114,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_PolishedCatBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a8d6ab34f07e9c846ab47e54becce43b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8d6ab34f07e9c846ab47e54becce43b, type: 3}
 --- !u!4 &3980985179143220709 stripped
@@ -122,3 +127,49 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3509981487125514766}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4356278543506569055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a8d6ab34f07e9c846ab47e54becce43b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3509981487125514766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7824444325235927855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356278543506569055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &7489064012639816683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356278543506569055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsMoving: 0
+  _layerCollision:
+    serializedVersion: 2
+    m_Bits: 8
+  _layerBlock:
+    serializedVersion: 2
+    m_Bits: 64
+  deplacementTime: 0.5

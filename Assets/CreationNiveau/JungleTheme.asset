@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: JungleTheme
   m_EditorClassIdentifier: 
   smallBlocks:
-  - {fileID: 919132149155446097, guid: 9cd06b7210aac33428b899216e1274e4, type: 3}
-  - {fileID: 919132149155446097, guid: 779a680c82969c742ae1e111218303ff, type: 3}
-  - {fileID: 919132149155446097, guid: d054ce1bf2cdd5246a83a192413150cb, type: 3}
   - {fileID: 919132149155446097, guid: a8d6ab34f07e9c846ab47e54becce43b, type: 3}
   - {fileID: 919132149155446097, guid: 062bfea406730fb4a97b1b3a13c88d51, type: 3}
   - {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b, type: 3}
@@ -23,6 +20,9 @@ MonoBehaviour:
   - {fileID: 7733201416027377379, guid: 91164615f66ac40428783e95a6b5e687, type: 3}
   - {fileID: 7904237153691646199, guid: 84514437e94582d42a0ad0cc489ca3a1, type: 3}
   - {fileID: 8796034376369518559, guid: da50383944061f243a0b09e4169c0a04, type: 3}
+  - {fileID: 3787794385619020277, guid: 6e18abe0a9785724d9281cd84ed4c936, type: 3}
+  - {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4, type: 3}
+  - {fileID: 7904237153691646199, guid: 9d7c06c6e46e7a540bdf1d35ed70d660, type: 3}
   bigBlocks:
   - {fileID: 2969948248883634531, guid: 6f9235957f93cc94d83b178a75665811, type: 3}
   - {fileID: 2433168094593046608, guid: 1fdaf6fff2fcbd44088ee240276acc2b, type: 3}

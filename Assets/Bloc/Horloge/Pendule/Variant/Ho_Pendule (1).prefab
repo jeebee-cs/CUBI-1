@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2076283793097675365}
   - component: {fileID: 4266182434282546863}
   - component: {fileID: 3239517444797020712}
+  - component: {fileID: -9064583037232447443}
+  - component: {fileID: -1293370090820743160}
   m_Layer: 0
   m_Name: Ho_Pendule (1)
   m_TagString: Untagged
@@ -116,6 +118,46 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-9064583037232447443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320613995134027642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsMoving: 0
+  _layerCollision:
+    serializedVersion: 2
+    m_Bits: 0
+  _layerBlock:
+    serializedVersion: 2
+    m_Bits: 0
+  deplacementTime: 0.5
+--- !u!114 &-1293370090820743160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320613995134027642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &3239517443751213336
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ClockTheme
   m_EditorClassIdentifier: 
   smallBlocks:
-  - {fileID: 919132149155446097, guid: 1cf9ae1335fe17445807ad1c388f8f7a, type: 3}
   - {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4, type: 3}
-  - {fileID: 919132149155446097, guid: 4412a788c0ab98543b992a363183f535, type: 3}
   - {fileID: 2320613995134027642, guid: a8f223d019fa8354394f377344e1b732, type: 3}
   - {fileID: 5728866059533524305, guid: 87df615b4ab58be46a08d1a1c08ac276, type: 3}
+  - {fileID: 5626464596316224392, guid: 37a657e5c550562488c138bf24407861, type: 3}
+  - {fileID: 6520887067222213329, guid: bb51ab7e14fe9e745b6fe730085dbc72, type: 3}
   bigBlocks:
   - {fileID: 6500897918278409698, guid: 180744c7c9c243843a55981c4f57aa20, type: 3}

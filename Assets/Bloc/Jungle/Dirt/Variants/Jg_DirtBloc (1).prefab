@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 1798349557193385261}
   - component: {fileID: 3412284797248154248}
   - component: {fileID: 629986869309988418}
-  m_Layer: 0
+  - component: {fileID: 6282313449011990381}
+  - component: {fileID: -1836675179362206602}
+  m_Layer: 6
   m_Name: Jg_DirtBloc (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,6 +91,46 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6282313449011990381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422809589158412183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 2814344455
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &-1836675179362206602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422809589158412183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsMoving: 0
+  _layerCollision:
+    serializedVersion: 2
+    m_Bits: 8
+  _layerBlock:
+    serializedVersion: 2
+    m_Bits: 64
+  deplacementTime: 0.5
 --- !u!1001 &2269739555505004082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,6 +212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flowers_8 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868703754745247333, guid: e6da6c1ae0242ea468220d30f297acd0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5289668535671166615, guid: e6da6c1ae0242ea468220d30f297acd0,
         type: 3}
@@ -277,6 +324,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flowers_10 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7424067271686631557, guid: e4be8c3bc2231d744bb2a3dfa676296e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4be8c3bc2231d744bb2a3dfa676296e, type: 3}
 --- !u!4 &3037902702719328958 stripped
@@ -366,6 +418,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flowers_9 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 239736078803402985, guid: 364304009212b92419e9c77dfc7f11cc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 752158868078036590, guid: 364304009212b92419e9c77dfc7f11cc,
         type: 3}
@@ -461,6 +518,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flowers_9 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 239736078803402985, guid: 364304009212b92419e9c77dfc7f11cc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 752158868078036590, guid: 364304009212b92419e9c77dfc7f11cc,
         type: 3}

@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: PastelTheme
   m_EditorClassIdentifier: 
   smallBlocks:
-  - {fileID: 919132149155446097, guid: 9ed0774f20e9e484db6d52811fbd17b3, type: 3}
-  - {fileID: 919132149155446097, guid: d4c92437aebeccc45a09d028d379b909, type: 3}
-  - {fileID: 919132149155446097, guid: ca23f6f8a4957584eaaa9fde68f8e630, type: 3}
   - {fileID: 2453670591844560573, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
   - {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed, type: 3}
   - {fileID: 6888931116663107293, guid: 164b35fe69592bf478b8ce8711e2c516, type: 3}
@@ -24,5 +21,8 @@ MonoBehaviour:
   - {fileID: 191339056605728524, guid: ba9e056441b74fd439fb4b5cbfd20ba6, type: 3}
   - {fileID: 7993223836014375342, guid: 1b298d11bebf7f143a4fbf8d8798829a, type: 3}
   - {fileID: 498456636680008044, guid: f4f5d89442bdb8148aedeadbfae8d5ef, type: 3}
+  - {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10, type: 3}
+  - {fileID: 142010182942281423, guid: bdd2430c7e03f3c41b3772668b0b4cfb, type: 3}
+  - {fileID: 7993223836014375342, guid: 1b298d11bebf7f143a4fbf8d8798829a, type: 3}
   bigBlocks:
   - {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739, type: 3}

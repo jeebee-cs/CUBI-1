@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6726238427751184175}
   - component: {fileID: 5040099365766478495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClockSmallNeedle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7158729355418298321}
   - component: {fileID: 1719824061798225038}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClockSmallNeedle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4042256395387636266}
   - component: {fileID: 1000580002819897457}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClockSmallNeedle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7146400891256995774}
   - component: {fileID: 2256781485545584375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClockSmallNeedle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6198867854281417089}
   - component: {fileID: 317507237061228334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClockBigNeedle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7207717454051786068}
   - component: {fileID: 3002103821291687997}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClockBigNeedle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2859640246424448211}
   - component: {fileID: 5826808920138767542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClockBigNeedle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2687838567571108507}
   - component: {fileID: 436820768921500020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClockBigNeedle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,6 +739,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ho_ClockBlock Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 37c0402f521124448af1067357ad24ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c0402f521124448af1067357ad24ee, type: 3}
 --- !u!1 &4919925068685420222 stripped
@@ -756,12 +761,53 @@ Animation:
   m_GameObject: {fileID: 4919925068685420222}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 0fe6564f4a9239e489855022eb8681a2, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0fe6564f4a9239e489855022eb8681a2, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &-8183096630035572228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919925068685420222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 4177354675
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &-4156489643542999503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919925068685420222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsMoving: 0
+  _layerCollision:
+    serializedVersion: 2
+    m_Bits: 8
+  _layerBlock:
+    serializedVersion: 2
+    m_Bits: 64
+  deplacementTime: 0.5
 --- !u!4 &5696144665799621636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37c0402f521124448af1067357ad24ee,
