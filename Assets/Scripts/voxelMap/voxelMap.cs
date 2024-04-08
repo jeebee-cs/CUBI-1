@@ -103,7 +103,7 @@ public class voxelMap : MonoBehaviour {
                     blockObject = Instantiate(prefab, transform.position, Quaternion.identity);
                 #endif
                 blockObject.transform.position = absolutePosition;
-                blockObject.transform.rotation = blockData.rotation;
+                blockObject.transform.rotation = Quaternion.Euler(-90,Random.Range(0,3)*90,0);
             }
             else
             {
