@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] CameraManager _cameraManager;
-    public CameraManager cameraManager { get => _cameraManager; }
     [SerializeField] UIManager _uIManager;
     public UIManager uIManager { get => _uIManager; }
     [SerializeField] PlayerMovements _playerMovement;
@@ -20,7 +18,6 @@ public class GameManager : MonoBehaviour
     {
         if (_instance != null && _instance != this)
         {
-            _instance.OnSceneLoaded(_cameraManager, _uIManager);
             Destroy(gameObject);
             return;
         }
@@ -28,13 +25,11 @@ public class GameManager : MonoBehaviour
         {
             DontDestroyOnLoad(this);
             _instance = this;
-            OnSceneLoaded(_cameraManager, _uIManager);
         }
         Time.timeScale = 1;
     }
-    public void OnSceneLoaded(CameraManager cameraManager, UIManager uIManager)
+    public void OnSceneLoaded(UIManager uIManager)
     {
-        _cameraManager = cameraManager;
         _uIManager = uIManager;
         _dreamCollection = new DreamCollection();
         _winLoose = new WinLoose();

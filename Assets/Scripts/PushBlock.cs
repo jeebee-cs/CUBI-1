@@ -30,7 +30,7 @@ public class PushBlock : MonoBehaviour
     void Update()
     {
         // Vérifie si un clic de souris est détecté
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetAxis("Fire1")!=0.0)
         {
             // Trouve le MoveableBlock le plus proche dans la liste
             MoveableBlock nearestBlock = FindNearestMoveableBlock();
