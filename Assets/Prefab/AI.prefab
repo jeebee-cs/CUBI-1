@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb13193188174248990b31d4ba67b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToFlight: 5
-  _timerBeforeCollectMode:
-    _duration: 20
+  movementSpeed: 3
+  changeDirectionInterval: 2
+  headToTargetInterval: 10
+  fleeDistance: 5
+  target: {fileID: 0}
+  playerToFleeFrom: {fileID: 0}
