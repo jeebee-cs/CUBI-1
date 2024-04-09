@@ -55,6 +55,11 @@ public class PlayerMovements : NetworkBehaviour
     void Start()
     {
         AkSoundEngine.PostEvent("Music_Start", this.gameObject);
+        if (IsOwner && IsClient)
+        {
+            GameManager.instance.cameraManager.FollowPlayer(transform);
+            GetComponentInChildren<PlayerOrientation>().CameraT = GameManager.instance.cameraManager.playerCamera.transform;
+        }
     }
 
     void Update()

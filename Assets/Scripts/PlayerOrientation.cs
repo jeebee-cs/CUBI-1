@@ -8,8 +8,7 @@ public class PlayerOrientation : MonoBehaviour
     private Vector3 viewDir;
     void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        CameraT = Camera.main.transform;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using static ABlock;
 
@@ -12,9 +13,15 @@ public class MoveableBlock : ABlock
 
     [SerializeField, Range(0f, 1f)]
 	private float deplacementTime = 0.5f;
+    NetworkObject _networkObject;
 
-    public void MoveBlock(Vector3 otherPos)
+    void Start() {
+        _networkObject = transform.parent.GetComponent<NetworkObject>();
+    }
+
+    public void MoveBlock(Vector3 otherPos, ulong clientId)
     {
+        ChangeOwnerShipServerRpc(clientId);
 
         Vector3 directionToOther = otherPos - transform.position;
 
@@ -54,5 +61,11 @@ public class MoveableBlock : ABlock
             }
             transform.position = newPosition;
             IsMoving = false;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void ChangeOwnerShipServerRpc(ulong ownerClientId)
+    {
+        _networkObject.ChangeOwnership(ownerClientId);
     }
 }

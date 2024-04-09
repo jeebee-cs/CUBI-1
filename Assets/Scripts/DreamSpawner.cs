@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 public class DreamSpawner : MonoBehaviour
@@ -9,10 +10,26 @@ public class DreamSpawner : MonoBehaviour
 
     void Start()
     {
-        int index = isRandom ? Random.Range(-1, dreamSpawnList.Count) : 0;
-        if ( index > -1 && dreamSpawnList.Count > 0)
+        NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
+    }
+
+    void OnClientConnectedCallback(ulong id)
+    {
+        if (id == 0)
         {
-            Instantiate(dreamSpawnList[index], transform.position, Quaternion.identity);
+            int index = isRandom ? Random.Range(-1, dreamSpawnList.Count) : 0;
+            if (index > -1 && dreamSpawnList.Count > 0)
+            {
+                SpawnServerRpc(index);
+            }
         }
     }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SpawnServerRpc(int index)
+    {
+        GameObject gameObject = Instantiate(dreamSpawnList[index], transform.position, Quaternion.identity);
+        gameObject.GetComponent<NetworkObject>().Spawn();
+    }
+
 }

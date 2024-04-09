@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class Dream : MonoBehaviour
+public class Dream : NetworkBehaviour
 {
     [SerializeField] float dreamPoint;
     [SerializeField] DreamType dreamType;
+    NetworkObject _networkObject;
+    private void Start()
+    {
+        _networkObject = GetComponent<NetworkObject>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,7 +23,13 @@ public class Dream : MonoBehaviour
         {
             GameManager.instance.dreamCollection.DreamNCollect();
         }
-        gameObject.SetActive(false);
+        DespawnServerRpc();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void DespawnServerRpc()
+    {
+        _networkObject.Despawn();
     }
 }
 

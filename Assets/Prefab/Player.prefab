@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2537030443660622146}
   - component: {fileID: 564895682466591763}
   - component: {fileID: 8802429742611642925}
+  - component: {fileID: 8648041366689152271}
   m_Layer: 3
   m_Name: PlayerController
   m_TagString: Untagged
@@ -89,7 +90,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!135 &1390296493116683296
@@ -218,6 +219,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c175445540945439ac5d964b5debd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8648041366689152271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691478012142615995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8deae8091111f4eb30a56c1f4e0d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionStateInfoList: []
+  m_Animator: {fileID: 3188602019907577502}
 --- !u!1 &5842180342739160920
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2976df4ab11571126a192c460565bfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 0}
+  CameraT: {fileID: 0}
 --- !u!1 &8755219453667122246
 GameObject:
   m_ObjectHideFlags: 0
