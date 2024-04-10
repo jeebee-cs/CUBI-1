@@ -8,28 +8,34 @@ using static ABlock;
 public class voxelMap : MonoBehaviour {
     private ABlock[,,] voxelMatrix; // Matrice 3D de blocs
 
-    [SerializeField ,Range(0,11)]
+    [SerializeField ,Range(0,20)]
     private int width = 5;
 
-    [SerializeField ,Range(0,11)]
+    [SerializeField ,Range(0,20)]
     private int height = 5;
 
-    [SerializeField ,Range(0,11)]
+    [SerializeField ,Range(0,20)]
     private int depth = 5;
 
     private Vector3 offset;
 
     private MapTheme mapTheme;
 
-    public BlockTheme jungleTheme;
-    public BlockTheme clockTheme;
-    public BlockTheme pastelTheme;
+    [SerializeField] private BlockTheme jungleTheme;
+    [SerializeField] private BlockTheme clockTheme;
+    [SerializeField] private BlockTheme pastelTheme;
+
+    //PlayerDetection
+    BoxCollider col;
 
     void Awake()
     {
         offset = transform.position;
         voxelMatrix = new ABlock[width,height,depth];
-        childsToMatrix();
+        //childsToMatrix();
+        col = GetComponent<BoxCollider>();
+        col.size = new Vector3(width* 2, height, depth*2);
+        col.center = (new Vector3(width, height, depth) / 2);
     }
 
     // Méthode pour ajouter un bloc à la carte de voxels
@@ -171,6 +177,14 @@ public class voxelMap : MonoBehaviour {
         return adjustedPosition.x >= 0 && adjustedPosition.x < width &&
             adjustedPosition.y >= 0 && adjustedPosition.y < height &&
             adjustedPosition.z >= 0 && adjustedPosition.z < depth;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 3)
+        {
+            //GameManager.instance.skyboxBlender.ChangeSkybox(mapTheme);
+        }
     }
 
     private void OnDrawGizmos()
