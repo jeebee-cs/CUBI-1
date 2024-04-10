@@ -109,7 +109,7 @@ public class voxelMap : MonoBehaviour {
                     blockObject = Instantiate(prefab, transform.position, Quaternion.identity);
                 #endif
                 blockObject.transform.position = absolutePosition;
-                blockObject.transform.rotation = Quaternion.Euler(-90,Random.Range(0,3)*90,0);
+                blockObject.transform.rotation = Quaternion.Euler(-90,(isBig?-1:Random.Range(0,3))*90,0);
             }
             else
             {
@@ -183,7 +183,7 @@ public class voxelMap : MonoBehaviour {
     {
         if(other.gameObject.layer == 3)
         {
-            //GameManager.instance.skyboxBlender.ChangeSkybox(mapTheme);
+            GameManager.instance.skyboxBlender.ChangeSkyboxTheme(mapTheme);
         }
     }
 
