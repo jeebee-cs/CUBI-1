@@ -6,7 +6,7 @@ using UnityEngine;
 public class Dream : NetworkBehaviour
 {
     [SerializeField] float dreamPoint;
-    [SerializeField] DreamType dreamType;
+    [SerializeField] public DreamType dreamType;
     NetworkObject _networkObject;
     private void Start()
     {
@@ -15,7 +15,7 @@ public class Dream : NetworkBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
+        //AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
         GameManager.instance.uIManager.dreamBar.value += dreamPoint;
         GameManager.instance.winLoose.winCheck(dreamPoint);
 
