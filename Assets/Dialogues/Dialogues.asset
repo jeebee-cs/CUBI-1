@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a5184633f00544fa005163f127a625, type: 3}
+  m_Name: Dialogues
+  m_EditorClassIdentifier: 
+  goodDialogues:
+  - "Wow! Il est beau celui-l\xE0!"
+  - "Hihihi! Une petite \xE9toile!"
+  - Regarde! Un pique-nique!
+  - "C'est une tr\xE8s jolie robe, comme une princesse"
+  - Cette girafe avait le cou le plus loooong au monde.
+  - J'ai envie de danser, hihihi!
+  - "Un jour, je ferais la plus grande f\xEAte au monde! Comme dans ce r\xEAve!"
+  - Quel joli sentiment!
+  - Vroom vroom, je vais vite!
+  - "\xC7a c'est un bon concert!"
+  - Une maison en chocolat!
+  - Je suis le plus garde pirate de tous les temps!
+  - Oh! On dirait une peinture!
+  - Une souris verte!
+  - "C'est tr\xE8s joli, les \xE9toiles."
+  neutralDialogues:
+  - On dirait un petit crystal.
+  - "Je me demande \xE7a fait quelle sensation de r\xEAver?"
+  - Hop! Un de plus.
+  - "Et un, et deux, et trois\u2026"
+  - Pit pit pit, petit oiseau.v
+  - Shwiiip, un de plus dans le sac.
+  - Cunch crunch crunch. Croquette de poulet.
+  - Haha! Ce chapeau ressemble au mien.
+  - J'aimerais avoir autant de livres.
+  - "Haha, il y a de l'echooo\u2026 Echooo"
+  - "Tu ne m'\xE9chappera pas!"
+  - "Hehehe, \xE7a chatouille!"
+  - Plip plap plop
+  badDialogues:
+  - Haaaa! Un gros chat! Fuyons!
+  - Est-ce que c'est de la lave?
+  - "Quel r\xEAve \xE9trange\u2026"
+  - "Brrrr, un blizzard\u2026"
+  - "Woooooaw\u2026 Un ouragan! J'ai le tournis\u2026"
+  - "Woah! \xC7a pue!"
+  - Haaa! Des zombies!
+  - "Ho! Un cornet de cr\xE8me glac\xE9e sur le plancher\u2026"
+  - "Ha! Non! Je n'ai rien vol\xE9!"
+  - Pourquoi les dentistes sont-ils si terrifiants?
+  - "Les sorci\xE8res sont si cruelles."
+  - "J'ai peur\u2026 Je ne veux plus revoir \xE7a\u2026"
+  - ' Ouache! Un gros crapaud!'
+  - "Est-ce que tous les monstres ressemblent \xE0 \xE7a?"
+  - "C'est comme un grand trou noir qui nous avale tout rond\u2026"

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : NetworkBehaviour
 {
+    
     [SerializeField] UIManager _uIManager;
     public UIManager uIManager { get => _uIManager; }
     [SerializeField] CameraManager _cameraManager;
@@ -17,11 +18,17 @@ public class GameManager : NetworkBehaviour
     public WinLoose winLoose { get => _winLoose; }
     static GameManager _instance;
     public static GameManager instance { get => _instance; }
+    [SerializeField] DreamDisplayer _dreamDisplayer;
+    public DreamDisplayer dreamDisplayer { get => _dreamDisplayer; }
+    [SerializeField] SkyboxBlender _skyboxBlender;
+    public SkyboxBlender skyboxBlender { get => _skyboxBlender; }
+
+
     void Awake()
     {
         if (_instance != null && _instance != this)
         {
-            _instance.OnSceneLoaded(_uIManager, _cameraManager, _dreamCollection, _winLoose);
+            _instance.OnSceneLoaded(_uIManager, _cameraManager, _dreamCollection, _winLoose, _dreamDisplayer, _skyboxBlender);
             Destroy(gameObject);
             return;
         }
@@ -32,11 +39,13 @@ public class GameManager : NetworkBehaviour
         }
         Time.timeScale = 1;
     }
-    public void OnSceneLoaded(UIManager uIManager, CameraManager cameraManager, DreamCollection dreamCollection, WinLoose winLoose)
+    public void OnSceneLoaded(UIManager uIManager, CameraManager cameraManager, DreamCollection dreamCollection, WinLoose winLoose, DreamDisplayer dreamDisplayer, SkyboxBlender skyboxBlender)
     {
         _uIManager = uIManager;
         _cameraManager = cameraManager;
         _dreamCollection = dreamCollection;
         _winLoose = winLoose;
+        _dreamDisplayer = dreamDisplayer;
+        _skyboxBlender = skyboxBlender;
     }
 }
