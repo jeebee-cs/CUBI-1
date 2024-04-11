@@ -229,10 +229,11 @@ public class AI : MonoBehaviour
         if (validTargets.Count == 0)
         {
             currentState = AIState.RandomMovement;
+            return;
         }
 
         // Select a random target from the list of valid targets
-        int randomIndex = Random.Range(0, validTargets.Count);
+        int randomIndex = Random.Range(0, validTargets.Count-1);
         currentTarget = validTargets[randomIndex].gameObject;
         currentState = AIState.MoveToTarget;
     }
@@ -249,6 +250,7 @@ public class AI : MonoBehaviour
         if (Vector3.Distance(transform.position, playerToFleeFrom.transform.position) < radiusAllowed)
         {
             currentState = AIState.RandomMovement;
+            return;
         }
     }
 
