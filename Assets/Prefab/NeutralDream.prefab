@@ -133,3 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dreamPoint: 0.01
   dreamType: 0
+  goodDreamMat: {fileID: 2100000, guid: 7e6a6dc95d3d66a4d8efe59bc6089a62, type: 2}
+  badDreamMat: {fileID: 2100000, guid: bfd0b7620762cfd44ab2c7d46d822866, type: 2}
+  neutralDreamMat: {fileID: 2100000, guid: 3bd088feb7df2814a84bf338e6573201, type: 2}

@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 0
+  GlobalObjectIdHash: 1758744603
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -133,3 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dreamPoint: -0.05
   dreamType: 2
+  goodDreamMat: {fileID: 2100000, guid: 7e6a6dc95d3d66a4d8efe59bc6089a62, type: 2}
+  badDreamMat: {fileID: 2100000, guid: bfd0b7620762cfd44ab2c7d46d822866, type: 2}
+  neutralDreamMat: {fileID: 2100000, guid: 3bd088feb7df2814a84bf338e6573201, type: 2}

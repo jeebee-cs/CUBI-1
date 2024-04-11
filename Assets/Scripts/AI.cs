@@ -7,6 +7,7 @@ using UnityEngine;
 public enum AIState
 {
     RandomMovement,
+    LookForTarget,
     MoveToTarget,
     HoverAroundTarget,
     Flee,
@@ -15,16 +16,28 @@ public enum AIState
 
 public class AI : MonoBehaviour
 {
+    [SerializeField, Range(0f, 10f)]
     public float movementSpeed = 3f;
+    [SerializeField, Range(0f, 10f)]
     public float fleeSpeed = 6f;
+    [SerializeField, Range(0f, 10f)]
     public float changeDirectionInterval = 2f;
+    [SerializeField, Range(0f, 20f)]
     public float headToTargetInterval = 10f;
+    [SerializeField, Range(0f, 10f)]
+    private float modifyTargetInterval = 5f;
+    [SerializeField, Range(0f, 10f)]
+    private float lookForTargetInterval = 5f;
+    [SerializeField, Range(0f, 10f)]
     public float fleeDistance = 5f;
+    [SerializeField, Range(0f, 100f)]
     public float radiusAllowed = 20f;
     private GameObject currentTarget;
     public GameObject playerToFleeFrom;
     private float changeDirectionTimer;
     private float headTowardTargetTimer;
+    private float modifyTargetTimer;
+    private float lookForTargetTimer;
     private Vector3 actualDirection;
     private Vector3 randomDirection;
     private AIState currentState = AIState.RandomMovement;
@@ -33,6 +46,8 @@ public class AI : MonoBehaviour
     {
         changeDirectionTimer = changeDirectionInterval;
         headTowardTargetTimer = headToTargetInterval;
+        modifyTargetTimer = modifyTargetInterval;
+        lookForTargetTimer = lookForTargetInterval;
         actualDirection = new Vector3(0,0,0);
     }
 
@@ -42,6 +57,9 @@ public class AI : MonoBehaviour
         {
             case AIState.RandomMovement:
                 RandomMovement();
+                break;
+            case AIState.LookForTarget:
+                LookForTarget();
                 break;
             case AIState.MoveToTarget:
                 MoveToTarget();
@@ -84,18 +102,37 @@ public class AI : MonoBehaviour
         {
             //each 10 seconds, the AI will chose a new target and head toward it
             headTowardTargetTimer = headToTargetInterval;
-            SearchNewTarget();
+            currentState = AIState.LookForTarget;
         }
 
         // Check if player is too close
         if (Vector3.Distance(transform.position, playerToFleeFrom.transform.position) <= fleeDistance)
         {
+            changeDirectionTimer = changeDirectionInterval;
+            headTowardTargetTimer = headToTargetInterval;
             currentState = AIState.Flee;
         }
 
         if (Vector3.Distance(transform.position, playerToFleeFrom.transform.position) > radiusAllowed)
         {
             currentState = AIState.returnInPlayerRange;
+        }
+    }
+
+    void LookForTarget()
+    {
+        lookForTargetTimer -= Time.deltaTime;
+
+        if(lookForTargetTimer<= 0f)
+        {
+            lookForTargetTimer = lookForTargetInterval;
+            SearchNewTarget();
+        }
+
+        if (Vector3.Distance(transform.position, playerToFleeFrom.transform.position) <= fleeDistance)
+        {
+            lookForTargetTimer = lookForTargetInterval;
+            currentState = AIState.Flee;
         }
     }
 
@@ -113,15 +150,27 @@ public class AI : MonoBehaviour
 
     void HoverAroundTarget()
     {
+        modifyTargetTimer -= Time.deltaTime;
         // Calculate a random point within a 1 unit radius sphere around the target
         Vector3 randomPoint = Random.insideUnitSphere * 1f + currentTarget.transform.position;
 
         // Move towards the random point
         transform.position = Vector3.MoveTowards(transform.position, randomPoint, movementSpeed * Time.deltaTime);
 
+        if (modifyTargetTimer <= 0f)
+        {
+            //each 10 seconds, the AI will chose a new target and head toward it
+            modifyTargetTimer = modifyTargetInterval;
+            Dream targetDream = currentTarget.GetComponent<Dream>();
+            targetDream.setDreamType(DreamType.BAD);
+
+            currentState = AIState.RandomMovement;
+        }
+
         // Check if player is too close
         if (Vector3.Distance(transform.position, playerToFleeFrom.transform.position) <= fleeDistance)
         {
+            modifyTargetTimer = modifyTargetInterval;
             currentState = AIState.Flee;
         }
     }
@@ -132,10 +181,12 @@ public class AI : MonoBehaviour
         // Flee from the player
         Vector3 fleeDirection = transform.position - playerToFleeFrom.transform.position;
         fleeDirection.y = 0f; // We don't want the AI to flee upwards
-        transform.Translate(fleeDirection.normalized * fleeSpeed * Time.deltaTime);
+        randomDirection = fleeDirection.normalized;
+        actualDirection = Vector3.Lerp(actualDirection,randomDirection, 0.1f);
+        transform.Translate(actualDirection.normalized * fleeSpeed * Time.deltaTime);
 
         // Check if player is far enough
-        if (Vector3.Distance(transform.position, playerToFleeFrom.transform.position) > fleeDistance * 1.5f)
+        if (Vector3.Distance(transform.position, playerToFleeFrom.transform.position) > fleeDistance * 2f)
         {
             currentState = AIState.RandomMovement;
         }
@@ -154,7 +205,7 @@ public class AI : MonoBehaviour
         // If there are no targets, return
         if (targets.Length == 0)
         {
-            return;
+            currentState = AIState.RandomMovement;
         }
 
         // Filter out targets based on distance to player and dream type
@@ -162,7 +213,7 @@ public class AI : MonoBehaviour
         foreach (Dream target in targets)
         {
             // Check if the dream type is GOOD
-            if (target.dreamType == DreamType.GOOD)
+            if (target.GetDreamType() == DreamType.GOOD)
             {
                 float distanceToPlayer = Vector3.Distance(target.transform.position, playerToFleeFrom.transform.position);
 
@@ -177,7 +228,7 @@ public class AI : MonoBehaviour
         // If there are no valid targets, return
         if (validTargets.Count == 0)
         {
-            return;
+            currentState = AIState.RandomMovement;
         }
 
         // Select a random target from the list of valid targets
@@ -203,9 +254,10 @@ public class AI : MonoBehaviour
 
     void OnDrawGizmos()
     {
+        #if !UNITY_EDITOR
         ForGizmo(transform.position, actualDirection);
         ForGizmo(transform.position, randomDirection);
-
+        #endif
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(playerToFleeFrom.transform.position, radiusAllowed);
 

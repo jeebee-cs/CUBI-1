@@ -6,7 +6,11 @@ using UnityEngine;
 public class Dream : NetworkBehaviour
 {
     [SerializeField] float dreamPoint;
-    [SerializeField] public DreamType dreamType;
+    [SerializeField] private DreamType dreamType;
+    [SerializeField] private Material goodDreamMat;
+    [SerializeField] private Material badDreamMat;
+    [SerializeField] private Material neutralDreamMat;
+
     NetworkObject _networkObject;
     private void Start()
     {
@@ -30,6 +34,18 @@ public class Dream : NetworkBehaviour
     public void DespawnServerRpc()
     {
         _networkObject.Despawn();
+    }
+
+    public void setDreamType(DreamType newDreamType)
+    {
+        Material[] materialList = {neutralDreamMat, goodDreamMat, badDreamMat};
+        dreamType = newDreamType;
+        gameObject.GetComponent<Renderer>().material = materialList[(int)newDreamType];
+    }
+
+    public DreamType GetDreamType()
+    {
+        return dreamType;
     }
 }
 

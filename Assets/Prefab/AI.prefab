@@ -112,8 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
+  fleeSpeed: 6
   changeDirectionInterval: 2
   headToTargetInterval: 10
-  fleeDistance: 5
-  target: {fileID: 0}
+  fleeDistance: 1
+  radiusAllowed: 10
   playerToFleeFrom: {fileID: 0}
