@@ -771,6 +771,7 @@ GameObject:
   - component: {fileID: 4845992521433915421}
   - component: {fileID: 6272908728025561304}
   - component: {fileID: -3540156692115325571}
+  - component: {fileID: 4670623763945842611}
   m_Layer: 0
   m_Name: Ho_Pendule (2)
   m_TagString: Untagged
@@ -914,3 +915,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   deplacementTime: 0.5
+--- !u!65 &4670623763945842611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5728866059533524305}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.009999998, z: 0.009999998}
+  m_Center: {x: 0, y: 0, z: 0}

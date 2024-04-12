@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8552759692094576930}
   - component: {fileID: 8964831681889401069}
   - component: {fileID: -2846052348724392118}
+  - component: {fileID: -8416070948707126618}
   m_Layer: 6
   m_Name: Jg_DirtBloc (4) 1
   m_TagString: Untagged
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3485345302
+  GlobalObjectIdHash: 3788516291
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -127,3 +128,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   deplacementTime: 0.5
+--- !u!65 &-8416070948707126618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7904237153691646199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.009999998, z: 0.009999998}
+  m_Center: {x: 0, y: 0, z: 0}
