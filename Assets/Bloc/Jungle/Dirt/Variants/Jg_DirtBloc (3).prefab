@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+  - {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,7 +136,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+  - {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -220,7 +220,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+  - {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -304,7 +304,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+  - {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -388,7 +388,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+  - {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -431,6 +431,7 @@ GameObject:
   - component: {fileID: 6924857391429997657}
   - component: {fileID: 6320189163411037180}
   - component: {fileID: 8093291542064901942}
+  - component: {fileID: -4854291083570543544}
   - component: {fileID: -170011199767939124}
   m_Layer: 6
   m_Name: Jg_DirtBloc (3)
@@ -511,6 +512,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-4854291083570543544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7733201416027377379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 2452635436
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!114 &-170011199767939124
 MonoBehaviour:
   m_ObjectHideFlags: 0

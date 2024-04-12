@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7979819855573377198}
   - component: {fileID: 6418148938603327243}
   - component: {fileID: 9148270159714098113}
+  - component: {fileID: -6577023326417022406}
   - component: {fileID: 460382510702516795}
   m_Layer: 6
   m_Name: Jg_DirtBloc (2)
@@ -91,6 +92,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-6577023326417022406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7347010697705765396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1821514003
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!114 &460382510702516795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +229,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+      objectReference: {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6da6c1ae0242ea468220d30f297acd0, type: 3}
 --- !u!4 &7749015332124663157 stripped
@@ -308,7 +329,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+      objectReference: {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 364304009212b92419e9c77dfc7f11cc, type: 3}
 --- !u!4 &7632934713068240985 stripped
@@ -398,7 +419,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+      objectReference: {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
     - target: {fileID: 7424067271686631557, guid: e4be8c3bc2231d744bb2a3dfa676296e,
         type: 3}
       propertyPath: m_Name
@@ -509,7 +530,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+      objectReference: {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
     - target: {fileID: 7424067271686631557, guid: e4be8c3bc2231d744bb2a3dfa676296e,
         type: 3}
       propertyPath: m_Name
@@ -619,7 +640,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 52c53333ffd3af847a7838c76afeca0a, type: 2}
+      objectReference: {fileID: 2100000, guid: 0a80f98b3de7acc4eaee782cac578061, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 364304009212b92419e9c77dfc7f11cc, type: 3}
 --- !u!4 &7632934713237074395 stripped
