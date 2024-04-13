@@ -21,14 +21,6 @@ public class SaveManager : MonoBehaviour
     {
         playerObject = GameObject.FindGameObjectWithTag("Player");
         SaveSystem.init();
-        SaveObject saveObject = new SaveObject()
-        {
-            neutralDreams = 0,
-        };
-        string json = JsonUtility.ToJson(saveObject);
-        //Debug.Log(json);
-
-        SaveObject saveLoaded = JsonUtility.FromJson<SaveObject>(json);
     }
 
 

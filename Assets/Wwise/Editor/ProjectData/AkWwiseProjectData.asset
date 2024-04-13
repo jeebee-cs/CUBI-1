@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 910b432bdc5eac4f9290d4aff05a6823
     GuidInternal: 
-    m_lastTime: -8584889840953496027
+    m_lastTime: -8584885583614371001
     List:
     - name: Main
       guid: 2db5dbd6675cab4abe8298bb350a3e88
@@ -93,8 +93,8 @@ MonoBehaviour:
       guid: a8ca54a46238d44dafdb41c9bfafafb3
     ParentPath: Events\Default Work Unit
     guid: a8ca54a46238d44dafdb41c9bfafafb3
-    GuidInternal:
-    m_lastTime: -8584885624009318915
+    GuidInternal: 
+    m_lastTime: -8584885583614391009
     List:
     - name: AI_Dream_Get
       guid: 4015a16d6132ed4aab1ccb6dc493e2c1
@@ -132,7 +132,7 @@ MonoBehaviour:
       - ElementName: AI_FS_Start
         ObjectType: 3
         guid: c5f255d5b9461e49ac56c7a0a6d6d05c
-      Path: Events/Default Work Unit/Rococo/AI_FS_Start
+      Path: Events\Default Work Unit\Rococo\AI_FS_Start
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -152,10 +152,10 @@ MonoBehaviour:
       - ElementName: AI_FS_Stop
         ObjectType: 3
         guid: c4d4613a3d722347b549c84a1b64de60
-      Path: Events/Default Work Unit/Rococo/AI_FS_Stop
+      Path: Events\Default Work Unit\Rococo\AI_FS_Stop
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: AI_Jump
       guid: 27773239e5b0cf448fc33c9f166a0915
       id: 77128254
@@ -417,7 +417,7 @@ MonoBehaviour:
       - ElementName: Stop_All_Audio
         ObjectType: 3
         guid: 07982944a13c0644896f835119cde1d2
-      Path: Events/Default Work Unit/Stop_All_Audio
+      Path: Events\Default Work Unit\Stop_All_Audio
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
