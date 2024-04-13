@@ -163,7 +163,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="AI_FS" ID="{D555F2C5-46B9-491E-AC56-C7A0A6D6D05C}">
+						<Event Name="AI_FS_Start" ID="{D555F2C5-46B9-491E-AC56-C7A0A6D6D05C}">
 							<ChildrenList>
 								<Action Name="" ID="{FADDD680-3074-41F8-A059-70CC5D9DB938}" ShortID="579134777">
 									<ReferenceList>
@@ -185,8 +185,58 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="AI_FS_Stop" ID="{3A61D4C4-723D-4723-B549-C84A1B64DE60}">
+							<ChildrenList>
+								<Action Name="" ID="{D95152AE-6E1A-4147-B671-8E5BEBDEFC7E}" ShortID="568039952">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AI Footsteps" ID="{DB2DF34A-424D-4DE9-82C1-D54050612229}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D4A3A114-8397-4FFE-9E9E-E333396D60A1}" ShortID="271424828">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AI Footsteps" ID="{DB2DF34A-424D-4DE9-82C1-D54050612229}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Stop_All_Audio" ID="{44299807-3CA1-4406-896F-835119CDE1D2}">
+					<ChildrenList>
+						<Action Name="" ID="{0FAAB708-C2AD-4C82-9FC9-8E836AC44EB0}" ShortID="154964107">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{30880798-B720-4EC1-8967-00A0D608773D}" ShortID="894433399">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{67E275EF-646C-47EA-B84A-8EDE7001C148}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

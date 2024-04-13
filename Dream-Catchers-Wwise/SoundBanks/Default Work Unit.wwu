@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{D6DBB52D-5C67-4AAB-BE82-98BB350A3E88}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Stop_All_Audio" ID="{44299807-3CA1-4406-896F-835119CDE1D2}" WorkUnitID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Rococo" ID="{3580534C-F799-4457-A07E-F7926872951E}" WorkUnitID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{BE78F2B3-16D7-47DE-8999-D018F0567DB1}" WorkUnitID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Ambience" ID="{20DEB7DE-B64F-4B5F-9685-BD458014ECEB}" WorkUnitID="{A454CAA8-3862-4DD4-AFDB-41C9BFAFAFB3}" Origin="Manual" Filter="7"/>
