@@ -46,7 +46,7 @@ public class MoveableBlock : ABlock
         {
             if (directionToPush.x == 0)
             {
-                if (Physics.OverlapBox(transform.position + directionToPush * 1.5f, new Vector3(.9f,.9f,.4f), Quaternion.identity, _layerBlock).Length != 0)
+                if (Physics.OverlapBox(transform.position + directionToPush * 1.5f, new Vector3(.9f, .9f, .4f), Quaternion.identity, _layerBlock).Length != 0)
                 {
                     Debug.Log("Block hit");
                     return;
@@ -54,7 +54,7 @@ public class MoveableBlock : ABlock
             }
             else if (directionToPush.z == 0)
             {
-                if (Physics.OverlapBox(transform.position + directionToPush * 1.5f, new Vector3(.4f,.9f,.9f), Quaternion.identity, _layerBlock).Length != 0)
+                if (Physics.OverlapBox(transform.position + directionToPush * 1.5f, new Vector3(.4f, .9f, .9f), Quaternion.identity, _layerBlock).Length != 0)
                 {
                     Debug.Log("Block hit");
                     return;
@@ -69,10 +69,10 @@ public class MoveableBlock : ABlock
                 return;
             }
         }
-
-        //AkSoundEngine.PostEvent("Block_Push", this.gameObject);
-        IsMoving = true;
-        StartCoroutine(SmoothLerp(transform.position + directionToPush, deplacementTime));
+            StartCoroutine(SmoothLerp(transform.position + directionToPush, deplacementTime));
+            //AkSoundEngine.PostEvent("Block_Push", this.gameObject);
+            IsMoving = true;
+       
     }
 
     private IEnumerator SmoothLerp(Vector3 newPosition, float time)
@@ -89,6 +89,8 @@ public class MoveableBlock : ABlock
         }
         transform.position = newPosition;
         IsMoving = false;
+        Debug.Log("position:" + transform.position);
+        GameManager.instance.winLoose.firstBlockChange(gameObject);
     }
 
     [ServerRpc(RequireOwnership = false)]

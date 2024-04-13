@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 717104506011365112}
   - component: {fileID: 6770275373567170932}
   - component: {fileID: 7293917940280427913}
+  - component: {fileID: 737169201410549232}
   - component: {fileID: 3459007557957284353}
   m_Layer: 0
   m_Name: Static Block
@@ -134,6 +135,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &737169201410549232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3817742143562676374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f47b14843566b74e92fec6159c18b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blend: 0
+  go: {fileID: 0}
 --- !u!65 &3459007557957284353
 BoxCollider:
   m_ObjectHideFlags: 0

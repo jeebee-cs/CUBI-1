@@ -23,7 +23,7 @@ public class Dream : NetworkBehaviour
         GameManager.instance.uIManager.dreamBar.value += dreamPoint;
         GameManager.instance.winLoose.winCheck(dreamPoint);
 
-        if (dreamType == 0)
+        if (dreamType == DreamType.NEUTRAL)
         {
             GameManager.instance.dreamCollection.DreamNCollect();
         }
