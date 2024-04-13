@@ -19,7 +19,14 @@ public class Dream : NetworkBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
+        if (other.gameObject.name == "AI")
+        {
+            AkSoundEngine.PostEvent("AI_Dream_Get", this.gameObject);
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
+        }
         GameManager.instance.uIManager.dreamBar.value += dreamPoint;
         GameManager.instance.winLoose.winCheck(dreamPoint);
 

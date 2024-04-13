@@ -130,12 +130,12 @@ public class PlayerMovementsOffline : MonoBehaviour
         lastOnGroundTime = 0.0f;
         GetComponent<Rigidbody>().AddForce(Vector3.down * gravity * GetComponent<Rigidbody>().mass);
 
-        if (animator.GetBool("Walk") && !isFootstepsPlaying)
+        if (velocity != Vector3.zero && !isFootstepsPlaying && animator.GetBool("Jump") == false)
         {
             AkSoundEngine.PostEvent("Player_FS_Start", this.gameObject);
             isFootstepsPlaying = true;
         }
-        if (!animator.GetBool("Walk"))
+        if ((velocity == Vector3.zero || animator.GetBool("Jump") == true) && isFootstepsPlaying)
         {
             AkSoundEngine.PostEvent("Player_FS_Stop", this.gameObject);
             isFootstepsPlaying = false;

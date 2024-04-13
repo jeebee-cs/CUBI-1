@@ -93,8 +93,8 @@ MonoBehaviour:
       guid: a8ca54a46238d44dafdb41c9bfafafb3
     ParentPath: Events\Default Work Unit
     guid: a8ca54a46238d44dafdb41c9bfafafb3
-    GuidInternal: 
-    m_lastTime: -8584885724285032654
+    GuidInternal:
+    m_lastTime: -8584885624009318915
     List:
     - name: AI_Dream_Get
       guid: 4015a16d6132ed4aab1ccb6dc493e2c1
@@ -116,9 +116,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.2526593
       minDuration: 0.23847862
-    - name: AI_FS
+    - name: AI_FS_Start
       guid: c5f255d5b9461e49ac56c7a0a6d6d05c
-      id: 3436755455
+      id: 3783528082
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -129,13 +129,33 @@ MonoBehaviour:
       - ElementName: Rococo
         ObjectType: 4
         guid: 4c53803599f75744a07ef7926872951e
-      - ElementName: AI_FS
+      - ElementName: AI_FS_Start
         ObjectType: 3
         guid: c5f255d5b9461e49ac56c7a0a6d6d05c
-      Path: Events\Default Work Unit\Rococo\AI_FS
+      Path: Events/Default Work Unit/Rococo/AI_FS_Start
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: AI_FS_Stop
+      guid: c4d4613a3d722347b549c84a1b64de60
+      id: 1595028298
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a8ca54a46238d44dafdb41c9bfafafb3
+      - ElementName: Rococo
+        ObjectType: 4
+        guid: 4c53803599f75744a07ef7926872951e
+      - ElementName: AI_FS_Stop
+        ObjectType: 3
+        guid: c4d4613a3d722347b549c84a1b64de60
+      Path: Events/Default Work Unit/Rococo/AI_FS_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: AI_Jump
       guid: 27773239e5b0cf448fc33c9f166a0915
       id: 77128254
@@ -381,6 +401,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 4c53803599f75744a07ef7926872951e
       Path: Events\Default Work Unit\Rococo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_All_Audio
+      guid: 07982944a13c0644896f835119cde1d2
+      id: 1326785954
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a8ca54a46238d44dafdb41c9bfafafb3
+      - ElementName: Stop_All_Audio
+        ObjectType: 3
+        guid: 07982944a13c0644896f835119cde1d2
+      Path: Events/Default Work Unit/Stop_All_Audio
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
