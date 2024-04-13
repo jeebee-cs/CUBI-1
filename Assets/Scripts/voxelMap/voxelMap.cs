@@ -33,6 +33,8 @@ public class voxelMap : MonoBehaviour {
         offset = transform.position;
         voxelMatrix = new ABlock[width,height,depth];
         //childsToMatrix();
+        if (GetComponent<BoxCollider>() == null)
+            gameObject.AddComponent<BoxCollider>();
         col = GetComponent<BoxCollider>();
         col.size = new Vector3(width* 2, height, depth*2);
         col.center = (new Vector3(width, height, depth) / 2);

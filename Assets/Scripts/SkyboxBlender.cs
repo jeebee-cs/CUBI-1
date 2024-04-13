@@ -23,17 +23,10 @@ public class SkyboxBlender : MonoBehaviour
 
     public bool blending = false;
 
-    private Timer timer;
-
     private ReflectionProbe probeComponent = null;
     private GameObject probeGameObject = null;
     private Cubemap blendedCubemap = null;
     private int renderId = -1;
-
-    void Start()
-    {
-        ChangeSkyboxTheme(MapTheme.CLOCK);
-    }
 
     public void ChangeSkyboxTheme(MapTheme theme)
     {
@@ -46,7 +39,7 @@ public class SkyboxBlender : MonoBehaviour
     IEnumerator LerpBlend(float endValue, float duration)
     {
         float time = 0;
-        float startValue = blend;
+        float startValue = blend = 0;
 
         while(time < duration)
         {
@@ -58,7 +51,7 @@ public class SkyboxBlender : MonoBehaviour
         }
         blending = false;
         currentTheme = nextTheme;
-        blend = endValue;
+        blend = 0;
     }
     public void UpdateSkybox()
     {
