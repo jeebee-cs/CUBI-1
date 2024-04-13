@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731716, g: 0.13414738, b: 0.121078566, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1109,11 +1109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b185d8321148e24ba59965cab6f4d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraManager: {fileID: 0}
   _uIManager: {fileID: 0}
+  _cameraManager: {fileID: 0}
   _playerMovement: {fileID: 0}
   _dreamCollection: {fileID: 0}
-  _winLose: {fileID: 0}
+  _winLoose: {fileID: 0}
+  _dreamDisplayer: {fileID: 0}
+  _skyboxBlender: {fileID: 0}
 --- !u!4 &2076929416
 Transform:
   m_ObjectHideFlags: 0
