@@ -105,7 +105,7 @@ Material:
     - _GlossyReflections: 1
     - _LockedBlend: 0
     - _LockedBlend_1: 0.1
-    - _MaxDistance: 3
+    - _MaxDistance: 2
     - _Metallic: 0
     - _MinDistance: 0.5
     - _Mode: 0

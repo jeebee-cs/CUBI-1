@@ -261,9 +261,11 @@ public class AI : MonoBehaviour
         ForGizmo(transform.position, randomDirection);
         #endif
         Gizmos.color = Color.cyan;
+        if(playerToFleeFrom != null)
         Gizmos.DrawWireSphere(playerToFleeFrom.transform.position, radiusAllowed);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(playerToFleeFrom.transform.position, fleeDistance);
+        if (playerToFleeFrom != null)
+            Gizmos.DrawWireSphere(playerToFleeFrom.transform.position, fleeDistance);
     }
 }
