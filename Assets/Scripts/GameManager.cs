@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class GameManager : NetworkBehaviour
 {
-    
+
     [SerializeField] UIManager _uIManager;
     public UIManager uIManager { get => _uIManager; }
     [SerializeField] CameraManager _cameraManager;
     public CameraManager cameraManager { get => _cameraManager; }
-    [SerializeField] PlayerMovements _playerMovement;
-    public PlayerMovements playerMovement { get => _playerMovement; }
+    [SerializeField] List<PlayerMovements> _playerMovements = new List<PlayerMovements>();
+    public List<PlayerMovements> playerMovements { get => _playerMovements; }
     [SerializeField] DreamCollection _dreamCollection;
     public DreamCollection dreamCollection { get => _dreamCollection; }
     [SerializeField] WinLoose _winLoose;
@@ -36,6 +36,7 @@ public class GameManager : NetworkBehaviour
         {
             DontDestroyOnLoad(this);
             _instance = this;
+            NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
         }
         Time.timeScale = 1;
     }
@@ -47,5 +48,13 @@ public class GameManager : NetworkBehaviour
         _winLoose = winLoose;
         _dreamDisplayer = dreamDisplayer;
         _skyboxBlender = skyboxBlender;
+    }
+    void OnClientConnectedCallback(ulong id)
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < players.Length; i++)
+        {
+            _playerMovements.Add(players[i].GetComponent<PlayerMovements>());
+        }
     }
 }
