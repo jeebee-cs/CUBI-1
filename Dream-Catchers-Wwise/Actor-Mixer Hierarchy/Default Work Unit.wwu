@@ -211,7 +211,8 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.00582362728785358"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.00748752079866888"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.0565723793677206"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0101624406362648"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0314651730898899"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>SFX_Player_test1.wav</AudioFile>
@@ -236,7 +237,7 @@
 									<ChildrenList>
 										<SourcePlugin Name="Silence" ID="{4C2BD0FA-CC05-4858-B0FF-95183D3D5BD4}" ShortID="678804024" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
 											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="0.2"/>
+												<Property Name="Length" Type="Real32" Value="0.1"/>
 											</PropertyList>
 											<Language>SFX</Language>
 										</SourcePlugin>

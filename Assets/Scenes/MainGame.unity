@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.77734596, g: 0.5156242, b: 0.9726588, a: 1}
+  m_IndirectSpecularColor: {r: 0.7753917, g: 0.51464903, b: 0.9731425, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -514,12 +514,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b51ec91a12d4cc6a598b1397ab1998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
+  triggerList: ae8d9d44f7e1664c
   useOtherObject: 0
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 97d33548913e849f089554c77801b924,
+      type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -7928,6 +7929,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4866546566752448346, guid: 6f9235957f93cc94d83b178a75665811,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 2627782858
+      objectReference: {fileID: 0}
     - target: {fileID: 7824444325235927855, guid: 6f9235957f93cc94d83b178a75665811,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -12046,7 +12052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uIManager: {fileID: 1848220754}
   _cameraManager: {fileID: 787137764}
-  _playerMovement: {fileID: 0}
+  _playerMovements: []
   _dreamCollection: {fileID: 104881152}
   _winLoose: {fileID: 1193438236}
   _dreamDisplayer: {fileID: 0}
@@ -25588,6 +25594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866546566752448346, guid: 6f9235957f93cc94d83b178a75665811,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 179340545
       objectReference: {fileID: 0}
     - target: {fileID: 7824444325235927855, guid: 6f9235957f93cc94d83b178a75665811,
         type: 3}

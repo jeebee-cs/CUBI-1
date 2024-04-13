@@ -41,6 +41,8 @@ public class PlayerMovements : NetworkBehaviour
     Animator animator;
     public Transform orientation;
 
+    private bool isFootstepsPlaying;
+
     void OnValidate()
     {
         minGroundDotProduct = Mathf.Cos(maxGroundAngle * Mathf.Deg2Rad);
@@ -55,6 +57,7 @@ public class PlayerMovements : NetworkBehaviour
     void Start()
     {
         AkSoundEngine.PostEvent("Music_Start", this.gameObject);
+        isFootstepsPlaying = false;
         if (IsOwner && IsClient)
         {
             GameManager.instance.cameraManager.FollowPlayer(transform);
@@ -133,6 +136,17 @@ public class PlayerMovements : NetworkBehaviour
         body.velocity = velocity;
         lastOnGroundTime = 0.0f;
         GetComponent<Rigidbody>().AddForce(Vector3.down * gravity * GetComponent<Rigidbody>().mass);
+
+        if (animator.GetBool("Walk") && !isFootstepsPlaying)
+        {
+            AkSoundEngine.PostEvent("Player_FS_Start", this.gameObject);
+            isFootstepsPlaying = true;
+        }
+        if (!animator.GetBool("Walk"))
+        {
+            AkSoundEngine.PostEvent("Player_FS_Stop", this.gameObject);
+            isFootstepsPlaying = false;
+        }
     }
 
     void Jump()

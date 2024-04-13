@@ -59,7 +59,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="MUS_Level" ID="{CCB12EA4-2434-44E4-AAFB-8232C9D19764}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+											<ObjectRef Name="MUS_Level" ID="{E4E80F1F-B827-4021-9AF7-BD8032F6B4D6}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -95,7 +95,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_FS" ID="{1A1C83CE-945B-4594-80F3-9D5DFD5D54C5}">
+						<Event Name="Player_FS_Start" ID="{1A1C83CE-945B-4594-80F3-9D5DFD5D54C5}">
 							<ChildrenList>
 								<Action Name="" ID="{5618A974-1CF7-4708-9151-67237B50CE5D}" ShortID="859607751">
 									<ReferenceList>
@@ -112,6 +112,33 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="SFX_Player_Jump" ID="{1C157CAD-F665-4C4C-83A2-FA79501397F4}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_FS_Stop" ID="{F1C2605B-5486-4D42-ACF8-F523D1316DEE}">
+							<ChildrenList>
+								<Action Name="" ID="{B41DA6FB-77DE-42B9-BF20-6C470F6A2795}" ShortID="732765864">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player Footsteps" ID="{B7172FB0-2AA7-47E4-85A5-5433AE518ADE}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B73CD441-B34D-49EF-B92E-56803D2FDB32}" ShortID="284791512">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+										<Property Name="Delay" Type="Real64" Value="0.05"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player Footsteps" ID="{B7172FB0-2AA7-47E4-85A5-5433AE518ADE}" WorkUnitID="{A65D975A-8F86-4FDF-9A84-0275A27BC636}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
