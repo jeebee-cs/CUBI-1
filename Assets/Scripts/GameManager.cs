@@ -52,6 +52,7 @@ public class GameManager : NetworkBehaviour
     void OnClientConnectedCallback(ulong id)
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        _playerMovements = new List<PlayerMovements>();
         for (int i = 0; i < players.Length; i++)
         {
             _playerMovements.Add(players[i].GetComponent<PlayerMovements>());
