@@ -118,6 +118,7 @@ MonoBehaviour:
   _layerBlock:
     serializedVersion: 2
     m_Bits: 64
+  _bigBlock: 0
   deplacementTime: 0.5
 --- !u!114 &688464368750179959
 MonoBehaviour:
@@ -159,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8540928166877733341}
   - component: {fileID: 4497011152150250926}
+  - component: {fileID: 5082948883407906389}
   m_Layer: 6
   m_Name: Moveable Block
   m_TagString: Untagged
@@ -202,3 +204,17 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &5082948883407906389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9004378897801414546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f47b14843566b74e92fec6159c18b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blend: 0
+  go: {fileID: 0}

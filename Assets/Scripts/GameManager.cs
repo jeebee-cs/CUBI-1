@@ -16,6 +16,8 @@ public class GameManager : NetworkBehaviour
     public DreamCollection dreamCollection { get => _dreamCollection; }
     [SerializeField] WinLoose _winLoose;
     public WinLoose winLoose { get => _winLoose; }
+    [SerializeField] SaveManager _saveManager;
+    public SaveManager saveManager { get => _saveManager; }
     static GameManager _instance;
     public static GameManager instance { get => _instance; }
     [SerializeField] DreamDisplayer _dreamDisplayer;
@@ -28,7 +30,7 @@ public class GameManager : NetworkBehaviour
     {
         if (_instance != null && _instance != this)
         {
-            _instance.OnSceneLoaded(_uIManager, _cameraManager, _dreamCollection, _winLoose, _dreamDisplayer, _skyboxBlender);
+            _instance.OnSceneLoaded(_uIManager, _cameraManager, _dreamCollection, _winLoose, _saveManager, _dreamDisplayer, _skyboxBlender);
             Destroy(gameObject);
             return;
         }
@@ -40,7 +42,7 @@ public class GameManager : NetworkBehaviour
         }
         Time.timeScale = 1;
     }
-    public void OnSceneLoaded(UIManager uIManager, CameraManager cameraManager, DreamCollection dreamCollection, WinLoose winLoose, DreamDisplayer dreamDisplayer, SkyboxBlender skyboxBlender)
+    public void OnSceneLoaded(UIManager uIManager, CameraManager cameraManager, DreamCollection dreamCollection, WinLoose winLoose, SaveManager saveManager, DreamDisplayer dreamDisplayer, SkyboxBlender skyboxBlender)
     {
         _uIManager = uIManager;
         _cameraManager = cameraManager;
@@ -48,6 +50,7 @@ public class GameManager : NetworkBehaviour
         _winLoose = winLoose;
         _dreamDisplayer = dreamDisplayer;
         _skyboxBlender = skyboxBlender;
+        _saveManager = saveManager;
     }
     void OnClientConnectedCallback(ulong id)
     {

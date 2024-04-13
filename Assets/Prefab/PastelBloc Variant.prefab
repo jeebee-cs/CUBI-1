@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9ed0774f20e9e484db6d52811fbd17b3,
         type: 3}
       propertyPath: m_Name
-      value: PastelBloc
+      value: PastelBloc Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ed0774f20e9e484db6d52811fbd17b3, type: 3}

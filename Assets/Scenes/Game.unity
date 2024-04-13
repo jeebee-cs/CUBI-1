@@ -7513,6 +7513,7 @@ MonoBehaviour:
   _playerMovements: []
   _dreamCollection: {fileID: 104881152}
   _winLoose: {fileID: 1193438236}
+  _saveManager: {fileID: 0}
   _dreamDisplayer: {fileID: 0}
   _skyboxBlender: {fileID: 0}
 --- !u!4 &750334122
@@ -11764,6 +11765,8 @@ MonoBehaviour:
       m_Calls: []
   winningScore: 0.8
   score: 0.1
+  staticBlock: {fileID: 3817742143562676374, guid: 5adb54a6c79e85442ac1a954703c5373,
+    type: 3}
 --- !u!1001 &1196769455
 PrefabInstance:
   m_ObjectHideFlags: 0

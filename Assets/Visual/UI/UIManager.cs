@@ -12,6 +12,4 @@ public class UIManager : MonoBehaviour
 
     public Slider dreamBar { get => _dreamBar; }
     public TMP_Text neutralDreams { get => _neutralDreamText; }
-
-
 }

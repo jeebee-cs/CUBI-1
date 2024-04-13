@@ -10,46 +10,86 @@ public class WinLoose : MonoBehaviour
     [SerializeField] private UnityEvent winning;
     [SerializeField] float winningScore = 0.80f;
     [SerializeField] float score = 0.10f;
-    private bool gameOver;
+    private bool _gameFinished = false;
+    bool firstBlock = true;
+    [SerializeField] GameObject staticBlock;
+    public bool gameOver { get => _gameFinished; set => _gameFinished = value; }
 
-   
+    public float scoreCount { get => score; set => score = value; }
     public void winCheck(float pointsGained)
     {
         score += pointsGained;
         if (score >= winningScore)
         {
-            Win();
+            LevelWin();
         }
-        else if (score < 0 )
+        else if (score < 0)
         {
-            Loose();
+            Lose();
         }
     }
 
-    public void Loose()
+    public void Lose()
     {
-        if (!gameOver)
-        {
-            Debug.Log("You loose");
-            gameOver = true;
-            Reset();
-        }
+        Debug.Log("You lose");
+        _gameFinished = true;
+        Reset();
     }
-    public void Win()
+
+    public void LevelWin()
     {
-        if (!gameOver)
+        Debug.Log("You win");
+        Reset();
+    }
+
+    /*public void GameWin()
+    {
+        Debug.Log("You win");
+         _gameFinished = true;
+         Reset();
+    }*/
+
+    public void Reload(int reload)
+    {
+        if (GameManager.instance.dreamCollection.dreamsCollectionN - reload >= 0)
         {
-            Debug.Log("You win");
-            gameOver = true;
-            Reset();
+            GameManager.instance.saveManager.saveCall("respawn");
+        }
+        else
+        {
+            Lose();
         }
     }
 
     public void Reset()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(0);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        if (_gameFinished)
+        {
+            //game finished
+            Time.timeScale = 1;
+            SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            
+        }
+
+        else
+        {
+            scoreCount = 0;
+        }
+
+
+    }
+    public void firstBlockChange(GameObject block)
+    {
+        if (firstBlock)
+        {
+            Debug.Log("first block ");
+            firstBlock = false;
+            Vector3 blockPosition = block.transform.position;
+            Destroy(block);
+            Debug.Log("Here " + blockPosition);
+            Instantiate(staticBlock, block.transform.position, Quaternion.identity);
+        }
     }
 }
