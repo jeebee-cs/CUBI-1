@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: a8ca54a46238d44dafdb41c9bfafafb3
     GuidInternal: 
-    m_lastTime: -8584892582780295321
+    m_lastTime: -8584885731856316021
     List:
     - name: AI_Dream_Get
       guid: 4015a16d6132ed4aab1ccb6dc493e2c1
@@ -307,9 +307,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.090455055
       minDuration: 0.090455055
-    - name: Player_FS
+    - name: Player_FS_Start
       guid: ce831c1a5b94944580f39d5dfd5d54c5
-      id: 4276063004
+      id: 1898826353
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -320,13 +320,33 @@ MonoBehaviour:
       - ElementName: Player
         ObjectType: 4
         guid: 0d343f2969699b4faf54637e0c14b9a9
-      - ElementName: Player_FS
+      - ElementName: Player_FS_Start
         ObjectType: 3
         guid: ce831c1a5b94944580f39d5dfd5d54c5
-      Path: Events/Default Work Unit/Player/Player_FS
+      Path: Events/Default Work Unit/Player/Player_FS_Start
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Player_FS_Stop
+      guid: 5b60c2f18654424dacf8f523d1316dee
+      id: 3597576427
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a8ca54a46238d44dafdb41c9bfafafb3
+      - ElementName: Player
+        ObjectType: 4
+        guid: 0d343f2969699b4faf54637e0c14b9a9
+      - ElementName: Player_FS_Stop
+        ObjectType: 3
+        guid: 5b60c2f18654424dacf8f523d1316dee
+      Path: Events/Default Work Unit/Player/Player_FS_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Player_Jump
       guid: adc8dd897fc22f41bf470c5a92106a8c
       id: 1305133589
@@ -421,7 +441,7 @@ MonoBehaviour:
     m_lastTime: -8584892582778355364
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0d0000000e000000
+  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000d0000000e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

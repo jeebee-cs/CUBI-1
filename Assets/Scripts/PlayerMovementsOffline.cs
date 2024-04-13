@@ -40,6 +40,8 @@ public class PlayerMovementsOffline : MonoBehaviour
     Animator animator;
     public Transform orientation;
 
+    private bool isFootstepsPlaying;
+
     void OnValidate()
     {
         minGroundDotProduct = Mathf.Cos(maxGroundAngle * Mathf.Deg2Rad);
@@ -53,7 +55,7 @@ public class PlayerMovementsOffline : MonoBehaviour
 
     void Start()
     {
-        //AkSoundEngine.PostEvent("Music_Start", this.gameObject);
+        AkSoundEngine.PostEvent("Music_Start", this.gameObject);
     }
 
     void Update()
@@ -127,6 +129,17 @@ public class PlayerMovementsOffline : MonoBehaviour
         body.velocity = velocity;
         lastOnGroundTime = 0.0f;
         GetComponent<Rigidbody>().AddForce(Vector3.down * gravity * GetComponent<Rigidbody>().mass);
+
+        if (velocity != Vector3.zero && !isFootstepsPlaying && animator.GetBool("Jump") == false)
+        {
+            AkSoundEngine.PostEvent("Player_FS_Start", this.gameObject);
+            isFootstepsPlaying = true;
+        }
+        if ((velocity == Vector3.zero || animator.GetBool("Jump") == true) && isFootstepsPlaying)
+        {
+            AkSoundEngine.PostEvent("Player_FS_Stop", this.gameObject);
+            isFootstepsPlaying = false;
+        }
     }
 
     void Jump()
@@ -142,7 +155,7 @@ public class PlayerMovementsOffline : MonoBehaviour
             }
             velocity += contactNormal * jumpSpeed;
             jumpBufferCounter = 0f;
-            //AkSoundEngine.PostEvent("Player_Jump", this.gameObject);
+            AkSoundEngine.PostEvent("Player_Jump", this.gameObject);
         }
     }
 
