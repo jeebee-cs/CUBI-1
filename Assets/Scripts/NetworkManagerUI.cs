@@ -20,7 +20,7 @@ public class NetworkManagerUI : MonoBehaviour
 
     IEnumerator HostGameCoroutine()
     {
-        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("Game");
+        AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("MainGame");
         while (!asyncLoadLevel.isDone)
         {
             yield return null;
