@@ -19,7 +19,7 @@ public class voxelMap : MonoBehaviour {
 
     private Vector3 offset;
 
-    private MapTheme mapTheme;
+    public MapTheme mapTheme;
 
     [SerializeField] private BlockTheme jungleTheme;
     [SerializeField] private BlockTheme clockTheme;
@@ -33,9 +33,10 @@ public class voxelMap : MonoBehaviour {
         offset = transform.position;
         voxelMatrix = new ABlock[width,height,depth];
         //childsToMatrix();
-        if (GetComponent<BoxCollider>() == null)
+        if (GetComponent<BoxCollider>() == null) { }
             gameObject.AddComponent<BoxCollider>();
         col = GetComponent<BoxCollider>();
+        col.isTrigger = true;
         col.size = new Vector3(width* 2, height, depth*2);
         col.center = (new Vector3(width, height, depth) / 2);
     }
@@ -70,7 +71,7 @@ public class voxelMap : MonoBehaviour {
             }
         }
 
-        string json = JsonUtility.ToJson(new MapData(width, height, depth, mapTheme,blockDataList.ToArray()));
+        string json = JsonUtility.ToJson(new MapData(width, height, depth, mapTheme, blockDataList.ToArray()));
 
         File.WriteAllText(filePath, json);
 
