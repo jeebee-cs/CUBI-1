@@ -20,6 +20,7 @@ public class MoveableBlock : ABlock
     void Start()
     {
         _networkObject = transform.parent.GetComponent<NetworkObject>();
+        if(_networkObject == null) _networkObject = GetComponent<NetworkObject>();
     }
 
     public void MoveBlock(Vector3 otherPos, ulong clientId)
@@ -96,6 +97,7 @@ public class MoveableBlock : ABlock
     [ServerRpc(RequireOwnership = false)]
     public void ChangeOwnerShipServerRpc(ulong ownerClientId)
     {
+        Debug.Log(_networkObject);
         _networkObject.ChangeOwnership(ownerClientId);
     }
 }

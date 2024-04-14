@@ -7,6 +7,8 @@ public class PushBlock : MonoBehaviour
 {
     private List<MoveableBlock> _moveableBlocks = new List<MoveableBlock>();
     public List<MoveableBlock> moveableBlocks { get => _moveableBlocks; }
+    Vector3 _lastGroundPosition = Vector3.zero;
+    public Vector3 lastGroundPosition { get => _lastGroundPosition; }
     PlayerMovements _playerMovements;
     void Start()
     {
@@ -15,7 +17,9 @@ public class PushBlock : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        _lastGroundPosition = other.gameObject.transform.position + Vector3.up * 2;
         MoveableBlock moveableBlock = other.gameObject.GetComponent<MoveableBlock>();
+
         if (moveableBlock != null)
         {
             // Ajoute le MoveableBlock à la liste
@@ -77,7 +81,12 @@ public class PushBlock : MonoBehaviour
         {
             // Calcule la distance entre le bloc actuel et cet objet
             float distance = Vector3.Distance(transform.position, block.transform.position);
-            if (block.bigBlock) distance *= .5f;
+            if (block.bigBlock)
+            {
+                if (Mathf.Abs(transform.position.y - block.transform.position.y) > 1f) continue;
+                distance *= .5f;
+            }
+            else if (Mathf.Abs(transform.position.y - block.transform.position.y) > .5f) continue;
 
             // Vérifie si cette distance est plus proche que la distance actuelle
             if (distance < nearestDistance)
