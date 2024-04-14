@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-[ExecuteInEditMode]
 public class SkyboxBlender : MonoBehaviour
 {
     public float transitionTime;
@@ -24,12 +23,18 @@ public class SkyboxBlender : MonoBehaviour
     public bool blending = false;
 
     private ReflectionProbe probeComponent = null;
-    private GameObject probeGameObject = null;
+    public GameObject probeGameObject = null;
     private Cubemap blendedCubemap = null;
     private int renderId = -1;
 
+    public void Start()
+    {
+        ChangeSkyboxTheme(MapTheme.JUNGLE);
+    }
+
     public void ChangeSkyboxTheme(MapTheme theme)
     {
+        Debug.Log("balls");
         nextTheme = theme;
         blending = true;
         skybox1 = skyboxes[(int)currentTheme];
@@ -76,7 +81,7 @@ public class SkyboxBlender : MonoBehaviour
 
         if (probeComponent)
         {
-            DestroyImmediate(probeComponent);
+            Destroy(probeComponent);
         }
 
         // Create a Reflection Probe that only contains the Skybox. The Update function controls the Reflection Probe refresh.
@@ -85,8 +90,7 @@ public class SkyboxBlender : MonoBehaviour
     }
     public void UpdateReflectionProbe()
     {
-        //if (!probeGameObject || !probeComponent)
-        CreateReflectionProbe();
+        probeComponent = probeGameObject.GetComponent<ReflectionProbe>();
 
         probeComponent.resolution = 2048;
         probeComponent.size = new Vector3(1, 1, 1);

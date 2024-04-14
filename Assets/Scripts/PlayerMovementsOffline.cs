@@ -184,7 +184,7 @@ public class PlayerMovementsOffline : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         EvaluateCollision(collision);
-        GameManager.instance.saveManager.saveCall("Save");
+        //GameManager.instance.saveManager.saveCall("Save");
     }
 
     void OnCollisionStay(Collision collision)

@@ -7,6 +7,6 @@ public class deadZone : MonoBehaviour
 {
     private void OnTriggerEnter(Collider collision)
     {
-        GameManager.instance.winLoose.Reload(1);
+        collision.gameObject.transform.position = collision.gameObject.GetComponent<PushBlock>().lastGroundPosition;
     }
 }
