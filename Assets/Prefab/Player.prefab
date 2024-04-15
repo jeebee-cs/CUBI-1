@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6437058934883260803}
   - component: {fileID: 5103092149891158785}
-  - component: {fileID: 1390296493116683296}
   - component: {fileID: 1455594003316033108}
   - component: {fileID: 8777385994220822755}
   - component: {fileID: 3188602019907577502}
@@ -18,6 +17,8 @@ GameObject:
   - component: {fileID: 564895682466591763}
   - component: {fileID: 8802429742611642925}
   - component: {fileID: 8648041366689152271}
+  - component: {fileID: 8964338292629920862}
+  - component: {fileID: 5450592426489779874}
   m_Layer: 3
   m_Name: PlayerController
   m_TagString: Player
@@ -93,19 +94,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!135 &1390296493116683296
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691478012142615995}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1455594003316033108
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,13 +124,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 4
   maxAcceleration: 80
-  maxAirAcceleration: 40
-  jumpHeight: 10
+  maxAirAcceleration: 20
+  jumpHeight: 7
   gravity: 40
   coyoteTime: 0.2
   jumpBufferTime: 0.2
   JumpCount: 0
-  maxGroundAngle: 50
+  maxGroundAngle: 45
   orientation: {fileID: 4185995039885274418}
 --- !u!95 &3188602019907577502
 Animator:
@@ -233,6 +221,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransitionStateInfoList: []
   m_Animator: {fileID: 3188602019907577502}
+--- !u!114 &8964338292629920862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691478012142615995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27089943865f620299ac1c43bf23a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &5450592426489779874
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691478012142615995}
+  m_Material: {fileID: 13400000, guid: 0a5a9fdfbce27065f9d4acf822031f79, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.341128
+  m_Height: 1.0274671
+  m_Direction: 1
+  m_Center: {x: 0.15887213, y: 0.013733506, z: 0}
 --- !u!1 &5842180342739160920
 GameObject:
   m_ObjectHideFlags: 0

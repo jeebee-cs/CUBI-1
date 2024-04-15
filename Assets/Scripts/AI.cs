@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using static DrawArrow;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum AIState
 {
@@ -53,6 +54,22 @@ public class AI : MonoBehaviour
 
     void Update()
     {
+        List<PlayerMovements> players = GameManager.instance.playerMovements;
+        PlayerMovements closestPlayer = null;
+        float minDistance = float.MaxValue;
+
+        foreach(PlayerMovements player in players)
+        {
+            float distance = Vector3.Distance(transform.position, player.transform.position);
+            if(distance < minDistance)
+            {
+                minDistance = distance;
+                closestPlayer = player;
+            }
+        }
+
+        playerToFleeFrom = closestPlayer.gameObject;
+
         switch (currentState)
         {
             case AIState.RandomMovement:
