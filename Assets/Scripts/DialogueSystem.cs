@@ -22,7 +22,7 @@ public class DialogueSystem : SerializedMonoBehaviour
         { "Slow", 0.075f },
     };
 
-    private bool inEvent = false;
+    public bool inEvent = false;
 
     public void Awake()
     {
@@ -31,11 +31,11 @@ public class DialogueSystem : SerializedMonoBehaviour
 
     public IEnumerator DisplayDialogue(string dialogue)
     {
-        if (inEvent)
+        /*if (inEvent)
         {
             Debug.Log("Already in dialogue");
             yield return null;
-        }
+        }*/
 
         inEvent = true; 
         dialogueText.gameObject.SetActive(true);
@@ -57,6 +57,7 @@ public class DialogueSystem : SerializedMonoBehaviour
 
     IEnumerator DisplayText(string dialogue)
     {
+        dialogueText.color = new Color(dialogueText.color.r, dialogueText.color.g, dialogueText.color.b);
         dialogueText.text = dialogue;
         dialogueText.ForceMeshUpdate();
         // Type sentence //
@@ -78,11 +79,11 @@ public class DialogueSystem : SerializedMonoBehaviour
         yield return null;
     }
 
-    IEnumerator FadeTextAway(float time)
+    public IEnumerator FadeTextAway(float time)
     {
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
-            dialogueText.color = new Color(1, 1, 1, i);
+            dialogueText.color = new Color(dialogueText.color.r, dialogueText.color.g, dialogueText.color.b, i);
             yield return null;
         }
     }

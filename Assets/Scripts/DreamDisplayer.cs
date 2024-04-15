@@ -15,6 +15,24 @@ public class DreamDisplayer : DialogueSystem
     {
         string dialogue = RandomDialogue(dreamType);
 
+        switch (dreamType)
+        {
+            case DreamType.NEUTRAL:
+                dialogueText.color = Color.white;
+                break;
+            case DreamType.GOOD:
+                dialogueText.color = Color.green;
+                break;
+            case DreamType.BAD:
+                dialogueText.color = Color.red;
+                break;
+        }
+
+        if (GameManager.instance.dreamDisplayer.inEvent)
+        {
+            StopCoroutine(DisplayDialogue(dialogue));
+            StopCoroutine(FadeTextAway(1));
+        }
         StartCoroutine(DisplayDialogue(dialogue));
     }
 
