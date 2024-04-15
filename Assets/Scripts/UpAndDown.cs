@@ -5,10 +5,12 @@ using UnityEngine;
 public class UpAndDown : MonoBehaviour
 {
     Vector2 originalPosition;
+    float randomSpeed;
     void Start()
     {
         originalPosition = transform.position;
         StartCoroutine(UpAndDownCoroutine());
+        randomSpeed = Random.Range(0.0007f, 0.001f);
     }
     IEnumerator UpAndDownCoroutine()
     {
@@ -16,12 +18,12 @@ public class UpAndDown : MonoBehaviour
         {
             while (transform.position.y < originalPosition.y + .05f)
             {
-                transform.position = transform.position + new Vector3(0, 0.001f, 0);
+                transform.position = transform.position + new Vector3(0, randomSpeed, 0);
                 yield return null;
             }
             while (transform.position.y > originalPosition.y - .05f)
             {
-                transform.position = transform.position + new Vector3(0, -0.001f, 0);
+                transform.position = transform.position + new Vector3(0, -randomSpeed, 0);
                 yield return null;
             }
             yield return null;
