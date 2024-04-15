@@ -43,6 +43,13 @@ public class AI : MonoBehaviour
     private Vector3 randomDirection;
     private AIState currentState = AIState.RandomMovement;
 
+    private Animator AIanim;
+
+    void Awake()
+    {
+        AIanim = GetComponent<Animator>();
+    }
+
     void Start()
     {
         changeDirectionTimer = changeDirectionInterval;
@@ -74,21 +81,51 @@ public class AI : MonoBehaviour
         {
             case AIState.RandomMovement:
                 RandomMovement();
+                AIanim.SetBool("flying", true);
+                AIanim.SetBool("escaping", false);
+                AIanim.SetBool("stole", false);
+                AIanim.SetBool("found", false);
+                AIanim.SetBool("search", false);
                 break;
             case AIState.LookForTarget:
                 LookForTarget();
+                AIanim.SetBool("flying", false);
+                AIanim.SetBool("escaping", false);
+                AIanim.SetBool("stole", false);
+                AIanim.SetBool("found", false);
+                AIanim.SetBool("search", true);
                 break;
             case AIState.MoveToTarget:
                 MoveToTarget();
+                AIanim.SetBool("flying", true);
+                AIanim.SetBool("escaping", false);
+                AIanim.SetBool("stole", false);
+                AIanim.SetBool("found", false);
+                AIanim.SetBool("search", false);
                 break;
             case AIState.HoverAroundTarget:
                 HoverAroundTarget();
+                AIanim.SetBool("flying", false);
+                AIanim.SetBool("escaping", false);
+                AIanim.SetBool("stole", false);
+                AIanim.SetBool("found", true);
+                AIanim.SetBool("search", false);
                 break;
             case AIState.Flee:
                 Flee();
+                AIanim.SetBool("flying", false);
+                AIanim.SetBool("escaping", true);
+                AIanim.SetBool("stole", false);
+                AIanim.SetBool("found", false);
+                AIanim.SetBool("search", false);
                 break;
             case AIState.returnInPlayerRange:
                 returnInPlayerRange();
+                AIanim.SetBool("flying", true);
+                AIanim.SetBool("escaping", false);
+                AIanim.SetBool("stole", false);
+                AIanim.SetBool("found", false);
+                AIanim.SetBool("search", false);
                 break;
         }
     }
@@ -169,14 +206,14 @@ public class AI : MonoBehaviour
     {
         modifyTargetTimer -= Time.deltaTime;
         // Calculate a random point within a 1 unit radius sphere around the target
-        Vector3 randomPoint = Random.insideUnitSphere * 1f + currentTarget.transform.position;
+        Vector3 above = new Vector3(currentTarget.transform.position.x, currentTarget.transform.position.y+1,currentTarget.transform.position.z);
 
         // Move towards the random point
-        transform.position = Vector3.MoveTowards(transform.position, randomPoint, movementSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, above, movementSpeed * Time.deltaTime);
 
         if (modifyTargetTimer <= 0f)
         {
-            //each 10 seconds, the AI will chose a new target and head toward it
+            AIanim.SetBool("stole", true);
             modifyTargetTimer = modifyTargetInterval;
             Dream targetDream = currentTarget.GetComponent<Dream>();
             targetDream.setDreamType(DreamType.BAD);
