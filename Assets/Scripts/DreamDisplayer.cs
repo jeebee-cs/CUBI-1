@@ -6,6 +6,11 @@ public class DreamDisplayer : DialogueSystem
 {
     public DreamDialogues dialoguesPool;
 
+    public void Start()
+    {
+        DisplayDreamDialogue(DreamType.NEUTRAL);
+    }
+
     public void DisplayDreamDialogue(DreamType dreamType)
     {
         string dialogue = RandomDialogue(dreamType);

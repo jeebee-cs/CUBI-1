@@ -24,6 +24,11 @@ public class DialogueSystem : SerializedMonoBehaviour
 
     private bool inEvent = false;
 
+    public void Awake()
+    {
+        dialogueText.gameObject.SetActive(false);
+    }
+
     public IEnumerator DisplayDialogue(string dialogue)
     {
         if (inEvent)
