@@ -38,7 +38,7 @@ public class GameManager : NetworkBehaviour
         {
             DontDestroyOnLoad(this);
             _instance = this;
-            //NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
+            NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
         }
         Time.timeScale = 1;
     }
