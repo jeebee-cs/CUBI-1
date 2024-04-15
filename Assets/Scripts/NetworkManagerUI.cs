@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
 using UnityEngine.SceneManagement;
+using Unity.Netcode.Transports.UTP;
+using TMPro;
 
 public class NetworkManagerUI : MonoBehaviour
 {
-
+    [SerializeField] TMP_InputField _ipAdresse;
     public void HostGame()
     {
         GameManager.instance.StartCoroutine(HostGameCoroutine());
@@ -30,6 +32,7 @@ public class NetworkManagerUI : MonoBehaviour
 
     IEnumerator JoinClientCoroutine()
     {
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(_ipAdresse.text, 7777);
         AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync("MainGame");
         while (!asyncLoadLevel.isDone)
         {

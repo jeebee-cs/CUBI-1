@@ -132,6 +132,7 @@ MonoBehaviour:
   _layerBlock:
     serializedVersion: 2
     m_Bits: 64
+  _bigBlock: 0
   deplacementTime: 0.5
 --- !u!114 &5453081220103973611
 MonoBehaviour:

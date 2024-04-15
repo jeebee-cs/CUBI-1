@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: JungleTheme
   m_EditorClassIdentifier: 
   smallBlocks:
-  - {fileID: 919132149155446097, guid: a8d6ab34f07e9c846ab47e54becce43b, type: 3}
-  - {fileID: 919132149155446097, guid: 062bfea406730fb4a97b1b3a13c88d51, type: 3}
   - {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b, type: 3}
   - {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035, type: 3}
   - {fileID: 7733201416027377379, guid: 91164615f66ac40428783e95a6b5e687, type: 3}
