@@ -107,7 +107,6 @@ public class AI : MonoBehaviour
                 HoverAroundTarget();
                 AIanim.SetBool("flying", false);
                 AIanim.SetBool("escaping", false);
-                AIanim.SetBool("stole", false);
                 AIanim.SetBool("found", true);
                 AIanim.SetBool("search", false);
                 break;
@@ -211,14 +210,9 @@ public class AI : MonoBehaviour
         // Move towards the random point
         transform.position = Vector3.MoveTowards(transform.position, above, movementSpeed * Time.deltaTime);
 
-        if (modifyTargetTimer <= 0f)
+        if (modifyTargetTimer <= 0f && !AIanim.GetBool("stole"))
         {
-            AIanim.SetBool("stole", true);
-            modifyTargetTimer = modifyTargetInterval;
-            Dream targetDream = currentTarget.GetComponent<Dream>();
-            targetDream.setDreamType(DreamType.BAD);
-
-            currentState = AIState.RandomMovement;
+            StartCoroutine(PlayStoleAnimation());
         }
 
         // Check if player is too close
@@ -306,6 +300,18 @@ public class AI : MonoBehaviour
             currentState = AIState.RandomMovement;
             return;
         }
+    }
+
+    IEnumerator PlayStoleAnimation()
+    {
+        AIanim.SetBool("stole", true);
+        yield return new WaitForSeconds(0.3f);
+        AIanim.SetBool("stole", false);
+         modifyTargetTimer = modifyTargetInterval;
+        Dream targetDream = currentTarget.GetComponent<Dream>();
+        targetDream.setDreamType(DreamType.BAD);
+
+        currentState = AIState.RandomMovement;
     }
 
     void OnDrawGizmos()
