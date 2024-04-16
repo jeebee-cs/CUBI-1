@@ -16,13 +16,13 @@ public class WinLoose : MonoBehaviour
     [SerializeField] GameObject staticBlock;
     public bool gameOver { get => _gameFinished; set => _gameFinished = value; }
 
-    public void winCheck()
+    public void winCheck(float dreamEnergy, int neutralDreamCollected)
     {
-        if (GameManager.instance.dreamEnergy >= winningScore)
+        if (dreamEnergy >= winningScore)
         {
             LevelWin();
         }
-        else if (GameManager.instance.dreamEnergy < 0)
+        else if (dreamEnergy < 0 || neutralDreamCollected < 0)
         {
             Lose();
         }

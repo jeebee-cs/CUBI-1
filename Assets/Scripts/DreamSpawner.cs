@@ -28,8 +28,8 @@ public class DreamSpawner : MonoBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void SpawnServerRpc(int index)
     {
-        GameObject gameObject = Instantiate(dreamSpawnList[index], transform.position, Quaternion.identity);
-        gameObject.GetComponent<NetworkObject>().Spawn();
+        GameObject gameObjectDream = Instantiate(dreamSpawnList[index], transform.position, Quaternion.identity);
+        gameObjectDream.GetComponent<NetworkObject>().Spawn();
     }
 
 }

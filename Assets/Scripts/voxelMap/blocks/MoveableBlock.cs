@@ -20,7 +20,7 @@ public class MoveableBlock : ABlock
     void Start()
     {
         _networkObject = transform.parent.GetComponent<NetworkObject>();
-        if(_networkObject == null) _networkObject = GetComponent<NetworkObject>();
+        if (_networkObject == null) _networkObject = GetComponent<NetworkObject>();
     }
 
     public void MoveBlock(Vector3 otherPos, ulong clientId)
@@ -64,16 +64,16 @@ public class MoveableBlock : ABlock
         }
         else
         {
-            if (Physics.Raycast(transform.position, directionToPush, 1f, _layerBlock))
+            if (Physics.OverlapBox(transform.position + directionToPush, new Vector3(.4f, .4f, .4f), Quaternion.identity, _layerBlock).Length != 0)
             {
                 Debug.Log("Block hit");
                 return;
             }
         }
-            StartCoroutine(SmoothLerp(transform.position + directionToPush, deplacementTime));
-            //AkSoundEngine.PostEvent("Block_Push", this.gameObject);
-            IsMoving = true;
-       
+        StartCoroutine(SmoothLerp(transform.position + directionToPush, deplacementTime));
+        //AkSoundEngine.PostEvent("Block_Push", this.gameObject);
+        IsMoving = true;
+
     }
 
     private IEnumerator SmoothLerp(Vector3 newPosition, float time)

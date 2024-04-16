@@ -51,10 +51,6 @@ public class SaveManager : MonoBehaviour
         {
             Load();
         }
-        if (option == "respawn")
-        {
-            respawn(playerObject.transform);
-        }
     }
 
 
@@ -94,28 +90,12 @@ public class SaveManager : MonoBehaviour
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
 
             gameManager.uIManager.neutralDreams.text = saveObject.neutralDreams.ToString();
-            gameManager.SetNeutralDreamCollectedServerRpc(saveObject.neutralDreams);
-            gameManager.SetDreamEnergyServerRpc(saveObject.totalScore);
             playerObject.transform.position = playerPosition;
         }
 
     }
 
-    private void respawn(Transform player)
-    {
-        GameManager gameManager = GameManager.instance;
-        string saveString = SaveSystem.Load();
-        if (saveString != null)
-        {
 
-            SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
-            gameManager.SetNeutralDreamCollectedServerRpc(saveObject.neutralDreams - 1);
-            gameManager.SetDreamEnergyServerRpc(saveObject.totalScore - 0.05f);
-            playerObject.transform.position = player.position;
-            gameManager.uIManager.neutralDreams.text = saveObject.neutralDreams.ToString();
-        }
-
-    }
     private class SaveObject
     {
         public int neutralDreams;
