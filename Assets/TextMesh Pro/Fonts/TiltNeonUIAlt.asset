@@ -9,8 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: TiltNeon-Regular-VariableFont_XROT,YROT SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ValidKeywords:
-  - UNDERLAY_ON
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -54,7 +53,7 @@ Material:
     - _ColorMask: 15
     - _CullMode: 0
     - _Diffuse: 0.5
-    - _FaceDilate: 0.275
+    - _FaceDilate: 0.246
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
     - _GlowInner: 0.05
@@ -72,8 +71,8 @@ Material:
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.44791666
-    - _ScaleRatioC: 0.3574754
+    - _ScaleRatioB: 0.47208333
+    - _ScaleRatioC: 0.23604167
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -86,9 +85,9 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 512
     - _TextureWidth: 512
-    - _UnderlayDilate: 0.253
-    - _UnderlayOffsetX: 1
-    - _UnderlayOffsetY: 0.143
+    - _UnderlayDilate: 1
+    - _UnderlayOffsetX: -1
+    - _UnderlayOffsetY: 1
     - _UnderlaySoftness: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
@@ -104,7 +103,7 @@ Material:
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 1}
+    - _UnderlayColor: {r: 0.2951673, g: 0.60872537, b: 0.6320754, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -116,11 +115,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: TiltNeon-Regular-VariableFont_XROT,YROT SDF
+  m_Name: TiltNeonUIAlt
   m_EditorClassIdentifier: 
-  hashCode: 2004853027
+  hashCode: 585738730
   material: {fileID: -5516416914262516711}
-  materialHashCode: -1852154589
+  materialHashCode: 1534859786
   m_Version: 1.1.0
   m_SourceFontFileGUID: beeea6271e4064ecf9ccafed66cf4a84
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: beeea6271e4064ecf9ccafed66cf4a84,

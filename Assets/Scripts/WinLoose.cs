@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,22 +9,20 @@ using UnityEngine.SceneManagement;
 public class WinLoose : MonoBehaviour
 {
     [SerializeField] private UnityEvent winning;
-    [SerializeField] float winningScore = 0.80f;
-    [SerializeField] float score = 0.10f;
+    [SerializeField] float winningScore = 1;
+    Coroutine resetGameCoroutine = null;
     private bool _gameFinished = false;
     bool firstBlock = true;
     [SerializeField] GameObject staticBlock;
     public bool gameOver { get => _gameFinished; set => _gameFinished = value; }
 
-    public float scoreCount { get => score; set => score = value; }
-    public void winCheck(float pointsGained)
+    public void winCheck()
     {
-        score += pointsGained;
-        if (score >= winningScore)
+        if (GameManager.instance.dreamEnergy >= winningScore)
         {
             LevelWin();
         }
-        else if (score < 0)
+        else if (GameManager.instance.dreamEnergy < 0)
         {
             Lose();
         }
@@ -33,13 +32,13 @@ public class WinLoose : MonoBehaviour
     {
         Debug.Log("You lose");
         _gameFinished = true;
-        Reset();
+        ResetGame("Lose");
     }
 
     public void LevelWin()
     {
         Debug.Log("You win");
-        Reset();
+        ResetGame("Win");
     }
 
     /*public void GameWin()
@@ -51,7 +50,7 @@ public class WinLoose : MonoBehaviour
 
     public void Reload(int reload)
     {
-        if (GameManager.instance.dreamCollection.dreamsCollectionN - reload >= 0)
+        if (GameManager.instance.neutralDreamCollected - reload >= 0)
         {
             GameManager.instance.saveManager.saveCall("respawn");
         }
@@ -61,24 +60,35 @@ public class WinLoose : MonoBehaviour
         }
     }
 
-    public void Reset()
+    public void ResetGame(string scene)
+    {
+        if (resetGameCoroutine == null) resetGameCoroutine = StartCoroutine(ResetGameCoroutine(scene));
+    }
+    public IEnumerator ResetGameCoroutine(string scene)
     {
         if (_gameFinished)
         {
-            //game finished
             Time.timeScale = 1;
-            SceneManager.LoadScene(0);
+            NetworkManager.Singleton.Shutdown();
+            while (NetworkManager.Singleton.ShutdownInProgress)
+            {
+                yield return null;
+            }
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            
+            Destroy(NetworkManager.Singleton.gameObject);
+            Destroy(GameManager.instance.gameObject);
+            AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync(scene);
+            while (!asyncLoadLevel.isDone)
+            {
+                yield return null;
+            }
         }
 
         else
         {
-            scoreCount = 0;
+            GameManager.instance.SetDreamEnergyServerRpc(0);
         }
-
-
     }
     public void firstBlockChange(GameObject block)
     {

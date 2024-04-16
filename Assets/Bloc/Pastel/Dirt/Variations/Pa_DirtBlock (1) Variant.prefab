@@ -755,6 +755,7 @@ MonoBehaviour:
   _layerBlock:
     serializedVersion: 2
     m_Bits: 64
+  _bigBlock: 0
   deplacementTime: 0.5
 --- !u!4 &2974311769293976583 stripped
 Transform:

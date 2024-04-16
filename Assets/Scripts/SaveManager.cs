@@ -62,11 +62,11 @@ public class SaveManager : MonoBehaviour
     {
         GameManager gameManager = GameManager.instance;
         playerPosition = playerObject.transform.position;
-        neutralDreams = gameManager.dreamCollection.dreamsCollectionN;
-        totalScore = gameManager.winLoose.scoreCount;
+        neutralDreams = gameManager.neutralDreamCollected;
+        totalScore = gameManager.dreamEnergy;
         neutralDreamsUI = gameManager.uIManager.neutralDreams.text;
         string dir = Application.persistentDataPath + directory;
-
+        Debug.Log(dir);
         if (!Directory.Exists(dir))
         {
             Directory.CreateDirectory(dir);
@@ -94,8 +94,8 @@ public class SaveManager : MonoBehaviour
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
 
             gameManager.uIManager.neutralDreams.text = saveObject.neutralDreams.ToString();
-            gameManager.dreamCollection.dreamsCollectionN = saveObject.neutralDreams;
-            gameManager.winLoose.scoreCount = saveObject.totalScore;
+            gameManager.SetNeutralDreamCollectedServerRpc(saveObject.neutralDreams);
+            gameManager.SetDreamEnergyServerRpc(saveObject.totalScore);
             playerObject.transform.position = playerPosition;
         }
 
@@ -109,8 +109,8 @@ public class SaveManager : MonoBehaviour
         {
 
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
-            gameManager.dreamCollection.dreamsCollectionN = saveObject.neutralDreams - 1;
-            gameManager.winLoose.scoreCount = saveObject.totalScore - 0.05f;
+            gameManager.SetNeutralDreamCollectedServerRpc(saveObject.neutralDreams - 1);
+            gameManager.SetDreamEnergyServerRpc(saveObject.totalScore - 0.05f);
             playerObject.transform.position = player.position;
             gameManager.uIManager.neutralDreams.text = saveObject.neutralDreams.ToString();
         }

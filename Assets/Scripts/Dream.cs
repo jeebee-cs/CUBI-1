@@ -34,6 +34,10 @@ public class Dream : NetworkBehaviour
         {
             GameManager.instance.dreamCollection.DreamNCollect();
         }
+
+        //Send dreamType to DreamDisplayer (handles dialogues)
+        GameManager.instance.dreamDisplayer.DisplayDreamDialogue(dreamType);
+
         DespawnServerRpc();
     }
 

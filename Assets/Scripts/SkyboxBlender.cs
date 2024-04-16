@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class SkyboxBlender : MonoBehaviour
 {
-    public float transitionTime;
+    public float transitionTime = 2;
 
     public Cubemap[] skyboxes;
     public MapTheme currentTheme;
@@ -27,6 +27,8 @@ public class SkyboxBlender : MonoBehaviour
     private Cubemap blendedCubemap = null;
     private int renderId = -1;
 
+    public List<ShitToRender> shitToRenderHAHAHA = new List<ShitToRender>();
+
     public void Start()
     {
         ChangeSkyboxTheme(MapTheme.JUNGLE);
@@ -37,6 +39,23 @@ public class SkyboxBlender : MonoBehaviour
         Debug.Log("balls");
         nextTheme = theme;
         blending = true;
+        for(int i = 0; i < shitToRenderHAHAHA.Count;i++)
+        {
+            if(i == (int)currentTheme)
+            {
+                foreach(GameObject go in shitToRenderHAHAHA[i].shits)
+                {
+                    go.SetActive(true);
+                }
+            }
+            else
+            {
+                foreach (GameObject go in shitToRenderHAHAHA[i].shits)
+                {
+                    go.SetActive(false);
+                }
+            }
+        }
         skybox1 = skyboxes[(int)currentTheme];
         skybox2 = skyboxes[(int)nextTheme];
         StartCoroutine(LerpBlend(1, transitionTime));
@@ -57,6 +76,7 @@ public class SkyboxBlender : MonoBehaviour
         blending = false;
         currentTheme = nextTheme;
         blend = 0;
+        yield return null;
     }
     public void UpdateSkybox()
     {
@@ -92,7 +112,7 @@ public class SkyboxBlender : MonoBehaviour
     {
         probeComponent = probeGameObject.GetComponent<ReflectionProbe>();
 
-        probeComponent.resolution = 2048;
+        probeComponent.resolution = 128;
         probeComponent.size = new Vector3(1, 1, 1);
         probeComponent.cullingMask = 0;
         probeComponent.clearFlags = ReflectionProbeClearFlags.Skybox;
@@ -146,4 +166,9 @@ public class SkyboxBlender : MonoBehaviour
         blendedMaterial.SetTexture("_Skybox2", skybox2);
         blendedMaterial.SetFloat("_Blend", blend);
     }
+}
+[System.Serializable]
+public class ShitToRender
+{
+    public List<GameObject> shits;
 }

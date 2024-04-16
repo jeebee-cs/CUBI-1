@@ -14,24 +14,24 @@ public class UIHelpScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("u"))
+        if (Input.GetAxis("Next") != 0.0)
         {
             uiAnimator.ResetTrigger("Previous");
             uiAnimator.SetTrigger("Next");
         }
-        if (Input.GetKeyDown("i"))
+        if (Input.GetAxis("Previous") != 0.0)
         {
             uiAnimator.ResetTrigger("Next");
             uiAnimator.SetTrigger("Previous");
         }
-        if (Input.GetKeyDown("f"))
+        if (Input.GetAxis("Fire2") != 0.0)
         {
             uiAnimator.SetTrigger("Called");
             uiAnimator.ResetTrigger("Next");
             uiAnimator.ResetTrigger("Previous");
             uiAnimator.ResetTrigger("Closed");
         }
-        if (Input.GetKeyDown("g"))
+        if (Input.GetAxis("Cancel") != 0.0)
         {
             uiAnimator.SetTrigger("Closed");
             uiAnimator.ResetTrigger("Next");
