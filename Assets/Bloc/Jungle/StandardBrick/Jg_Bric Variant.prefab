@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_Bric Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9cd06b7210aac33428b899216e1274e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd06b7210aac33428b899216e1274e4, type: 3}
 --- !u!1 &6044868124375403900 stripped
@@ -127,6 +132,7 @@ MonoBehaviour:
   _layerBlock:
     serializedVersion: 2
     m_Bits: 64
+  _bigBlock: 0
   deplacementTime: 0.5
 --- !u!114 &7177004810294966944
 MonoBehaviour:

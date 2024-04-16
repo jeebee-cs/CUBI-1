@@ -9,9 +9,9 @@ public class Dream : NetworkBehaviour
     [SerializeField] float dreamPointBad = -0.5f;
     [SerializeField] float dreamPointNeutral = 0.1f;
     [SerializeField] private DreamType dreamType;
-    [SerializeField] private RuntimeAnimatorController  goodDreamAnim;
-    [SerializeField] private RuntimeAnimatorController  badDreamAnim;
-    [SerializeField] private RuntimeAnimatorController  neutralDreamAnim;
+    [SerializeField] private RuntimeAnimatorController goodDreamAnim;
+    [SerializeField] private RuntimeAnimatorController badDreamAnim;
+    [SerializeField] private RuntimeAnimatorController neutralDreamAnim;
     NetworkObject _networkObject;
     private void Start()
     {
@@ -28,19 +28,20 @@ public class Dream : NetworkBehaviour
         {
             //AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
         }
-        float[] dreamTypeList = {dreamPointNeutral, dreamPointGood, dreamPointBad};
+        float[] dreamTypeList = { dreamPointNeutral, dreamPointGood, dreamPointBad };
 
         GameManager.instance.SetDreamEnergyServerRpc(GameManager.instance.dreamEnergy + dreamTypeList[(int)dreamType]);
-        GameManager.instance.winLoose.winCheck();
 
         if (dreamType == DreamType.NEUTRAL)
         {
-            GameManager.instance.dreamCollection.DreamNCollect();
+            if (GameManager.instance.neutralDreamCollected <= 6)
+            {
+                GameManager.instance.SetNeutralDreamCollectedServerRpc(GameManager.instance.neutralDreamCollected + 1);
+            }
         }
 
         //Send dreamType to DreamDisplayer (handles dialogues)
         GameManager.instance.dreamDisplayer.DisplayDreamDialogue(dreamType);
-
         DespawnServerRpc();
     }
 
@@ -52,7 +53,7 @@ public class Dream : NetworkBehaviour
 
     public void setDreamType(DreamType newDreamType)
     {
-        RuntimeAnimatorController[] animList = {neutralDreamAnim, goodDreamAnim, badDreamAnim};
+        RuntimeAnimatorController[] animList = { neutralDreamAnim, goodDreamAnim, badDreamAnim };
         dreamType = newDreamType;
         gameObject.GetComponent<Animator>().runtimeAnimatorController = animList[(int)newDreamType];
     }

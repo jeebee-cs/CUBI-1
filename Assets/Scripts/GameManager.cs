@@ -11,7 +11,7 @@ public class GameManager : NetworkBehaviour
     NetworkVariable<float> _dreamEnergy = new NetworkVariable<float>();
     public float dreamEnergy { get => _dreamEnergy.Value; }
     NetworkVariable<int> _neutralDreamCollected = new NetworkVariable<int>();
-    public int neutralDreamCollected { get => _neutralDreamCollected.Value;}
+    public int neutralDreamCollected { get => _neutralDreamCollected.Value; }
     [SerializeField] CameraManager _cameraManager;
     public CameraManager cameraManager { get => _cameraManager; }
     [SerializeField] List<PlayerMovements> _playerMovements = new List<PlayerMovements>();
@@ -44,7 +44,7 @@ public class GameManager : NetworkBehaviour
             SetDreamEnergyServerRpc(0);
             SetNeutralDreamCollectedServerRpc(0);
             _instance = this;
-            //NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
+            NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
         }
         Time.timeScale = 1;
     }
@@ -69,14 +69,37 @@ public class GameManager : NetworkBehaviour
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void SetDreamEnergyServerRpc(float dreamEnergy) {
+    public void SetDreamEnergyServerRpc(float dreamEnergy)
+    {
+        Debug.Log(_dreamEnergy.Value);
         _dreamEnergy.Value = dreamEnergy;
         _uIManager.dreamBar.value = _dreamEnergy.Value;
+        SetDreamEnergyClientRpc(dreamEnergy);
+        _winLoose.winCheck(dreamEnergy, _neutralDreamCollected.Value);
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void SetNeutralDreamCollectedServerRpc(int neutralDreamCollected) {
+    public void SetNeutralDreamCollectedServerRpc(int neutralDreamCollected)
+    {
+        Debug.Log(_neutralDreamCollected.Value);
         _neutralDreamCollected.Value = neutralDreamCollected;
         _uIManager.neutralDreams.text = _neutralDreamCollected.Value.ToString();
+        SetNeutralDreamCollectedClientRpc(neutralDreamCollected);
+        _winLoose.winCheck(_dreamEnergy.Value, neutralDreamCollected);
+    }
+    [ClientRpc]
+    public void SetDreamEnergyClientRpc(float dreamEnergy)
+    {
+        Debug.Log(dreamEnergy);
+        _uIManager.dreamBar.value = dreamEnergy;
+        _winLoose.winCheck(dreamEnergy, _neutralDreamCollected.Value);
+    }
+
+    [ClientRpc]
+    public void SetNeutralDreamCollectedClientRpc(int neutralDreamCollected)
+    {
+        Debug.Log(_neutralDreamCollected.Value);
+        _uIManager.neutralDreams.text = neutralDreamCollected.ToString();
+        _winLoose.winCheck(_dreamEnergy.Value, neutralDreamCollected);
     }
 }
