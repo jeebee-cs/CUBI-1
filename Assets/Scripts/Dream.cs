@@ -20,13 +20,14 @@ public class Dream : NetworkBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (!_networkObject.IsSpawned) return;
         if (other.gameObject.name == "AI")
         {
-            AkSoundEngine.PostEvent("AI_Dream_Get", this.gameObject);
+            AkSoundEngine.PostEvent("AI_Dream_Get", gameObject);
         }
         else
         {
-            AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
+            AkSoundEngine.PostEvent("Player_Dream_Get", gameObject);
         }
         float[] dreamTypeList = { dreamPointNeutral, dreamPointGood, dreamPointBad };
 

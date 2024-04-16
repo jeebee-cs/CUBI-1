@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99999905, g: 0, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.7803404, g: 0.52392584, b: 0.9835949, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,6 +135,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 135085720
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -215,6 +220,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2623242437
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -370,6 +380,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 352371653
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -445,6 +460,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -600,6 +620,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -760,6 +785,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 996772126
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -840,6 +870,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3582376206
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -1065,6 +1100,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1017383988
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &34298908 stripped
@@ -1160,6 +1200,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3127155989
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -1335,6 +1380,7 @@ MonoBehaviour:
   width: 8
   height: 12
   depth: 8
+  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -1484,6 +1530,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1248824453
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -1564,6 +1615,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3320368771
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -1664,6 +1720,7 @@ MonoBehaviour:
   width: 6
   height: 6
   depth: 7
+  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -1789,6 +1846,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -1913,6 +1975,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: -402668701998234361, guid: 1dd2db2b7c5331047bee90da0d3024e6,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -2068,6 +2135,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -2148,6 +2220,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: -402668701998234361, guid: 1dd2db2b7c5331047bee90da0d3024e6,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -2238,6 +2315,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -2388,6 +2470,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3082166803
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -2468,6 +2555,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2139073880
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -2548,6 +2640,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2110042832
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -2623,6 +2720,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -2708,6 +2810,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -2793,6 +2900,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3666456371
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -2933,6 +3045,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2804129074
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &162591433 stripped
@@ -2948,6 +3065,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -3033,6 +3155,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 465714478
       objectReference: {fileID: 0}
+    - target: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6111867334319060071, guid: 164b35fe69592bf478b8ce8711e2c516,
         type: 3}
       propertyPath: m_RootOrder
@@ -3252,6 +3379,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -3332,6 +3464,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -3492,6 +3629,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -2755817237217315107, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 142010182942281423, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
         type: 3}
       propertyPath: m_Name
@@ -3572,6 +3714,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -3831,6 +3978,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1346971472
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -3986,6 +4138,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2141701756
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -4136,6 +4293,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -4281,6 +4443,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2473070698
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &207997740 stripped
@@ -4407,6 +4574,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1405657848
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -4492,6 +4664,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -4562,6 +4739,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -4717,6 +4899,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -1836675179362206602, guid: 48438649d5f207a488037428ec74a49b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b,
         type: 3}
       propertyPath: m_Name
@@ -4947,6 +5134,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -5107,6 +5299,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2862066489
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -5182,6 +5379,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -1836675179362206602, guid: 48438649d5f207a488037428ec74a49b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b,
         type: 3}
       propertyPath: m_Name
@@ -5267,6 +5469,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2503409988
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -5342,6 +5549,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -5427,6 +5639,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1553904358
       objectReference: {fileID: 0}
+    - target: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6111867334319060071, guid: 164b35fe69592bf478b8ce8711e2c516,
         type: 3}
       propertyPath: m_RootOrder
@@ -5507,6 +5724,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2754986055
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -5882,6 +6104,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -5962,6 +6189,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -6052,6 +6284,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3577830376
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -6277,6 +6514,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -6357,6 +6599,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -6517,6 +6764,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3390962134
       objectReference: {fileID: 0}
+    - target: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed,
         type: 3}
       propertyPath: m_Name
@@ -6592,6 +6844,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: -402668701998234361, guid: 1dd2db2b7c5331047bee90da0d3024e6,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -6672,6 +6929,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: 4617590737084488270, guid: 180744c7c9c243843a55981c4f57aa20,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 6500897918278409698, guid: 180744c7c9c243843a55981c4f57aa20,
         type: 3}
       propertyPath: m_Name
@@ -6902,6 +7164,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -6987,6 +7254,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -7072,6 +7344,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1177244872
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -7147,6 +7424,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -7232,6 +7514,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2690502441
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -7511,6 +7798,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2x_Jg_Block2
       objectReference: {fileID: 0}
+    - target: {fileID: 2624153285118619482, guid: 1fdaf6fff2fcbd44088ee240276acc2b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 8984398885681718159, guid: 1fdaf6fff2fcbd44088ee240276acc2b,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -7536,6 +7828,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3830058246
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -7761,6 +8058,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -2755817237217315107, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 142010182942281423, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
         type: 3}
       propertyPath: m_Name
@@ -7916,6 +8218,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -7996,6 +8303,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: 56129902122520927, guid: d80d7629cd78b4748a654e8409833739,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739,
         type: 3}
       propertyPath: m_Name
@@ -8405,6 +8717,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -8490,6 +8807,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2876792239
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -8715,6 +9037,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -8800,6 +9127,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 388602696
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -8880,6 +9212,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2079246778
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -8955,6 +9292,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -9040,6 +9382,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2992912839
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -9190,6 +9537,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -9280,6 +9632,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1126482109
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -9435,6 +9792,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2454694392
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -9579,6 +9941,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: 56129902122520927, guid: d80d7629cd78b4748a654e8409833739,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739,
         type: 3}
       propertyPath: m_Name
@@ -9734,6 +10101,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -9819,6 +10191,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 337631030
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -9899,6 +10276,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2810851016
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -9979,6 +10361,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 743445725
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -10123,6 +10510,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -10213,6 +10605,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 27160131
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -10444,6 +10841,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4290813276
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -10653,6 +11055,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -10813,6 +11220,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3999664046
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -10888,6 +11300,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -10973,6 +11390,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 799642800
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -11048,6 +11470,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -11128,6 +11555,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -11208,6 +11640,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -2755817237217315107, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 142010182942281423, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
         type: 3}
       propertyPath: m_Name
@@ -11288,6 +11725,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -11518,6 +11960,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -11598,6 +12045,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -1836675179362206602, guid: 48438649d5f207a488037428ec74a49b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b,
         type: 3}
       propertyPath: m_Name
@@ -11758,6 +12210,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2187873720
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -12063,6 +12520,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3037316278
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -12148,6 +12610,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -12263,6 +12730,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -12343,6 +12815,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -12498,6 +12975,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -1836675179362206602, guid: 48438649d5f207a488037428ec74a49b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b,
         type: 3}
       propertyPath: m_Name
@@ -12578,6 +13060,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -12738,6 +13225,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1549389010
       objectReference: {fileID: 0}
+    - target: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed,
         type: 3}
       propertyPath: m_Name
@@ -12818,6 +13310,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2996383491
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -12898,6 +13395,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3737657127
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -12973,6 +13475,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: 4617590737084488270, guid: 180744c7c9c243843a55981c4f57aa20,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 6500897918278409698, guid: 180744c7c9c243843a55981c4f57aa20,
         type: 3}
       propertyPath: m_Name
@@ -13208,6 +13715,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3075432688
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -13358,6 +13870,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -13443,6 +13960,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -13528,6 +14050,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3157853192
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -13678,6 +14205,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -13763,6 +14295,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4190868040
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -13838,6 +14375,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -13994,6 +14536,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -14079,6 +14626,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 423032733
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -14229,6 +14781,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -14309,6 +14866,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -14399,6 +14961,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 945787062
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -14499,6 +15066,7 @@ MonoBehaviour:
   width: 6
   height: 6
   depth: 6
+  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -14706,6 +15274,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 545896190
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -14861,6 +15434,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 788723449
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -15076,6 +15654,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1022419906
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &710512737 stripped
@@ -15091,6 +15674,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -15214,6 +15802,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1869586281
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -15294,6 +15887,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3165626889
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -15374,6 +15972,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3700324864
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -15454,6 +16057,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1752911757
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -15605,6 +16213,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -15695,6 +16308,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 391474260
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -15770,6 +16388,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -15923,6 +16546,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -16008,6 +16636,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1435893890
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -16083,6 +16716,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -16168,6 +16806,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3391674805
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -16248,6 +16891,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4133725436
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -16323,6 +16971,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -16478,6 +17131,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -16684,6 +17342,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2700606056
       objectReference: {fileID: 0}
+    - target: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed,
         type: 3}
       propertyPath: m_Name
@@ -16839,6 +17502,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 987145203
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -16919,6 +17587,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2800380420
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -16994,6 +17667,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -17220,6 +17898,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1529105490
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -17295,6 +17978,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -17385,6 +18073,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 995540423
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -17600,6 +18293,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4530810540207767641, guid: f4f5d89442bdb8148aedeadbfae8d5ef,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f5d89442bdb8148aedeadbfae8d5ef, type: 3}
 --- !u!4 &826635873 stripped
@@ -17691,6 +18389,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -17796,6 +18499,7 @@ MonoBehaviour:
   width: 6
   height: 12
   depth: 6
+  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -17987,6 +18691,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1381176447
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &844588966 stripped
@@ -18007,6 +18716,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1144029534
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -18087,6 +18801,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4218446399
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -18167,6 +18886,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3646189979
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -18242,6 +18966,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -18327,6 +19056,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2229036757
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -18407,6 +19141,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1817010329
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -18542,6 +19281,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2x_Jg_Block2
       objectReference: {fileID: 0}
+    - target: {fileID: 2624153285118619482, guid: 1fdaf6fff2fcbd44088ee240276acc2b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 8984398885681718159, guid: 1fdaf6fff2fcbd44088ee240276acc2b,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -18567,6 +19311,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3723949843
       objectReference: {fileID: 0}
+    - target: {fileID: 5909792131768937131, guid: da50383944061f243a0b09e4169c0a04,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 8167869486877207909, guid: da50383944061f243a0b09e4169c0a04,
         type: 3}
       propertyPath: m_RootOrder
@@ -18792,6 +19541,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -18872,6 +19626,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -18957,6 +19716,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4115004828
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -19037,6 +19801,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3219834646
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -19117,6 +19886,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2476771810
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -19407,6 +20181,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1409369643
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -19487,6 +20266,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 815824445
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -19627,6 +20411,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4530810540207767641, guid: f4f5d89442bdb8148aedeadbfae8d5ef,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f5d89442bdb8148aedeadbfae8d5ef, type: 3}
 --- !u!4 &932528944 stripped
@@ -19642,6 +20431,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -19835,6 +20629,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3870929877
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -19910,6 +20709,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -20216,6 +21020,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -20440,6 +21249,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 306915728
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -20595,6 +21409,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2596143493
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -20814,6 +21633,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -20904,6 +21728,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -20979,6 +21808,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2997664374
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -21059,6 +21893,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1286614555
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -21159,6 +21998,7 @@ MonoBehaviour:
   width: 10
   height: 4
   depth: 4
+  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -21209,6 +22049,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1542388526
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -21284,6 +22129,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -1836675179362206602, guid: 48438649d5f207a488037428ec74a49b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b,
         type: 3}
       propertyPath: m_Name
@@ -21374,6 +22224,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -21444,6 +22299,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: 56129902122520927, guid: d80d7629cd78b4748a654e8409833739,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739,
         type: 3}
       propertyPath: m_Name
@@ -21534,6 +22394,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -21609,6 +22474,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1807247818
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -21834,6 +22704,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -21914,6 +22789,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -1836675179362206602, guid: 48438649d5f207a488037428ec74a49b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b,
         type: 3}
       propertyPath: m_Name
@@ -21999,6 +22879,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 119996306
       objectReference: {fileID: 0}
+    - target: {fileID: 5909792131768937131, guid: da50383944061f243a0b09e4169c0a04,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 8167869486877207909, guid: da50383944061f243a0b09e4169c0a04,
         type: 3}
       propertyPath: m_RootOrder
@@ -22154,6 +23039,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 407448622
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -22304,6 +23194,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -22389,6 +23284,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -22549,6 +23449,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1441575726
       objectReference: {fileID: 0}
+    - target: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed,
         type: 3}
       propertyPath: m_Name
@@ -22699,6 +23604,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -1836675179362206602, guid: 48438649d5f207a488037428ec74a49b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b,
         type: 3}
       propertyPath: m_Name
@@ -22844,6 +23754,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1469414931
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &1065579651 stripped
@@ -22939,6 +23854,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1259847708
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -23169,6 +24089,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4292288780
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -23329,6 +24254,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -23399,6 +24329,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -23484,6 +24419,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1026839781
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -23559,6 +24499,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -23639,6 +24584,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -23729,6 +24679,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3533164982
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -23804,6 +24759,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -23884,6 +24844,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -23969,6 +24934,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3142768974
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -24184,6 +25154,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4530810540207767641, guid: f4f5d89442bdb8148aedeadbfae8d5ef,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f5d89442bdb8148aedeadbfae8d5ef, type: 3}
 --- !u!4 &1135271520 stripped
@@ -24284,6 +25259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -24529,6 +25509,7 @@ MonoBehaviour:
   width: 13
   height: 6
   depth: 4
+  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -24651,6 +25632,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4003533109
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &1155200081 stripped
@@ -24671,6 +25657,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1250969959
       objectReference: {fileID: 0}
+    - target: {fileID: 5909792131768937131, guid: da50383944061f243a0b09e4169c0a04,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 8167869486877207909, guid: da50383944061f243a0b09e4169c0a04,
         type: 3}
       propertyPath: m_RootOrder
@@ -24746,6 +25737,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -24831,6 +25827,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3115773833
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -24911,6 +25912,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 952495702
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -25147,6 +26153,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -25222,6 +26233,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2626259380
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -25302,6 +26318,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1527441119
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -25417,7 +26438,8 @@ MonoBehaviour:
   winning:
     m_PersistentCalls:
       m_Calls: []
-  winningScore: 0.8
+  winningScore: 1
+  _voxelMap: []
   staticBlock: {fileID: 0}
 --- !u!1001 &1194868501
 PrefabInstance:
@@ -25426,6 +26448,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -25581,6 +26608,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: 56129902122520927, guid: d80d7629cd78b4748a654e8409833739,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739,
         type: 3}
       propertyPath: m_Name
@@ -25726,6 +26758,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4530810540207767641, guid: f4f5d89442bdb8148aedeadbfae8d5ef,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f5d89442bdb8148aedeadbfae8d5ef, type: 3}
 --- !u!4 &1198370763 stripped
@@ -25821,6 +26858,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 874197895
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -25901,6 +26943,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1086614629
       objectReference: {fileID: 0}
+    - target: {fileID: 5909792131768937131, guid: da50383944061f243a0b09e4169c0a04,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 8167869486877207909, guid: da50383944061f243a0b09e4169c0a04,
         type: 3}
       propertyPath: m_RootOrder
@@ -26051,6 +27098,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -1836675179362206602, guid: 48438649d5f207a488037428ec74a49b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b,
         type: 3}
       propertyPath: m_Name
@@ -26131,6 +27183,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -26216,6 +27273,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1629335793
       objectReference: {fileID: 0}
+    - target: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6111867334319060071, guid: 164b35fe69592bf478b8ce8711e2c516,
         type: 3}
       propertyPath: m_RootOrder
@@ -26316,6 +27378,7 @@ MonoBehaviour:
   width: 8
   height: 7
   depth: 8
+  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -26440,6 +27503,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 56129902122520927, guid: d80d7629cd78b4748a654e8409833739,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739,
         type: 3}
       propertyPath: m_Name
@@ -26600,6 +27668,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: 4617590737084488270, guid: 180744c7c9c243843a55981c4f57aa20,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 6500897918278409698, guid: 180744c7c9c243843a55981c4f57aa20,
         type: 3}
       propertyPath: m_Name
@@ -26755,6 +27828,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -26840,6 +27918,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 361914595
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -26920,6 +28003,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3161681
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -26995,6 +28083,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: 4617590737084488270, guid: 180744c7c9c243843a55981c4f57aa20,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 6500897918278409698, guid: 180744c7c9c243843a55981c4f57aa20,
         type: 3}
       propertyPath: m_Name
@@ -27140,6 +28233,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 350871600
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &1250554446 stripped
@@ -27230,6 +28328,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -2755817237217315107, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 142010182942281423, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
         type: 3}
       propertyPath: m_Name
@@ -27315,6 +28418,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3506466525
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -27395,6 +28503,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 668681641
       objectReference: {fileID: 0}
+    - target: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6111867334319060071, guid: 164b35fe69592bf478b8ce8711e2c516,
         type: 3}
       propertyPath: m_RootOrder
@@ -27550,6 +28663,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1042810148
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -27630,6 +28748,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 720630535
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -27786,6 +28909,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4063477812
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -27861,6 +28989,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: -402668701998234361, guid: 1dd2db2b7c5331047bee90da0d3024e6,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -28056,6 +29189,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -28136,6 +29274,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -28516,6 +29659,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -28671,6 +29819,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -28751,6 +29904,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -2755817237217315107, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 142010182942281423, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
         type: 3}
       propertyPath: m_Name
@@ -28831,6 +29989,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -29137,6 +30300,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -29372,6 +30540,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3092787252
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -29527,6 +30700,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3822596617
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -29607,6 +30785,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 916214667
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -29747,6 +30930,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3039344287
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &1378864370 stripped
@@ -29767,6 +30955,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 693361069
       objectReference: {fileID: 0}
+    - target: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6111867334319060071, guid: 164b35fe69592bf478b8ce8711e2c516,
         type: 3}
       propertyPath: m_RootOrder
@@ -29842,6 +31035,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -29922,6 +31120,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -30077,6 +31280,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -30237,6 +31445,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1930276256
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -30312,6 +31525,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: -402668701998234361, guid: 1dd2db2b7c5331047bee90da0d3024e6,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -30397,6 +31615,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1698097713
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -30477,6 +31700,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3557735331
       objectReference: {fileID: 0}
+    - target: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 4626508894230405813, guid: 1f212cd1f02c47d478cb7cac34e84c10,
         type: 3}
       propertyPath: m_Name
@@ -30617,6 +31845,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4530810540207767641, guid: f4f5d89442bdb8148aedeadbfae8d5ef,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f5d89442bdb8148aedeadbfae8d5ef, type: 3}
 --- !u!4 &1426611891 stripped
@@ -30637,6 +31870,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3707551335
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -30722,6 +31960,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -30797,6 +32040,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3356326376
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -30872,6 +32120,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -30952,6 +32205,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -31112,6 +32370,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1767917196
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -31262,6 +32525,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: -2984265133698481187, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 191339056605728524, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
         type: 3}
       propertyPath: m_Name
@@ -31342,6 +32610,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -31437,6 +32710,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -31582,6 +32860,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 56129902122520927, guid: d80d7629cd78b4748a654e8409833739,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739,
         type: 3}
       propertyPath: m_Name
@@ -31667,6 +32950,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3634429744
       objectReference: {fileID: 0}
+    - target: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6111867334319060071, guid: 164b35fe69592bf478b8ce8711e2c516,
         type: 3}
       propertyPath: m_RootOrder
@@ -31747,6 +33035,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2970639368
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -31827,6 +33120,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1608500749
       objectReference: {fileID: 0}
+    - target: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6111867334319060071, guid: 164b35fe69592bf478b8ce8711e2c516,
         type: 3}
       propertyPath: m_RootOrder
@@ -31907,6 +33205,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 676954879
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -31992,6 +33295,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -32142,6 +33450,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3414271671
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -32217,6 +33530,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -32302,6 +33620,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3220335372
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -32402,6 +33725,7 @@ MonoBehaviour:
   width: 6
   height: 13
   depth: 6
+  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -32494,6 +33818,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -32579,6 +33908,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1691233723
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -32884,6 +34218,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1471967064
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -32959,6 +34298,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -33044,6 +34388,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3589489301
       objectReference: {fileID: 0}
+    - target: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed,
         type: 3}
       propertyPath: m_Name
@@ -33199,6 +34548,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 69346733
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -33348,6 +34702,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4037744083
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -33503,6 +34862,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2273326522
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -33653,6 +35017,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -33738,6 +35107,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 322349515
       objectReference: {fileID: 0}
+    - target: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6111867334319060071, guid: 164b35fe69592bf478b8ce8711e2c516,
         type: 3}
       propertyPath: m_RootOrder
@@ -33818,6 +35192,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2723003621
       objectReference: {fileID: 0}
+    - target: {fileID: 5909792131768937131, guid: da50383944061f243a0b09e4169c0a04,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 8167869486877207909, guid: da50383944061f243a0b09e4169c0a04,
         type: 3}
       propertyPath: m_RootOrder
@@ -33973,6 +35352,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3983530557
       objectReference: {fileID: 0}
+    - target: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2419774365051306419, guid: 1b3a0fc97cbdd4f45940985827632a03,
         type: 3}
       propertyPath: m_Name
@@ -34113,6 +35497,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4530810540207767641, guid: f4f5d89442bdb8148aedeadbfae8d5ef,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f5d89442bdb8148aedeadbfae8d5ef, type: 3}
 --- !u!4 &1545389662 stripped
@@ -34133,6 +35522,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 912169265
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -34328,6 +35722,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3695823407
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -34403,6 +35802,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -34558,6 +35962,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -34638,6 +36047,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -34718,6 +36132,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: -402668701998234361, guid: 1dd2db2b7c5331047bee90da0d3024e6,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -34798,6 +36217,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -34878,6 +36302,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -34958,6 +36387,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: -2984265133698481187, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 191339056605728524, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
         type: 3}
       propertyPath: m_Name
@@ -35113,6 +36547,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -35464,6 +36903,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4870472
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -35614,6 +37058,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 56129902122520927, guid: d80d7629cd78b4748a654e8409833739,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739,
         type: 3}
       propertyPath: m_Name
@@ -35699,6 +37148,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1756962960
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -35854,6 +37308,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3786499221
       objectReference: {fileID: 0}
+    - target: {fileID: 5909792131768937131, guid: da50383944061f243a0b09e4169c0a04,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 8167869486877207909, guid: da50383944061f243a0b09e4169c0a04,
         type: 3}
       propertyPath: m_RootOrder
@@ -35934,6 +37393,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2537812812
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -36074,6 +37538,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4530810540207767641, guid: f4f5d89442bdb8148aedeadbfae8d5ef,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f5d89442bdb8148aedeadbfae8d5ef, type: 3}
 --- !u!4 &1657312037 stripped
@@ -36089,6 +37558,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 56129902122520927, guid: d80d7629cd78b4748a654e8409833739,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739,
         type: 3}
       propertyPath: m_Name
@@ -36169,6 +37643,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -36259,6 +37738,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -36329,6 +37813,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -36414,6 +37903,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1086814545
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -36563,6 +38057,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3034975663
       objectReference: {fileID: 0}
+    - target: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed,
         type: 3}
       propertyPath: m_Name
@@ -36638,6 +38137,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -36718,6 +38222,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -36798,6 +38307,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -36878,6 +38392,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1217861173}
     m_Modifications:
+    - target: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: -402668701998234361, guid: 1dd2db2b7c5331047bee90da0d3024e6,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -36963,6 +38482,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 935283026
       objectReference: {fileID: 0}
+    - target: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed,
         type: 3}
       propertyPath: m_Name
@@ -37113,6 +38637,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: 4617590737084488270, guid: 180744c7c9c243843a55981c4f57aa20,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 6500897918278409698, guid: 180744c7c9c243843a55981c4f57aa20,
         type: 3}
       propertyPath: m_Name
@@ -37273,6 +38802,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4239569042
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -37358,6 +38892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -37433,6 +38972,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3974490569
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -37518,6 +39062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -37588,6 +39137,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -37809,6 +39363,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3829354215
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -37884,6 +39443,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -37969,6 +39533,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2335854805
       objectReference: {fileID: 0}
+    - target: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed,
         type: 3}
       propertyPath: m_Name
@@ -38049,6 +39618,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 727010624
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -38129,6 +39703,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 823599927
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -38284,6 +39863,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3445080880
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -38384,6 +39968,7 @@ MonoBehaviour:
   width: 5
   height: 4
   depth: 5
+  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -38439,6 +40024,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -38519,6 +40109,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: -402668701998234361, guid: 1dd2db2b7c5331047bee90da0d3024e6,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -38684,6 +40279,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -38754,6 +40354,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -38834,6 +40439,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -39054,6 +40664,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1662959323
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &1787145633 stripped
@@ -39149,6 +40764,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -39294,6 +40914,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2053285992
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &1795351771 stripped
@@ -39572,7 +41197,7 @@ PrefabInstance:
     - target: {fileID: 8813879327189351177, guid: fd783ff01fbafe16aa460686a990a73f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9091282
+      value: 0.9091281
       objectReference: {fileID: 0}
     - target: {fileID: 8813879327189351177, guid: fd783ff01fbafe16aa460686a990a73f,
         type: 3}
@@ -39582,7 +41207,7 @@ PrefabInstance:
     - target: {fileID: 8813879327189351177, guid: fd783ff01fbafe16aa460686a990a73f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.38500768
+      value: -0.38500765
       objectReference: {fileID: 0}
     - target: {fileID: 8813879327189351177, guid: fd783ff01fbafe16aa460686a990a73f,
         type: 3}
@@ -39663,6 +41288,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4117801778
       objectReference: {fileID: 0}
+    - target: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 6111867334319060071, guid: 164b35fe69592bf478b8ce8711e2c516,
         type: 3}
       propertyPath: m_RootOrder
@@ -39743,6 +41373,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 911986989
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -39818,6 +41453,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -3476289425674860036, guid: eb8a97ad851d7df4f853a1c49163b45e,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6353394349837204151, guid: eb8a97ad851d7df4f853a1c49163b45e,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -39898,6 +41538,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -2755817237217315107, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 142010182942281423, guid: bdd2430c7e03f3c41b3772668b0b4cfb,
         type: 3}
       propertyPath: m_Name
@@ -40053,6 +41698,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -2984265133698481187, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 191339056605728524, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
         type: 3}
       propertyPath: m_Name
@@ -40184,6 +41834,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 405347768
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -40259,6 +41914,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -40339,6 +41999,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 56129902122520927, guid: d80d7629cd78b4748a654e8409833739,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 2969948248883634531, guid: d80d7629cd78b4748a654e8409833739,
         type: 3}
       propertyPath: m_Name
@@ -40443,6 +42108,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1988553356
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -40518,6 +42188,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -2984265133698481187, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 191339056605728524, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
         type: 3}
       propertyPath: m_Name
@@ -40598,6 +42273,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -40678,6 +42358,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -40833,6 +42518,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -40918,6 +42608,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3539214541
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -40993,6 +42688,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -41148,6 +42848,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: 4617590737084488270, guid: 180744c7c9c243843a55981c4f57aa20,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 6500897918278409698, guid: 180744c7c9c243843a55981c4f57aa20,
         type: 3}
       propertyPath: m_Name
@@ -41308,6 +43013,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 589223222
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -41388,6 +43098,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2447090799
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -41468,6 +43183,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2192257036
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -41683,6 +43403,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3162178695
       objectReference: {fileID: 0}
+    - target: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc50036a210bfce4b9553922efa27ce3, type: 3}
 --- !u!4 &1957176432 stripped
@@ -41703,6 +43428,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3055489262
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -41820,6 +43550,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3997116526
       objectReference: {fileID: 0}
+    - target: {fileID: -4156489643542999503, guid: 628f236212d97d94faa92e910d25a7a4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4919925068685420222, guid: 628f236212d97d94faa92e910d25a7a4,
         type: 3}
       propertyPath: m_Name
@@ -41900,6 +43635,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1657387591
       objectReference: {fileID: 0}
+    - target: {fileID: -386457401379066761, guid: 37a657e5c550562488c138bf24407861,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 4998686700622127410, guid: 37a657e5c550562488c138bf24407861,
         type: 3}
       propertyPath: m_RootOrder
@@ -41975,6 +43715,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -42055,6 +43800,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -42140,6 +43890,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 849163386
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -42215,6 +43970,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -1836675179362206602, guid: 48438649d5f207a488037428ec74a49b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 1422809589158412183, guid: 48438649d5f207a488037428ec74a49b,
         type: 3}
       propertyPath: m_Name
@@ -42375,6 +44135,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 770651401
       objectReference: {fileID: 0}
+    - target: {fileID: 460382510702516795, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7347010697705765396, guid: 6d2ee86d566c8ce45b8dbd8b907e5035,
         type: 3}
       propertyPath: m_Name
@@ -42455,6 +44220,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1741574856
       objectReference: {fileID: 0}
+    - target: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1217861172}
     - target: {fileID: 3576521839664899092, guid: e8c64f361ce165346b4f66248b88d5ed,
         type: 3}
       propertyPath: m_Name
@@ -42540,6 +44310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -42732,6 +44507,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1267483494
       objectReference: {fileID: 0}
+    - target: {fileID: 4289593405775074044, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 6044868124375403900, guid: b1cbb574de2d7cf42a4d9da97e9863c4,
         type: 3}
       propertyPath: m_Name
@@ -42867,6 +44647,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2x_Jg_Block2
       objectReference: {fileID: 0}
+    - target: {fileID: 2624153285118619482, guid: 1fdaf6fff2fcbd44088ee240276acc2b,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 8984398885681718159, guid: 1fdaf6fff2fcbd44088ee240276acc2b,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -42887,6 +44672,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -43127,6 +44917,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: -402668701998234361, guid: 1dd2db2b7c5331047bee90da0d3024e6,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -43282,6 +45077,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -43367,6 +45167,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 4176803377
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -43447,6 +45252,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2992274425
       objectReference: {fileID: 0}
+    - target: {fileID: -170011199767939124, guid: 91164615f66ac40428783e95a6b5e687,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 6924857391429997657, guid: 91164615f66ac40428783e95a6b5e687,
         type: 3}
       propertyPath: m_RootOrder
@@ -43527,6 +45337,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3164664244
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -43602,6 +45417,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -43757,6 +45577,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -43837,6 +45662,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -44002,6 +45832,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: -2984265133698481187, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 191339056605728524, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
         type: 3}
       propertyPath: m_Name
@@ -44092,6 +45927,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -44172,6 +46012,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jg_MossyBrick Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3810964387399857167, guid: 6e18abe0a9785724d9281cd84ed4c936,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 4601309103899947855, guid: 6e18abe0a9785724d9281cd84ed4c936,
         type: 3}
       propertyPath: m_RootOrder
@@ -44242,6 +46087,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -44322,6 +46172,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1155073584}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1155073583}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder
@@ -44471,6 +46326,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1492662687}
     m_Modifications:
+    - target: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1492662686}
     - target: {fileID: 6917676227553457262, guid: 1b298d11bebf7f143a4fbf8d8798829a,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -44551,6 +46411,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684397951}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 7420434086491873869, guid: 9d7c06c6e46e7a540bdf1d35ed70d660,
         type: 3}
       propertyPath: m_RootOrder
@@ -44636,6 +46501,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3377316997
       objectReference: {fileID: 0}
+    - target: {fileID: 5909792131768937131, guid: da50383944061f243a0b09e4169c0a04,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 8167869486877207909, guid: da50383944061f243a0b09e4169c0a04,
         type: 3}
       propertyPath: m_RootOrder
@@ -44716,6 +46586,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 983222403
       objectReference: {fileID: 0}
+    - target: {fileID: 5909792131768937131, guid: da50383944061f243a0b09e4169c0a04,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 684397950}
     - target: {fileID: 8167869486877207909, guid: da50383944061f243a0b09e4169c0a04,
         type: 3}
       propertyPath: m_RootOrder
@@ -44871,6 +46746,11 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 108222702
       objectReference: {fileID: 0}
+    - target: {fileID: 1828842312103392681, guid: c947e3212a45eb64f99cf77099e59d24,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 3893679833332100335, guid: c947e3212a45eb64f99cf77099e59d24,
         type: 3}
       propertyPath: m_Name
@@ -44946,6 +46826,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1749513282}
     m_Modifications:
+    - target: {fileID: -2984265133698481187, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 1749513281}
     - target: {fileID: 191339056605728524, guid: ba9e056441b74fd439fb4b5cbfd20ba6,
         type: 3}
       propertyPath: m_Name
@@ -45026,6 +46911,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 90069438}
     m_Modifications:
+    - target: {fileID: 1822776899332099755, guid: bb51ab7e14fe9e745b6fe730085dbc72,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 90069437}
     - target: {fileID: 5851592712193071211, guid: bb51ab7e14fe9e745b6fe730085dbc72,
         type: 3}
       propertyPath: m_RootOrder
@@ -45106,6 +46996,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77321139}
     m_Modifications:
+    - target: {fileID: -9064583037232447443, guid: a8f223d019fa8354394f377344e1b732,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 77321138}
     - target: {fileID: -1293370090820743160, guid: a8f223d019fa8354394f377344e1b732,
         type: 3}
       propertyPath: GlobalObjectIdHash
@@ -45191,6 +47086,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985381633}
     m_Modifications:
+    - target: {fileID: -3540156692115325571, guid: 87df615b4ab58be46a08d1a1c08ac276,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 985381632}
     - target: {fileID: 4957009603536209899, guid: 87df615b4ab58be46a08d1a1c08ac276,
         type: 3}
       propertyPath: m_RootOrder
@@ -45271,6 +47171,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 841258011}
     m_Modifications:
+    - target: {fileID: -2846052348724392118, guid: 84514437e94582d42a0ad0cc489ca3a1,
+        type: 3}
+      propertyPath: _voxelMap
+      value: 
+      objectReference: {fileID: 841258010}
     - target: {fileID: 7420434086491873869, guid: 84514437e94582d42a0ad0cc489ca3a1,
         type: 3}
       propertyPath: m_RootOrder

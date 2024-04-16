@@ -10,6 +10,7 @@ public class WinLoose : MonoBehaviour
 {
     [SerializeField] private UnityEvent winning;
     [SerializeField] float winningScore = 1;
+    [SerializeField] voxelMap[] _voxelMap;
     Coroutine resetGameCoroutine = null;
     private bool _gameFinished = false;
     bool firstBlock = true;
@@ -98,16 +99,22 @@ public class WinLoose : MonoBehaviour
             GameManager.instance.SetDreamEnergyServerRpc(0);
         }
     }
-    public void firstBlockChange(GameObject block)
+    public void firstBlockChange(ABlock block)
     {
-        if (firstBlock)
+        if (block.voxelMap.firstBlockThisGame == null)
         {
-            Debug.Log("first block ");
-            firstBlock = false;
-            Vector3 blockPosition = block.transform.position;
-            Destroy(block);
-            Debug.Log("Here " + blockPosition);
-            Instantiate(staticBlock, block.transform.position, Quaternion.identity);
+            block.voxelMap.firstBlockThisGame = block;
+            Debug.Log("first block");
+            firstBlockChangeServerRpc(block);
         }
     }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void firstBlockChangeServerRpc(ABlock block)
+    {
+        block.GetComponent<NetworkObject>().Despawn();
+        GameObject gameObjectCrystal = Instantiate(staticBlock, block.transform.position, Quaternion.identity);
+        gameObjectCrystal.GetComponent<NetworkObject>().Spawn();
+    }
+
 }
