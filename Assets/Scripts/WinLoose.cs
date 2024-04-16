@@ -38,6 +38,7 @@ public class WinLoose : MonoBehaviour
     public void LevelWin()
     {
         Debug.Log("You win");
+        _gameFinished = true;
         ResetGame("Win");
     }
 
