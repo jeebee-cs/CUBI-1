@@ -6,7 +6,7 @@ public class UpAndDown : MonoBehaviour
 {
     Vector2 originalPosition;
     float randomSpeed;
-    void Start()
+    void Awake()
     {
         originalPosition = transform.position;
         StartCoroutine(UpAndDownCoroutine());
