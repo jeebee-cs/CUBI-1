@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6831801416286655537}
   - component: {fileID: 2198264577081193834}
   - component: {fileID: 3095776459174896751}
+  - component: {fileID: -1285157476516055657}
   m_Layer: 0
   m_Name: GoodDream
   m_TagString: Untagged
@@ -134,11 +135,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33291e93f4a757947a3bdee208e0a729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dreamPoint: 0.05
+  dreamPointGood: 0.5
+  dreamPointBad: -0.5
+  dreamPointNeutral: 0.1
   dreamType: 1
-  goodDreamMat: {fileID: 2100000, guid: 7e6a6dc95d3d66a4d8efe59bc6089a62, type: 2}
-  badDreamMat: {fileID: 2100000, guid: bfd0b7620762cfd44ab2c7d46d822866, type: 2}
-  neutralDreamMat: {fileID: 2100000, guid: 3bd088feb7df2814a84bf338e6573201, type: 2}
+  goodDreamAnim: {fileID: 9100000, guid: b376e1388a14fc84591e66369e0166f9, type: 2}
+  badDreamAnim: {fileID: 9100000, guid: 983c21ce8391c144eb6bb73a3ece0781, type: 2}
+  neutralDreamAnim: {fileID: 9100000, guid: f7e995fefb92ba449946bd6ba2447105, type: 2}
 --- !u!114 &2198264577081193834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +175,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1285157476516055657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088405387793088453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27089943865f620299ac1c43bf23a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
