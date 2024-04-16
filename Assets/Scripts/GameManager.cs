@@ -41,8 +41,6 @@ public class GameManager : NetworkBehaviour
         else
         {
             DontDestroyOnLoad(this);
-            SetDreamEnergyServerRpc(0);
-            SetNeutralDreamCollectedServerRpc(0);
             _instance = this;
             NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
         }
@@ -66,6 +64,8 @@ public class GameManager : NetworkBehaviour
         {
             _playerMovements.Add(players[i].GetComponent<PlayerMovements>());
         }
+        _uIManager.neutralDreams.text = _neutralDreamCollected.Value.ToString();
+        _uIManager.dreamBar.value = _dreamEnergy.Value;
     }
 
     [ServerRpc(RequireOwnership = false)]

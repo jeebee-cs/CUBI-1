@@ -12,7 +12,6 @@ public class deadZone : MonoBehaviour
         _timerDeadZone.Restart();
         collision.gameObject.transform.position = collision.gameObject.GetComponent<PushBlock>().lastGroundPosition;
         collision.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,0f);
-        GameManager.instance.SetDreamEnergyServerRpc(GameManager.instance.dreamEnergy - .05f);
         GameManager.instance.SetNeutralDreamCollectedServerRpc(GameManager.instance.neutralDreamCollected - 1);
     }
 }

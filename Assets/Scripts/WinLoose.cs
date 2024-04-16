@@ -45,6 +45,7 @@ public class WinLoose : MonoBehaviour
     {
         AkSoundEngine.PostEvent("Stop_All_Audio", this.gameObject);
         Debug.Log("You win");
+        _gameFinished = true;
         ResetGame("Win");
     }
 
