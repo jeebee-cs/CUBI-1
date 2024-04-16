@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8648041366689152271}
   - component: {fileID: 8964338292629920862}
   - component: {fileID: 5450592426489779874}
+  - component: {fileID: 7293638283275154955}
   m_Layer: 3
   m_Name: PlayerController
   m_TagString: Player
@@ -246,7 +247,20 @@ CapsuleCollider:
   m_Radius: 0.341128
   m_Height: 1.0274671
   m_Direction: 1
-  m_Center: {x: 0.15887213, y: 0.013733506, z: 0}
+  m_Center: {x: 0, y: 0.013733506, z: 0}
+--- !u!65 &7293638283275154955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691478012142615995}
+  m_Material: {fileID: 13400000, guid: 0a5a9fdfbce27065f9d4acf822031f79, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5092746, y: 0.17894655, z: 0.49287888}
+  m_Center: {x: -0.005379133, y: -0.3783287, z: -0.0040247478}
 --- !u!1 &5842180342739160920
 GameObject:
   m_ObjectHideFlags: 0
