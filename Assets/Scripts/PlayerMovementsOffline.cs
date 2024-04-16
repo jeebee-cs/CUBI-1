@@ -64,7 +64,7 @@ public class PlayerMovementsOffline : MonoBehaviour
         getInputs();
         if (Input.GetKeyDown(KeyCode.R))
         {
-            GameManager.instance.winLoose.Reset();
+            GameManager.instance.winLoose.ResetGame("Lose");
         }
     }
 

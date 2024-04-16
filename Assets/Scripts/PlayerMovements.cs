@@ -71,7 +71,7 @@ public class PlayerMovements : NetworkBehaviour
         getInputs();
         if (Input.GetKeyDown(KeyCode.R))
         {
-            GameManager.instance.winLoose.Reset();
+            GameManager.instance.winLoose.ResetGame("Lose");
         }
     }
 

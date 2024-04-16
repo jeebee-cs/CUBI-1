@@ -17,14 +17,23 @@ public class PushBlock : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        _lastGroundPosition = other.gameObject.transform.position + Vector3.up * 2;
         MoveableBlock moveableBlock = other.gameObject.GetComponent<MoveableBlock>();
+
 
         if (moveableBlock != null)
         {
+            if (moveableBlock.bigBlock)
+            {
+                if (transform.position.y - other.gameObject.transform.position.y > 1.2f) _lastGroundPosition = other.gameObject.transform.position + Vector3.up * 2;
+            }
+            else
+            {
+                if (transform.position.y - other.gameObject.transform.position.y > .6f) _lastGroundPosition = other.gameObject.transform.position + Vector3.up * 2;
+            }
             // Ajoute le MoveableBlock à la liste
             _moveableBlocks.Add(moveableBlock);
         }
+        else _lastGroundPosition = other.gameObject.transform.position + Vector3.up * 2;
     }
 
     void OnCollisionExit(Collision other)
