@@ -44,7 +44,7 @@ public class GameManager : NetworkBehaviour
             SetDreamEnergyServerRpc(0);
             SetNeutralDreamCollectedServerRpc(0);
             _instance = this;
-            NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
+            //NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
         }
         Time.timeScale = 1;
     }

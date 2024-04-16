@@ -44,7 +44,7 @@ public class DialogueSystem : SerializedMonoBehaviour
 
         yield return new WaitForSeconds(appearanceTime);
 
-        yield return FadeTextAway(fadeAwayTime);
+        yield return FadeTextAway();
 
         dialogueText.gameObject.SetActive(false);
         inEvent = false;
@@ -79,7 +79,7 @@ public class DialogueSystem : SerializedMonoBehaviour
         yield return null;
     }
 
-    public IEnumerator FadeTextAway(float time)
+    public IEnumerator FadeTextAway()
     {
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {

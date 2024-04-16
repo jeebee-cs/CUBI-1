@@ -69,3 +69,5 @@ Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
 
 # macOS 
 .DS_Store
+Assets/Scenes/MainGame.unity
+Assets/Scenes/MainGame.meta

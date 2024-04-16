@@ -31,7 +31,7 @@ public class SkyboxBlender : MonoBehaviour
 
     public void Start()
     {
-        ChangeSkyboxTheme(MapTheme.JUNGLE);
+        ChangeSkyboxTheme(MapTheme.CLOCK);
     }
 
     public void ChangeSkyboxTheme(MapTheme theme)

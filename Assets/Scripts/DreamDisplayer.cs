@@ -6,11 +6,6 @@ public class DreamDisplayer : DialogueSystem
 {
     public DreamDialogues dialoguesPool;
 
-    public void Start()
-    {
-        DisplayDreamDialogue(DreamType.NEUTRAL);
-    }
-
     public void DisplayDreamDialogue(DreamType dreamType)
     {
         string dialogue = RandomDialogue(dreamType);
@@ -27,11 +22,9 @@ public class DreamDisplayer : DialogueSystem
                 dialogueText.color = Color.red;
                 break;
         }
-
-        if (GameManager.instance.dreamDisplayer.inEvent)
+        if (inEvent)
         {
-            StopCoroutine(DisplayDialogue(dialogue));
-            StopCoroutine(FadeTextAway(1));
+            StopAllCoroutines();
         }
         StartCoroutine(DisplayDialogue(dialogue));
     }
