@@ -71,7 +71,7 @@ public class MoveableBlock : ABlock
             }
         }
         StartCoroutine(SmoothLerp(transform.position + directionToPush, deplacementTime));
-        //AkSoundEngine.PostEvent("Block_Push", this.gameObject);
+        AkSoundEngine.PostEvent("Block_Push", this.gameObject);
         IsMoving = true;
 
     }

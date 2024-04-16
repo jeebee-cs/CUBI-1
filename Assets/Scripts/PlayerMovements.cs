@@ -56,7 +56,7 @@ public class PlayerMovements : NetworkBehaviour
 
     void Start()
     {
-        AkSoundEngine.PostEvent("Music_Start", this.gameObject);
+        //AkSoundEngine.PostEvent("Music_Start", this.gameObject);
         isFootstepsPlaying = false;
         if (IsOwner && IsClient)
         {

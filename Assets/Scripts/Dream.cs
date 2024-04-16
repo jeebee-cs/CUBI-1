@@ -22,11 +22,11 @@ public class Dream : NetworkBehaviour
     {
         if (other.gameObject.name == "AI")
         {
-            //AkSoundEngine.PostEvent("AI_Dream_Get", this.gameObject);
+            AkSoundEngine.PostEvent("AI_Dream_Get", this.gameObject);
         }
         else
         {
-            //AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
+            AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
         }
         float[] dreamTypeList = { dreamPointNeutral, dreamPointGood, dreamPointBad };
 

@@ -16,6 +16,11 @@ public class WinLoose : MonoBehaviour
     [SerializeField] GameObject staticBlock;
     public bool gameOver { get => _gameFinished; set => _gameFinished = value; }
 
+    private void Start()
+    {
+        AkSoundEngine.PostEvent("Music_Start", this.gameObject);
+    }
+
     public void winCheck(float dreamEnergy, int neutralDreamCollected)
     {
         if (dreamEnergy >= winningScore)
@@ -30,6 +35,7 @@ public class WinLoose : MonoBehaviour
 
     public void Lose()
     {
+        AkSoundEngine.PostEvent("Stop_All_Audio", this.gameObject);
         Debug.Log("You lose");
         _gameFinished = true;
         ResetGame("Lose");
@@ -37,6 +43,7 @@ public class WinLoose : MonoBehaviour
 
     public void LevelWin()
     {
+        AkSoundEngine.PostEvent("Stop_All_Audio", this.gameObject);
         Debug.Log("You win");
         ResetGame("Win");
     }
