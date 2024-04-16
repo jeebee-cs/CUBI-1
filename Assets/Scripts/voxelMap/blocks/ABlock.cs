@@ -12,6 +12,8 @@ public abstract class ABlock : NetworkBehaviour
     public Material Material { get; set; }
 
     public GameObject cube { get; set;}
+    [SerializeField] voxelMap _voxelMap;
+    public voxelMap voxelMap { get => _voxelMap; set => _voxelMap = value; }
 
     protected virtual void OnValidate()
     {

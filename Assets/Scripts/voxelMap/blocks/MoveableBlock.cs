@@ -71,7 +71,7 @@ public class MoveableBlock : ABlock
             }
         }
         StartCoroutine(SmoothLerp(transform.position + directionToPush, deplacementTime));
-        AkSoundEngine.PostEvent("Block_Push", this.gameObject);
+        AkSoundEngine.PostEvent("Block_Push", gameObject);
         IsMoving = true;
 
     }
@@ -91,7 +91,7 @@ public class MoveableBlock : ABlock
         transform.position = newPosition;
         IsMoving = false;
         Debug.Log("position:" + transform.position);
-        GameManager.instance.winLoose.firstBlockChange(gameObject);
+        GameManager.instance.winLoose.firstBlockChange(this);
     }
 
     [ServerRpc(RequireOwnership = false)]

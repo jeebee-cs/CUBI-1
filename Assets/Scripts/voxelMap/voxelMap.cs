@@ -16,6 +16,10 @@ public class voxelMap : MonoBehaviour {
 
     [SerializeField ,Range(0,20)]
     private int depth = 5;
+    ABlock _firstBlock;
+    public ABlock firstBlock {get => _firstBlock;}
+    public ABlock _firstBlockThisGame;
+    public ABlock firstBlockThisGame {get => _firstBlockThisGame; set => _firstBlockThisGame = value; }
 
     private Vector3 offset;
 
