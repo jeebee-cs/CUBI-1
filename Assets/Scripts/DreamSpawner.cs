@@ -10,7 +10,7 @@ public class DreamSpawner : MonoBehaviour
 
     void Start()
     {
-       // NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
+       NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
     }
 
     void OnClientConnectedCallback(ulong id)

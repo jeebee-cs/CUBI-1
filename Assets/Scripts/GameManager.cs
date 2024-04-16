@@ -8,6 +8,10 @@ public class GameManager : NetworkBehaviour
 
     [SerializeField] UIManager _uIManager;
     public UIManager uIManager { get => _uIManager; }
+    NetworkVariable<float> _dreamEnergy = new NetworkVariable<float>();
+    public float dreamEnergy { get => _dreamEnergy.Value; }
+    NetworkVariable<int> _neutralDreamCollected = new NetworkVariable<int>();
+    public int neutralDreamCollected { get => _neutralDreamCollected.Value;}
     [SerializeField] CameraManager _cameraManager;
     public CameraManager cameraManager { get => _cameraManager; }
     [SerializeField] List<PlayerMovements> _playerMovements = new List<PlayerMovements>();
@@ -37,6 +41,8 @@ public class GameManager : NetworkBehaviour
         else
         {
             DontDestroyOnLoad(this);
+            SetDreamEnergyServerRpc(0);
+            SetNeutralDreamCollectedServerRpc(0);
             _instance = this;
             NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
         }
@@ -60,5 +66,17 @@ public class GameManager : NetworkBehaviour
         {
             _playerMovements.Add(players[i].GetComponent<PlayerMovements>());
         }
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetDreamEnergyServerRpc(float dreamEnergy) {
+        _dreamEnergy.Value = dreamEnergy;
+        _uIManager.dreamBar.value = _dreamEnergy.Value;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetNeutralDreamCollectedServerRpc(int neutralDreamCollected) {
+        _neutralDreamCollected.Value = neutralDreamCollected;
+        _uIManager.neutralDreams.text = _neutralDreamCollected.Value.ToString();
     }
 }

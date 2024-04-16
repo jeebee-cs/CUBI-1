@@ -27,8 +27,8 @@ public class Dream : NetworkBehaviour
         {
             AkSoundEngine.PostEvent("Player_Dream_Get", this.gameObject);
         }
-        GameManager.instance.uIManager.dreamBar.value += dreamPoint;
-        GameManager.instance.winLoose.winCheck(dreamPoint);
+        GameManager.instance.SetDreamEnergyServerRpc(GameManager.instance.dreamEnergy + dreamPoint);
+        GameManager.instance.winLoose.winCheck();
 
         if (dreamType == DreamType.NEUTRAL)
         {
