@@ -103,7 +103,6 @@ public class WinLoose : MonoBehaviour
     {
         if (block.voxelMap.firstBlockThisGame == null)
         {
-            block.voxelMap.firstBlockThisGame = block;
             Debug.Log("first block");
             firstBlockChangeServerRpc(block);
         }
@@ -112,9 +111,16 @@ public class WinLoose : MonoBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void firstBlockChangeServerRpc(ABlock block)
     {
+        block.voxelMap.firstBlockThisGame = block;
         block.GetComponent<NetworkObject>().Despawn();
         GameObject gameObjectCrystal = Instantiate(staticBlock, block.transform.position, Quaternion.identity);
         gameObjectCrystal.GetComponent<NetworkObject>().Spawn();
+        firstBlockChangeClientRpc(block);
+    }
+    [ClientRpc]
+    public void firstBlockChangeClientRpc(ABlock block)
+    {
+        block.voxelMap.firstBlockThisGame = block;
     }
 
 }

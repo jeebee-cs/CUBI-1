@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7227532, g: 0.55963755, b: 0.86340123, a: 1}
+  m_IndirectSpecularColor: {r: 0.7803404, g: 0.52392584, b: 0.9835949, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29012,7 +29012,8 @@ MonoBehaviour:
       m_Calls: []
   winningScore: 1
   _voxelMap: []
-  staticBlock: {fileID: 0}
+  staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
 --- !u!1 &1194837946
 GameObject:
   m_ObjectHideFlags: 0
@@ -44257,7 +44258,7 @@ PrefabInstance:
     - target: {fileID: 3808826435472714480, guid: fd783ff01fbafe16aa460686a990a73f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.12127295
+      value: -0.12127
       objectReference: {fileID: 0}
     - target: {fileID: 3808826435472714480, guid: fd783ff01fbafe16aa460686a990a73f,
         type: 3}
