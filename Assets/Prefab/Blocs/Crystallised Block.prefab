@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7293917940280427913}
   - component: {fileID: 3459007557957284353}
   - component: {fileID: 2853882208623974335}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Crystallised Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}

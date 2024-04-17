@@ -101,9 +101,4 @@ public class MoveableBlock : ABlock
     {
         _networkObject.Despawn();
     }
-    [ServerRpc(RequireOwnership = false)]
-    public void SpawnServerRpc()
-    {
-        _networkObject.Spawn();
-    }
 }

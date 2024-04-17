@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEditor;
-using static ABlock;
 using Unity.Netcode;
 
 public class voxelMap : NetworkBehaviour
@@ -63,7 +62,6 @@ public class voxelMap : NetworkBehaviour
         if (block != null)
         {
             FirstBlockChangeServerRpc(_firstPosBlock);
-            block.GetComponent<MoveableBlock>().SpawnServerRpc();
             block.GetComponent<MoveableBlock>().DespawnServerRpc();
         }
     }
