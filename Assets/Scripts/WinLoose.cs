@@ -37,7 +37,6 @@ public class WinLoose : NetworkBehaviour
     public void Lose()
     {
         AkSoundEngine.PostEvent("Stop_All_Audio", this.gameObject);
-        Debug.Log("You lose");
         _gameFinished = true;
         ResetGame("Lose");
     }
@@ -45,7 +44,6 @@ public class WinLoose : NetworkBehaviour
     public void LevelWin()
     {
         AkSoundEngine.PostEvent("Stop_All_Audio", this.gameObject);
-        Debug.Log("You win");
         _gameFinished = true;
         ResetGame("Win");
     }
@@ -103,12 +101,15 @@ public class WinLoose : NetworkBehaviour
     {
         if (_voxelMaps[voxelMapID].firstBlockPosThisGame != new Vector3(int.MaxValue, int.MaxValue, int.MaxValue)) return;
 
+        _voxelMaps[voxelMapID].firstBlockPosThisGame = position;
+        _voxelMaps[voxelMapID].firstBlockOriginalPosThisGame = firstPosition;
+
+        if (_voxelMaps[voxelMapID].firstPosBlock != new Vector3(int.MaxValue, int.MaxValue, int.MaxValue)) return;
+
         GameObject gameObjectCrystal = Instantiate(staticBlock, position, Quaternion.identity);
         NetworkObject gameObjectCrystalNetworkObject = gameObjectCrystal.GetComponent<NetworkObject>();
         gameObjectCrystalNetworkObject.Spawn();
 
-        _voxelMaps[voxelMapID].firstBlockPosThisGame = position;
-        _voxelMaps[voxelMapID].firstBlockOriginalPosThisGame = firstPosition;
 
         block.TryGet(out NetworkObject blockObject);
         blockObject.Despawn();

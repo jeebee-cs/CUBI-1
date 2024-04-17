@@ -8,6 +8,7 @@ using Unity.Netcode;
 
 public class voxelMap : NetworkBehaviour
 {
+    [SerializeField] GameObject _staticBlock;
     [SerializeField] ABlock[] blocksLists;
     private ABlock[,,] voxelMatrix; // Matrice 3D de blocs
 
@@ -57,14 +58,19 @@ public class voxelMap : NetworkBehaviour
         {
             if (Vector3.Distance(blocksLists[i].transform.position, _firstPosBlock) < .1f) block = blocksLists[i];
         }
-        Debug.Log(block);
-        if (block != null) FirstBlockChangeServerRpc(_firstPosBlock, block.GetComponent<NetworkObject>());
+
+        if (block != null)
+        {
+            NetworkObject networkObject = block.GetComponentInChildren<NetworkObject>();
+            if (networkObject == null) networkObject = block.GetComponent<NetworkObject>();
+            FirstBlockChangeServerRpc(_firstPosBlock, networkObject);
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
     public void FirstBlockChangeServerRpc(Vector3 position, NetworkObjectReference block)
     {
-        GameObject gameObjectCrystal = Instantiate(GameManager.instance.winLoose.staticBlock, position, Quaternion.identity);
+        GameObject gameObjectCrystal = Instantiate(_staticBlock, position, Quaternion.identity);
         NetworkObject gameObjectCrystalNetworkObject = gameObjectCrystal.GetComponent<NetworkObject>();
         gameObjectCrystalNetworkObject.Spawn();
 

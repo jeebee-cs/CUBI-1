@@ -22,6 +22,8 @@ public class SaveManager : MonoBehaviour
             Directory.CreateDirectory(path);
         }
 
+        path += fileName;
+
         FileStream stream = new FileStream(path, FileMode.Create);
 
         SaveCrystallisedAll data = new SaveCrystallisedAll(gameManager.winLoose.voxelMaps);
@@ -34,7 +36,7 @@ public class SaveManager : MonoBehaviour
     {
         GameManager gameManager = GameManager.instance;
 
-        string path = Application.persistentDataPath + directory;
+        string path = Application.persistentDataPath + directory + fileName;
 
         if (File.Exists(path))
         {
@@ -67,7 +69,7 @@ public class SaveManager : MonoBehaviour
             
             for (int i = 0; i < _saveCrystalliseds.Length; i++)
             {
-                _saveCrystalliseds[i] = new SaveCrystallised(voxelMaps[i].firstPosBlock);
+                _saveCrystalliseds[i] = new SaveCrystallised(voxelMaps[i].firstBlockOriginalPosThisGame);
             }
         }
 

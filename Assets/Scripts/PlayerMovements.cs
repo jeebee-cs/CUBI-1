@@ -63,6 +63,8 @@ public class PlayerMovements : NetworkBehaviour
             GameManager.instance.cameraManager.FollowPlayer(transform);
             GetComponentInChildren<PlayerOrientation>().CameraT = GameManager.instance.cameraManager.playerCamera.transform;
         }
+
+        if (GameManager.instance.saveManager != null && IsHost) GameManager.instance.saveManager.Load();
     }
 
     void Update()

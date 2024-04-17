@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7227532, g: 0.55963755, b: 0.86340123, a: 1}
+  m_IndirectSpecularColor: {r: 0.7803404, g: 0.52392584, b: 0.9835949, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1595,6 +1595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 77321139}
+  - component: {fileID: 77321140}
   - component: {fileID: 77321138}
   m_Layer: 0
   m_Name: ClockHardPuzzle
@@ -1615,6 +1616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41612e99217048adb88f80b95a8fd4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
   blocksLists:
   - {fileID: 1052990581}
   - {fileID: 545002298}
@@ -1731,6 +1734,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &77321140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77321137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 3417736824
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1001 &79096875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2004,6 +2027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 90069438}
   - component: {fileID: 90069437}
+  - component: {fileID: 90069439}
   m_Layer: 0
   m_Name: ClockMediumPuzzle
   m_TagString: Untagged
@@ -2023,6 +2047,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41612e99217048adb88f80b95a8fd4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
   blocksLists:
   - {fileID: 306152790}
   - {fileID: 465559969}
@@ -2093,6 +2119,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &90069439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90069436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1189316694
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &92087696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2831,6 +2877,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 110886114}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &110886116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 110886114}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &111324382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8521,6 +8579,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 324440648}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &324440650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 324440648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &330693236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9234,6 +9304,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 360228197}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &360228199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+    type: 3}
+  m_PrefabInstance: {fileID: 360228197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &370666733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12322,6 +12404,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 457810045}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &457810047 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+    type: 3}
+  m_PrefabInstance: {fileID: 457810045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &462859388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17382,6 +17476,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 671202400}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &671202402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+    type: 3}
+  m_PrefabInstance: {fileID: 671202400}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &674439216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17763,6 +17869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684397951}
   - component: {fileID: 684397950}
+  - component: {fileID: 684397952}
   m_Layer: 0
   m_Name: JungleMediumPuzzle
   m_TagString: Untagged
@@ -17782,6 +17889,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41612e99217048adb88f80b95a8fd4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
   blocksLists:
   - {fileID: 746740810}
   - {fileID: 1622925365}
@@ -17882,6 +17991,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684397952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684397949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1573091159
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &686213052
 GameObject:
   m_ObjectHideFlags: 0
@@ -22351,6 +22480,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 840672700}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &840672702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+    type: 3}
+  m_PrefabInstance: {fileID: 840672700}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &841258009
 GameObject:
   m_ObjectHideFlags: 0
@@ -22361,6 +22502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841258011}
   - component: {fileID: 841258010}
+  - component: {fileID: 841258012}
   m_Layer: 0
   m_Name: JungleHardPuzzle
   m_TagString: Untagged
@@ -22380,6 +22522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41612e99217048adb88f80b95a8fd4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
   blocksLists:
   - {fileID: 1375175240}
   - {fileID: 981645960}
@@ -22602,6 +22746,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841258012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841258009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 4016956079
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1001 &844588965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22784,6 +22948,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 845369977}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &845369979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+    type: 3}
+  m_PrefabInstance: {fileID: 845369977}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &849852116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23919,6 +24095,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 895487223}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &895487225 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+    type: 3}
+  m_PrefabInstance: {fileID: 895487223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &898514821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26330,6 +26518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 985381633}
   - component: {fileID: 985381632}
+  - component: {fileID: 985381634}
   m_Layer: 0
   m_Name: ClockEasyPuzzle
   m_TagString: Untagged
@@ -26349,6 +26538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41612e99217048adb88f80b95a8fd4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
   blocksLists:
   - {fileID: 889829646}
   - {fileID: 1107473791}
@@ -26409,6 +26600,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &985381634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985381631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1233278090
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1001 &989177349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28643,6 +28854,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1065579650}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1065579652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1065579650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1067395021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30327,6 +30550,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1135271519}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1135271521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4530810540207767641, guid: f4f5d89442bdb8148aedeadbfae8d5ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135271519}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1136546310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30875,6 +31110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1155073584}
   - component: {fileID: 1155073583}
+  - component: {fileID: 1155073585}
   m_Layer: 0
   m_Name: JungleEasyPuzzle
   m_TagString: Untagged
@@ -30894,6 +31130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41612e99217048adb88f80b95a8fd4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
   blocksLists:
   - {fileID: 955475122}
   - {fileID: 607457503}
@@ -30978,6 +31216,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1155073585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155073582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1526737645
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1001 &1155200080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33058,6 +33316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1217861173}
   - component: {fileID: 1217861172}
+  - component: {fileID: 1217861174}
   m_Layer: 0
   m_Name: PastelEasyPuzzle
   m_TagString: Untagged
@@ -33077,7 +33336,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41612e99217048adb88f80b95a8fd4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blocksLists: []
+  _staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
+  blocksLists:
+  - {fileID: 895487225}
+  - {fileID: 1250554447}
+  - {fileID: 1677628582}
+  - {fileID: 1690968035}
+  - {fileID: 1366863933}
+  - {fileID: 1415986117}
+  - {fileID: 1135271521}
+  - {fileID: 1999365342}
+  - {fileID: 1665563500}
+  - {fileID: 110886116}
+  - {fileID: 324440650}
+  - {fileID: 1799235799}
+  - {fileID: 840672702}
+  - {fileID: 360228199}
+  - {fileID: 845369979}
+  - {fileID: 671202402}
+  - {fileID: 1065579652}
+  - {fileID: 457810047}
+  - {fileID: 1421430852}
   width: 8
   height: 7
   depth: 8
@@ -33123,6 +33403,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217861174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217861171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 500707263
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1001 &1227259847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34060,6 +34360,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1250554445}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1250554447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6242894048512511537, guid: cc50036a210bfce4b9553922efa27ce3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1250554445}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1254376944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36595,6 +36907,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1366863931}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1366863933 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -253746144501267797, guid: 1b3a0fc97cbdd4f45940985827632a03,
+    type: 3}
+  m_PrefabInstance: {fileID: 1366863931}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1370390643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37758,6 +38082,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1415986115}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1415986117 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1415986115}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1420530529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37940,6 +38276,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1421430850}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1421430852 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3114939024338205216, guid: 1f212cd1f02c47d478cb7cac34e84c10,
+    type: 3}
+  m_PrefabInstance: {fileID: 1421430850}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1426611890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40162,6 +40510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1492662687}
   - component: {fileID: 1492662686}
+  - component: {fileID: 1492662688}
   m_Layer: 0
   m_Name: PastelHardPuzzle
   m_TagString: Untagged
@@ -40181,6 +40530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41612e99217048adb88f80b95a8fd4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
   blocksLists:
   - {fileID: 1057924898}
   - {fileID: 1863802429}
@@ -40332,6 +40683,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1492662688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492662685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 2303656277
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1001 &1496279928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44790,6 +45161,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1665563498}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1665563500 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1804494818670763341, guid: 1b298d11bebf7f143a4fbf8d8798829a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1665563498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1666338885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45235,6 +45618,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1677628580}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1677628582 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 1677628580}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1680310181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45687,6 +46082,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1690968033}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1690968035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4787870076290039478, guid: 1dd2db2b7c5331047bee90da0d3024e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690968033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1693160453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47345,6 +47752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749513282}
   - component: {fileID: 1749513281}
+  - component: {fileID: 1749513283}
   m_Layer: 0
   m_Name: PastelMediumPuzzle
   m_TagString: Untagged
@@ -47364,6 +47772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41612e99217048adb88f80b95a8fd4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
+    type: 3}
   blocksLists:
   - {fileID: 284618601}
   - {fileID: 1545389663}
@@ -47444,6 +47854,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1749513283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749513280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1093723241
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1001 &1750249575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48971,6 +49401,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1799235797}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1799235799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -2508268763430319949, guid: 164b35fe69592bf478b8ce8711e2c516,
+    type: 3}
+  m_PrefabInstance: {fileID: 1799235797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1802758051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52242,6 +52684,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1999365340}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1999365342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -3947140726127819948, guid: e8c64f361ce165346b4f66248b88d5ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 1999365340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8184057e3b70197f895a5e59f23551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2002131584
 PrefabInstance:
   m_ObjectHideFlags: 0

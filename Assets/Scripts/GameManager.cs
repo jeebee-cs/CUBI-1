@@ -35,7 +35,6 @@ public class GameManager : NetworkBehaviour
         if (_instance != null && _instance != this)
         {
             _instance.OnSceneLoaded(_uIManager, _cameraManager, _dreamCollection, _winLoose, _saveManager, _dreamDisplayer, _skyboxBlender);
-            if (_instance.saveManager != null) _instance.saveManager.Load();
             Destroy(gameObject);
             return;
         }

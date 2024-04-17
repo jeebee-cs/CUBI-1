@@ -20,8 +20,8 @@ public class MoveableBlock : ABlock
 
     void Start()
     {
-        _networkObject = transform.parent.GetComponent<NetworkObject>();
-        if (_networkObject == null) _networkObject = GetComponent<NetworkObject>();
+        _networkObject = GetComponent<NetworkObject>();
+        if (_networkObject == null) _networkObject = transform.parent.GetComponent<NetworkObject>();
     }
 
     public void MoveBlock(Vector3 otherPos, ulong clientId)
@@ -49,7 +49,6 @@ public class MoveableBlock : ABlock
             {
                 if (Physics.OverlapBox(transform.position + directionToPush * 1.5f, new Vector3(.9f, .9f, .4f), Quaternion.identity, _layerBlock).Length != 0)
                 {
-                    Debug.Log("Block hit");
                     return;
                 }
             }
@@ -57,7 +56,6 @@ public class MoveableBlock : ABlock
             {
                 if (Physics.OverlapBox(transform.position + directionToPush * 1.5f, new Vector3(.4f, .9f, .9f), Quaternion.identity, _layerBlock).Length != 0)
                 {
-                    Debug.Log("Block hit");
                     return;
                 }
             }
@@ -66,7 +64,6 @@ public class MoveableBlock : ABlock
         {
             if (Physics.OverlapBox(transform.position + directionToPush, new Vector3(.4f, .4f, .4f), Quaternion.identity, _layerBlock).Length != 0)
             {
-                Debug.Log("Block hit");
                 return;
             }
         }
