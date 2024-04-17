@@ -9,14 +9,13 @@ using UnityEngine.SceneManagement;
 
 public class WinLoose : NetworkBehaviour
 {
-    [SerializeField] private UnityEvent winning;
     [SerializeField] float winningScore = 1;
     [SerializeField] voxelMap[] _voxelMaps;
     public voxelMap[] voxelMaps { get => _voxelMaps; }
     Coroutine resetGameCoroutine = null;
     private bool _gameFinished = false;
-    [SerializeField] GameObject staticBlock;
-    public bool gameOver { get => _gameFinished; set => _gameFinished = value; }
+    [SerializeField] GameObject _staticBlock;
+    public GameObject staticBlock { get => _staticBlock; }
 
     private void Start()
     {
@@ -51,25 +50,6 @@ public class WinLoose : NetworkBehaviour
         ResetGame("Win");
     }
 
-    /*public void GameWin()
-    {
-        Debug.Log("You win");
-         _gameFinished = true;
-         Reset();
-    }*/
-
-    public void Reload(int reload)
-    {
-        if (GameManager.instance.neutralDreamCollected - reload >= 0)
-        {
-            GameManager.instance.saveManager.saveCall("respawn");
-        }
-        else
-        {
-            Lose();
-        }
-    }
-
     public void ResetGame(string scene)
     {
         if (resetGameCoroutine == null) resetGameCoroutine = StartCoroutine(ResetGameCoroutine(scene));
@@ -89,6 +69,7 @@ public class WinLoose : NetworkBehaviour
             Destroy(NetworkManager.Singleton.gameObject);
             Destroy(GameManager.instance.gameObject);
             AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync(scene);
+            GameManager.instance.saveManager.Save();
             while (!asyncLoadLevel.isDone)
             {
                 yield return null;
@@ -121,7 +102,7 @@ public class WinLoose : NetworkBehaviour
     public void FirstBlockChangeServerRpc(Vector3 position, Vector3 firstPosition, int voxelMapID, NetworkObjectReference block)
     {
         if (_voxelMaps[voxelMapID].firstBlockPosThisGame != new Vector3(int.MaxValue, int.MaxValue, int.MaxValue)) return;
-        Debug.Log("b");
+
         GameObject gameObjectCrystal = Instantiate(staticBlock, position, Quaternion.identity);
         NetworkObject gameObjectCrystalNetworkObject = gameObjectCrystal.GetComponent<NetworkObject>();
         gameObjectCrystalNetworkObject.Spawn();
