@@ -1457,7 +1457,6 @@ MonoBehaviour:
   width: 8
   height: 12
   depth: 8
-  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -1797,7 +1796,6 @@ MonoBehaviour:
   width: 6
   height: 6
   depth: 7
-  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -16349,7 +16347,6 @@ MonoBehaviour:
   width: 6
   height: 6
   depth: 6
-  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -20272,7 +20269,6 @@ MonoBehaviour:
   width: 6
   height: 12
   depth: 6
-  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -23854,7 +23850,6 @@ MonoBehaviour:
   width: 10
   height: 4
   depth: 4
-  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -28081,7 +28076,6 @@ MonoBehaviour:
   width: 13
   height: 6
   depth: 4
-  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -28972,6 +28966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1193438235}
+  - component: {fileID: 1193438237}
   - component: {fileID: 1193438236}
   m_Layer: 0
   m_Name: WinLose
@@ -29014,6 +29009,26 @@ MonoBehaviour:
   _voxelMap: []
   staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
     type: 3}
+--- !u!114 &1193438237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193438234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 2047076839
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &1194837946
 GameObject:
   m_ObjectHideFlags: 0
@@ -30027,7 +30042,6 @@ MonoBehaviour:
   width: 8
   height: 7
   depth: 8
-  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -36603,7 +36617,6 @@ MonoBehaviour:
   width: 6
   height: 13
   depth: 6
-  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}
@@ -43172,7 +43185,6 @@ MonoBehaviour:
   width: 5
   height: 4
   depth: 5
-  _firstBlockThisGame: {fileID: 0}
   mapTheme: 0
   jungleTheme: {fileID: 11400000, guid: ea89d2b5c4fbd1b44bcef5aa9c5f7503, type: 2}
   clockTheme: {fileID: 11400000, guid: 4670e08d94a13074aa462282caab7048, type: 2}

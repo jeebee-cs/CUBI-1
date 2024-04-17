@@ -4,8 +4,9 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 using static ABlock;
+using Unity.Netcode;
 
-public class voxelMap : MonoBehaviour {
+public class voxelMap : NetworkBehaviour {
     private ABlock[,,] voxelMatrix; // Matrice 3D de blocs
 
     [SerializeField ,Range(0,20)]
@@ -16,14 +17,14 @@ public class voxelMap : MonoBehaviour {
 
     [SerializeField ,Range(0,20)]
     private int depth = 5;
-    Vector2 _firstPosBlock = new Vector2(int.MaxValue, int.MaxValue);
-    public Vector2 firstPosBlock {get => _firstPosBlock;}
-    Vector2 _firstBlockOriginalPos = new Vector2(int.MaxValue, int.MaxValue);
-    public Vector2 firstBlockOriginalPos {get => _firstBlockOriginalPos; set => _firstBlockOriginalPos = value; }
-    Vector2 _firstBlockOriginalPosThisGame = new Vector2(int.MaxValue, int.MaxValue);
-    public Vector2 firstBlockOriginalPosThisGame {get => _firstBlockOriginalPosThisGame; set => _firstBlockOriginalPosThisGame = value; }
-    Vector2 _firstBlockPosThisGame = new Vector2(int.MaxValue, int.MaxValue);
-    public Vector2 firstBlockPosThisGame {get => _firstBlockPosThisGame; set => _firstBlockPosThisGame = value; }
+    Vector3 _firstPosBlock = new Vector3(int.MaxValue, int.MaxValue, int.MaxValue);
+    public Vector3 firstPosBlock {get => _firstPosBlock;}
+    Vector3 _firstBlockOriginalPos = new Vector3(int.MaxValue, int.MaxValue, int.MaxValue);
+    public Vector3 firstBlockOriginalPos {get => _firstBlockOriginalPos; set => _firstBlockOriginalPos = value; }
+    Vector3 _firstBlockOriginalPosThisGame = new Vector3(int.MaxValue, int.MaxValue, int.MaxValue);
+    public Vector3 firstBlockOriginalPosThisGame {get => _firstBlockOriginalPosThisGame; set => _firstBlockOriginalPosThisGame = value; }
+    Vector3 _firstBlockPosThisGame = new Vector3(int.MaxValue, int.MaxValue, int.MaxValue);
+    public Vector3 firstBlockPosThisGame {get => _firstBlockPosThisGame; set => _firstBlockPosThisGame = value; }
 
     private Vector3 offset;
 

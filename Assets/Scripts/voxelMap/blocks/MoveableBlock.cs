@@ -16,6 +16,7 @@ public class MoveableBlock : ABlock
     [SerializeField, Range(0f, 1f)]
     private float deplacementTime = 0.5f;
     NetworkObject _networkObject;
+    public NetworkObject networkObject { get => _networkObject; }
 
     void Start()
     {
@@ -97,5 +98,10 @@ public class MoveableBlock : ABlock
     public void ChangeOwnerShipServerRpc(ulong ownerClientId)
     {
         _networkObject.ChangeOwnership(ownerClientId);
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void DespawnServerRpc()
+    {
+        _networkObject.Despawn();
     }
 }
