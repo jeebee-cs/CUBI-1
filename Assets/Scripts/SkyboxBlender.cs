@@ -29,9 +29,9 @@ public class SkyboxBlender : MonoBehaviour
 
     public List<ShitToRender> shitToRenderHAHAHA = new List<ShitToRender>();
 
-    public void Start()
+    public void Awake()
     {
-        ChangeSkyboxTheme(MapTheme.CLOCK);
+        ChangeSkyboxTheme(MapTheme.JUNGLE);
     }
 
     public void ChangeSkyboxTheme(MapTheme theme)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
@@ -20,6 +21,7 @@ public class PauseMenu : MonoBehaviour
     public string[] difficultyTexts;
 
     public GameObject firstSelected;
+    Coroutine resetGameCoroutine = null;
 
     public void Update()
     {
@@ -28,12 +30,15 @@ public class PauseMenu : MonoBehaviour
             if (inPauseMenu)
             {
                 Resume();
+                Cursor.lockState = CursorLockMode.Locked;
             }
             else
             {
+                Cursor.lockState = CursorLockMode.Confined;
                 EventSystem.current.SetSelectedGameObject(firstSelected);
                 inPauseMenu = true;
                 menuGameObject.SetActive(true);
+
             }
         }
     }
@@ -41,6 +46,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         inPauseMenu = false;
         menuGameObject.SetActive(false);
     }
@@ -67,16 +73,44 @@ public class PauseMenu : MonoBehaviour
 
     public void ResetLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ResetGame("Lose");
     }
 
     public void ReturnMainMenu()
     {
-        SceneManager.LoadScene(menuScene.name);
+        ResetGame("Main Menu");
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+
+    public void ResetGame(string scene)
+    {
+        if (resetGameCoroutine == null) resetGameCoroutine = StartCoroutine(ResetGameCoroutine(scene));
+    }
+
+    public IEnumerator ResetGameCoroutine(string scene)
+    {
+            Time.timeScale = 1;
+            Debug.Log(NetworkManager.Singleton);
+            NetworkManager.Singleton.Shutdown();
+            while (NetworkManager.Singleton.ShutdownInProgress)
+            {
+                yield return null;
+            }
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Destroy(NetworkManager.Singleton.gameObject);
+            Destroy(GameManager.instance.gameObject);
+            AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync(scene);
+            GameManager.instance.saveManager.Save();
+            while (!asyncLoadLevel.isDone)
+            {
+                yield return null;
+            }
+       
     }
 }
