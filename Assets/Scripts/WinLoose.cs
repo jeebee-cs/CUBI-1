@@ -11,11 +11,10 @@ public class WinLoose : NetworkBehaviour
 {
     [SerializeField] private UnityEvent winning;
     [SerializeField] float winningScore = 1;
-    [SerializeField] voxelMap[] _voxelMap;
+    [SerializeField] voxelMap[] _voxelMaps;
     Coroutine resetGameCoroutine = null;
     private bool _gameFinished = false;
     [SerializeField] GameObject staticBlock;
-    NetworkObject _networkBlock;
     public bool gameOver { get => _gameFinished; set => _gameFinished = value; }
 
     private void Start()
@@ -100,32 +99,35 @@ public class WinLoose : NetworkBehaviour
             GameManager.instance.SetDreamEnergyServerRpc(0);
         }
     }
-    public void firstBlockChange(MoveableBlock block, Vector3 firstPosition)
+    public void FirstBlockChange(MoveableBlock block, Vector3 firstPosition)
     {
-        if (block.voxelMap.firstBlockPosThisGame == new Vector3(int.MaxValue, int.MaxValue, int.MaxValue))
+        int voxelMapID = -1;
+        for (int i = 0; i < _voxelMaps.Length; i++)
         {
-            Debug.Log(block.transform.position + "   " + firstPosition);
-            firstBlockChangeServerRpc(block.transform.position, firstPosition);
-            block.voxelMap.firstBlockPosThisGame = block.transform.position;
-            block.voxelMap.firstBlockOriginalPosThisGame = firstPosition;
-            block.DespawnServerRpc();
+            if(block.voxelMap == _voxelMaps[i]) {
+                voxelMapID = i;
+            }
+        }
+
+        if (_voxelMaps[voxelMapID].firstBlockPosThisGame == new Vector3(int.MaxValue, int.MaxValue, int.MaxValue))
+        {
+            FirstBlockChangeServerRpc(block.transform.position, firstPosition, voxelMapID, block.networkObject);
         }
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void firstBlockChangeServerRpc(Vector3 position, Vector3 firstPosition)
+    public void FirstBlockChangeServerRpc(Vector3 position, Vector3 firstPosition, int voxelMapID, NetworkObjectReference block)
     {
+        if (_voxelMaps[voxelMapID].firstBlockPosThisGame != new Vector3(int.MaxValue, int.MaxValue, int.MaxValue)) return;
+        Debug.Log("b");
         GameObject gameObjectCrystal = Instantiate(staticBlock, position, Quaternion.identity);
         NetworkObject gameObjectCrystalNetworkObject = gameObjectCrystal.GetComponent<NetworkObject>();
         gameObjectCrystalNetworkObject.Spawn();
-        
-        //firstBlockChangeClientRpc(position, firstPosition);
-    }
-    // [ClientRpc]
-    // public void firstBlockChangeClientRpc(ABlock block, Vector2 firstPosition)
-    // {
-    //     block.voxelMap.firstBlockPosThisGame = block.transform.position;
-    //     block.voxelMap.firstBlockOriginalPosThisGame = firstPosition;
-    // }
 
+        _voxelMaps[voxelMapID].firstBlockPosThisGame = position;
+        _voxelMaps[voxelMapID].firstBlockOriginalPosThisGame = firstPosition;
+
+        block.TryGet(out NetworkObject blockObject);
+        blockObject.Despawn();
+    }
 }

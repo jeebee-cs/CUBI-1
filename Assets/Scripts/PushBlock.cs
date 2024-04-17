@@ -64,7 +64,6 @@ public class PushBlock : MonoBehaviour
                     {
                         if (playerMovement != _playerMovements) otherPlayer = playerMovement;
                     }
-                    Debug.Log(otherPlayer);
                     if (otherPlayer == null) return;
 
                     if (Vector3.Distance(otherPlayer.transform.position, nearestBlock.transform.position) < 1.75f && Vector3.Distance(otherPlayer.transform.position, transform.position) < 1.35f)

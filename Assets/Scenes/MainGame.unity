@@ -29006,7 +29006,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   winningScore: 1
-  _voxelMap: []
+  _voxelMaps:
+  - {fileID: 985381632}
+  - {fileID: 90069437}
+  - {fileID: 77321138}
+  - {fileID: 1155073583}
+  - {fileID: 684397950}
+  - {fileID: 841258010}
+  - {fileID: 1217861172}
+  - {fileID: 1749513281}
+  - {fileID: 1492662686}
   staticBlock: {fileID: 3817742143562676374, guid: 9191d270c8e806441ad06c1c318de22e,
     type: 3}
 --- !u!114 &1193438237

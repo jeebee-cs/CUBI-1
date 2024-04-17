@@ -91,7 +91,7 @@ public class MoveableBlock : ABlock
         transform.position = newPosition;
         IsMoving = false;
 
-        if(!bigBlock) GameManager.instance.winLoose.firstBlockChange(this, startingPos);
+        if(!bigBlock) GameManager.instance.winLoose.FirstBlockChange(this, startingPos);
     }
 
     [ServerRpc(RequireOwnership = false)]
