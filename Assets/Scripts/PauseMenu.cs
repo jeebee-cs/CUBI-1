@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Update()
     {
-        if (ButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel"))
         {
             if (inPauseMenu)
             {
