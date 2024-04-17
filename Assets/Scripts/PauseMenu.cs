@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -18,6 +19,8 @@ public class PauseMenu : MonoBehaviour
 
     public string[] difficultyTexts;
 
+    public GameObject firstSelected;
+
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -28,6 +31,7 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
+                EventSystem.current.SetSelectedGameObject(firstSelected);
                 inPauseMenu = true;
                 menuGameObject.SetActive(true);
             }
