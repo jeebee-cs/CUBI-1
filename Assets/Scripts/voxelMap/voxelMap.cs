@@ -56,26 +56,24 @@ public class voxelMap : NetworkBehaviour
         ABlock block = null;
         for (int i = 0; i < blocksLists.Length; i++)
         {
+            if (blocksLists[i] == null) continue;
             if (Vector3.Distance(blocksLists[i].transform.position, _firstPosBlock) < .1f) block = blocksLists[i];
         }
 
         if (block != null)
         {
-            NetworkObject networkObject = block.GetComponentInChildren<NetworkObject>();
-            if (networkObject == null) networkObject = block.GetComponent<NetworkObject>();
-            FirstBlockChangeServerRpc(_firstPosBlock, networkObject);
+            FirstBlockChangeServerRpc(_firstPosBlock);
+            block.GetComponent<MoveableBlock>().SpawnServerRpc();
+            block.GetComponent<MoveableBlock>().DespawnServerRpc();
         }
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void FirstBlockChangeServerRpc(Vector3 position, NetworkObjectReference block)
+    public void FirstBlockChangeServerRpc(Vector3 position)
     {
         GameObject gameObjectCrystal = Instantiate(_staticBlock, position, Quaternion.identity);
         NetworkObject gameObjectCrystalNetworkObject = gameObjectCrystal.GetComponent<NetworkObject>();
         gameObjectCrystalNetworkObject.Spawn();
-
-        block.TryGet(out NetworkObject blockObject);
-        blockObject.Despawn();
     }
 
     // Méthode pour ajouter un bloc à la carte de voxels

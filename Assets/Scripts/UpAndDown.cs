@@ -8,13 +8,13 @@ public class UpAndDown : MonoBehaviour
     float randomSpeed;
     void Awake()
     {
-        originalPosition = transform.position;
-        Debug.Log(originalPosition);
-        StartCoroutine(UpAndDownCoroutine());
         randomSpeed = Random.Range(0.0007f, 0.001f);
+        StartCoroutine(UpAndDownCoroutine());
     }
     IEnumerator UpAndDownCoroutine()
     {
+        yield return new WaitForSeconds(1);
+        originalPosition = transform.position;
         while (true)
         {
             while (transform.position.y < originalPosition.y + .05f)

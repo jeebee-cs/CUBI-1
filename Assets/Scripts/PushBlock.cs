@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PushBlock : MonoBehaviour
 {
+    [SerializeField] LayerMask _layerBlock;
     private List<MoveableBlock> _moveableBlocks = new List<MoveableBlock>();
     public List<MoveableBlock> moveableBlocks { get => _moveableBlocks; }
     Vector3 _lastGroundPosition = Vector3.zero;
@@ -19,7 +20,6 @@ public class PushBlock : MonoBehaviour
     {
         MoveableBlock moveableBlock = other.gameObject.GetComponent<MoveableBlock>();
 
-
         if (moveableBlock != null)
         {
             if (moveableBlock.bigBlock)
@@ -30,10 +30,9 @@ public class PushBlock : MonoBehaviour
             {
                 if (transform.position.y - other.gameObject.transform.position.y > .6f) _lastGroundPosition = other.gameObject.transform.position + Vector3.up * 2;
             }
-            // Ajoute le MoveableBlock à la liste
             _moveableBlocks.Add(moveableBlock);
         }
-        else _lastGroundPosition = other.gameObject.transform.position + Vector3.up * 2;
+        else if(Physics.OverlapBox(other.transform.position + Vector3.up, new Vector3(.4f, .4f, .4f), Quaternion.identity, _layerBlock).Length != 0) _lastGroundPosition = other.gameObject.transform.position + Vector3.up * 2;
     }
 
     void OnCollisionExit(Collision other)
