@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -99,28 +100,33 @@ public class WinLoose : MonoBehaviour
             GameManager.instance.SetDreamEnergyServerRpc(0);
         }
     }
-    public void firstBlockChange(ABlock block)
+    public void firstBlockChange(ABlock block, Vector2 firstPosition)
     {
-        if (block.voxelMap.firstBlockThisGame == null)
+        Debug.Log(block.voxelMap.firstBlockPosThisGame + "   " + new Vector2(int.MaxValue, int.MaxValue));
+        if (block.voxelMap.firstBlockPosThisGame == new Vector2(int.MaxValue, int.MaxValue))
         {
-            Debug.Log("first block");
-            firstBlockChangeServerRpc(block);
+            firstBlockChangeServerRpc(block, firstPosition);
         }
     }
 
     [ServerRpc(RequireOwnership = false)]
-    public void firstBlockChangeServerRpc(ABlock block)
+    public void firstBlockChangeServerRpc(ABlock block, Vector2 firstPosition)
     {
-        block.voxelMap.firstBlockThisGame = block;
+        block.voxelMap.firstBlockPosThisGame = block.transform.position;
+        block.voxelMap.firstBlockOriginalPosThisGame = firstPosition;
+
         block.GetComponent<NetworkObject>().Despawn();
+
         GameObject gameObjectCrystal = Instantiate(staticBlock, block.transform.position, Quaternion.identity);
         gameObjectCrystal.GetComponent<NetworkObject>().Spawn();
-        firstBlockChangeClientRpc(block);
+
+        firstBlockChangeClientRpc(block, firstPosition);
     }
     [ClientRpc]
-    public void firstBlockChangeClientRpc(ABlock block)
+    public void firstBlockChangeClientRpc(ABlock block, Vector2 firstPosition)
     {
-        block.voxelMap.firstBlockThisGame = block;
+        block.voxelMap.firstBlockPosThisGame = block.transform.position;
+        block.voxelMap.firstBlockOriginalPosThisGame = firstPosition;
     }
 
 }

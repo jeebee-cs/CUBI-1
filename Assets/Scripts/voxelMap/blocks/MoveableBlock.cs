@@ -37,7 +37,6 @@ public class MoveableBlock : ABlock
 
         directionToOther = directionToOther.normalized;
 
-        Debug.Log(directionToOther);
         directionToOther.x = Mathf.Round(directionToOther.x * .6f);
         directionToOther.z = Mathf.Round(directionToOther.z * .6f);
         directionToOther.y = 0;
@@ -90,14 +89,13 @@ public class MoveableBlock : ABlock
         }
         transform.position = newPosition;
         IsMoving = false;
-        Debug.Log("position:" + transform.position);
-        GameManager.instance.winLoose.firstBlockChange(this);
+
+        if(!bigBlock) GameManager.instance.winLoose.firstBlockChange(this, startingPos);
     }
 
     [ServerRpc(RequireOwnership = false)]
     public void ChangeOwnerShipServerRpc(ulong ownerClientId)
     {
-        Debug.Log(_networkObject);
         _networkObject.ChangeOwnership(ownerClientId);
     }
 }

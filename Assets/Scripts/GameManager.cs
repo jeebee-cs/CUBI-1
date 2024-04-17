@@ -71,7 +71,6 @@ public class GameManager : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void SetDreamEnergyServerRpc(float dreamEnergy)
     {
-        Debug.Log(_dreamEnergy.Value);
         _dreamEnergy.Value = dreamEnergy;
         _uIManager.dreamBar.value = _dreamEnergy.Value;
         SetDreamEnergyClientRpc(dreamEnergy);
@@ -81,7 +80,6 @@ public class GameManager : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void SetNeutralDreamCollectedServerRpc(int neutralDreamCollected)
     {
-        Debug.Log(_neutralDreamCollected.Value);
         _neutralDreamCollected.Value = neutralDreamCollected;
         _uIManager.neutralDreams.text = _neutralDreamCollected.Value.ToString();
         SetNeutralDreamCollectedClientRpc(neutralDreamCollected);
@@ -90,7 +88,6 @@ public class GameManager : NetworkBehaviour
     [ClientRpc]
     public void SetDreamEnergyClientRpc(float dreamEnergy)
     {
-        Debug.Log(dreamEnergy);
         _uIManager.dreamBar.value = dreamEnergy;
         _winLoose.winCheck(dreamEnergy, _neutralDreamCollected.Value);
     }
@@ -98,7 +95,6 @@ public class GameManager : NetworkBehaviour
     [ClientRpc]
     public void SetNeutralDreamCollectedClientRpc(int neutralDreamCollected)
     {
-        Debug.Log(_neutralDreamCollected.Value);
         _uIManager.neutralDreams.text = neutralDreamCollected.ToString();
         _winLoose.winCheck(_dreamEnergy.Value, neutralDreamCollected);
     }

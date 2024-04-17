@@ -16,10 +16,14 @@ public class voxelMap : MonoBehaviour {
 
     [SerializeField ,Range(0,20)]
     private int depth = 5;
-    ABlock _firstBlock;
-    public ABlock firstBlock {get => _firstBlock;}
-    public ABlock _firstBlockThisGame;
-    public ABlock firstBlockThisGame {get => _firstBlockThisGame; set => _firstBlockThisGame = value; }
+    Vector2 _firstPosBlock = new Vector2(int.MaxValue, int.MaxValue);
+    public Vector2 firstPosBlock {get => _firstPosBlock;}
+    Vector2 _firstBlockOriginalPos = new Vector2(int.MaxValue, int.MaxValue);
+    public Vector2 firstBlockOriginalPos {get => _firstBlockOriginalPos; set => _firstBlockOriginalPos = value; }
+    Vector2 _firstBlockOriginalPosThisGame = new Vector2(int.MaxValue, int.MaxValue);
+    public Vector2 firstBlockOriginalPosThisGame {get => _firstBlockOriginalPosThisGame; set => _firstBlockOriginalPosThisGame = value; }
+    Vector2 _firstBlockPosThisGame = new Vector2(int.MaxValue, int.MaxValue);
+    public Vector2 firstBlockPosThisGame {get => _firstBlockPosThisGame; set => _firstBlockPosThisGame = value; }
 
     private Vector3 offset;
 
