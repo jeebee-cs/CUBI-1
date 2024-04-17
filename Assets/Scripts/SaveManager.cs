@@ -1,85 +1,95 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using Unity.VisualScripting;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
+
+    static string directory = "/SaveData/";
+    static string fileName = "GameData.dream";
+
+    public void Save()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        GameManager gameManager = GameManager.instance;
+
+        string path = Application.persistentDataPath + directory;
+
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        SaveCrystallisedAll data = new SaveCrystallisedAll(gameManager.winLoose.voxelMaps);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+    public void Load()
+    {
+        GameManager gameManager = GameManager.instance;
+
+        string path = Application.persistentDataPath + directory;
+
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            SaveCrystallisedAll data = formatter.Deserialize(stream) as SaveCrystallisedAll;
+
+            for (int i = 0; i < gameManager.winLoose.voxelMaps.Length; i++)
+            {
+                Vector3 pos = new Vector3(data.saveCrystalliseds[i].firstPosBlockX, data.saveCrystalliseds[i].firstPosBlockY, data.saveCrystalliseds[i].firstPosBlockZ);
+
+                gameManager.winLoose.voxelMaps[i].firstPosBlock = pos;
+
+                gameManager.winLoose.voxelMaps[i].Load();
+            }
+
+            stream.Close();
+        }
+    }
+
+    [System.Serializable]
+    public class SaveCrystallisedAll
+    {
+        SaveCrystallised[] _saveCrystalliseds;
+        public SaveCrystallised[] saveCrystalliseds { get => _saveCrystalliseds;}
+        public SaveCrystallisedAll(voxelMap[] voxelMaps)
+        {
+            _saveCrystalliseds = new SaveCrystallised[voxelMaps.Length];
+            
+            for (int i = 0; i < _saveCrystalliseds.Length; i++)
+            {
+                _saveCrystalliseds[i] = new SaveCrystallised(voxelMaps[i].firstPosBlock);
+            }
+        }
+
+    }
+
+    [System.Serializable]
+    public class SaveCrystallised
+    {
+        float _firstPosBlockX;
+        public float firstPosBlockX { get => _firstPosBlockX; }
+        float _firstPosBlockY;
+        public float firstPosBlockY { get => _firstPosBlockY; }
+        float _firstPosBlockZ;
+        public float firstPosBlockZ { get => _firstPosBlockZ; }
     
-    public static string directory = "/SaveData/";
-    public static string fileName = "GameData.txt";
-    public GameObject playerObject;
-
-    void Awake()
-    {
-        playerObject = GameObject.FindGameObjectWithTag("Player");
-        SaveSystem.init();
-    }
-
-
-    void Update()
-    {
-        
-        if (Input.GetKeyDown(KeyCode.T))
+        public SaveCrystallised(Vector3 firstPosBlock)
         {
-            Debug.Log("trying to save...");
-            Save();
-            Debug.Log("Saved!");
+            _firstPosBlockX = firstPosBlock.x;
+            _firstPosBlockY = firstPosBlock.y;
+            _firstPosBlockZ = firstPosBlock.z;
         }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Debug.Log("Loading...");
-            Load();
-            Debug.Log("Loaded");
-        }
-    }
 
-    public void saveCall(string option)
-    {
-        if (option == "Save")
-        {
-            Save();
-        }
-        if (option == "Load")
-        {
-            Load();
-        }
-    }
-
-
-    private void Save()
-    {
-        GameManager gameManager = GameManager.instance;
-
-        string dir = Application.persistentDataPath + directory;
-        Debug.Log(dir);
-        if (!Directory.Exists(dir))
-        {
-            Directory.CreateDirectory(dir);
-        }
-        
-        //gameManager.winLoose.voxelMaps
-        SaveCrystallised saveObject = new SaveCrystallised();
-
-        string json = JsonUtility.ToJson(saveObject, true);
-        SaveSystem.Save(json);
-    }
-
-    private void Load()
-    {
-        GameManager gameManager = GameManager.instance;
-        string saveString = SaveSystem.Load();
-        if (saveString != null)
-        {
-            SaveCrystallised saveObject = JsonUtility.FromJson<SaveCrystallised>(saveString);
-        }
-    }
-
-
-    private class SaveCrystallised
-    {
-        
     }
 
 }

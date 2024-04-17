@@ -6,25 +6,25 @@ using UnityEditor;
 using static ABlock;
 using Unity.Netcode;
 
-public class voxelMap : NetworkBehaviour {
+public class voxelMap : NetworkBehaviour
+{
+    [SerializeField] ABlock[] blocksLists;
     private ABlock[,,] voxelMatrix; // Matrice 3D de blocs
 
-    [SerializeField ,Range(0,20)]
+    [SerializeField, Range(0, 20)]
     private int width = 5;
 
-    [SerializeField ,Range(0,20)]
+    [SerializeField, Range(0, 20)]
     private int height = 5;
 
-    [SerializeField ,Range(0,20)]
+    [SerializeField, Range(0, 20)]
     private int depth = 5;
     Vector3 _firstPosBlock = new Vector3(int.MaxValue, int.MaxValue, int.MaxValue);
-    public Vector3 firstPosBlock {get => _firstPosBlock;}
-    Vector3 _firstBlockOriginalPos = new Vector3(int.MaxValue, int.MaxValue, int.MaxValue);
-    public Vector3 firstBlockOriginalPos {get => _firstBlockOriginalPos; set => _firstBlockOriginalPos = value; }
+    public Vector3 firstPosBlock { get => _firstPosBlock; set => _firstPosBlock = value; }
     Vector3 _firstBlockOriginalPosThisGame = new Vector3(int.MaxValue, int.MaxValue, int.MaxValue);
-    public Vector3 firstBlockOriginalPosThisGame {get => _firstBlockOriginalPosThisGame; set => _firstBlockOriginalPosThisGame = value; }
+    public Vector3 firstBlockOriginalPosThisGame { get => _firstBlockOriginalPosThisGame; set => _firstBlockOriginalPosThisGame = value; }
     Vector3 _firstBlockPosThisGame = new Vector3(int.MaxValue, int.MaxValue, int.MaxValue);
-    public Vector3 firstBlockPosThisGame {get => _firstBlockPosThisGame; set => _firstBlockPosThisGame = value; }
+    public Vector3 firstBlockPosThisGame { get => _firstBlockPosThisGame; set => _firstBlockPosThisGame = value; }
 
     private Vector3 offset;
 
@@ -40,14 +40,36 @@ public class voxelMap : NetworkBehaviour {
     void Awake()
     {
         offset = transform.position;
-        voxelMatrix = new ABlock[width,height,depth];
+        voxelMatrix = new ABlock[width, height, depth];
         //childsToMatrix();
         if (GetComponent<BoxCollider>() == null) { }
-            gameObject.AddComponent<BoxCollider>();
+        gameObject.AddComponent<BoxCollider>();
         col = GetComponent<BoxCollider>();
         col.isTrigger = true;
-        col.size = new Vector3(width* 2, height, depth*2);
+        col.size = new Vector3(width * 2, height, depth * 2);
         col.center = (new Vector3(width, height, depth) / 2);
+    }
+
+    public void Load()
+    {
+        ABlock block = null;
+        for (int i = 0; i < blocksLists.Length; i++)
+        {
+            if (Vector3.Distance(blocksLists[i].transform.position, _firstPosBlock) < .1f) block = blocksLists[i];
+        }
+        Debug.Log(block);
+        if (block != null) FirstBlockChangeServerRpc(_firstPosBlock, block.GetComponent<NetworkObject>());
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void FirstBlockChangeServerRpc(Vector3 position, NetworkObjectReference block)
+    {
+        GameObject gameObjectCrystal = Instantiate(GameManager.instance.winLoose.staticBlock, position, Quaternion.identity);
+        NetworkObject gameObjectCrystalNetworkObject = gameObjectCrystal.GetComponent<NetworkObject>();
+        gameObjectCrystalNetworkObject.Spawn();
+
+        block.TryGet(out NetworkObject blockObject);
+        blockObject.Despawn();
     }
 
     // Méthode pour ajouter un bloc à la carte de voxels
@@ -103,7 +125,7 @@ public class voxelMap : NetworkBehaviour {
 
         foreach (ABlockData blockData in mapData.blockDataArray)
         {
-            Vector3 absolutePosition = blockData.position + offset + new Vector3(1.5f,1.5f,1.5f);
+            Vector3 absolutePosition = blockData.position + offset + new Vector3(1.5f, 1.5f, 1.5f);
 
             MapTheme currentTheme = mapData.mapTheme;
 
@@ -115,13 +137,13 @@ public class voxelMap : NetworkBehaviour {
             {
                 // Place the prefab in the scene at the specified position
                 GameObject blockObject;
-                #if UNITY_EDITOR
-                    blockObject = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
-                #else
+#if UNITY_EDITOR
+                blockObject = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
+#else
                     blockObject = Instantiate(prefab, transform.position, Quaternion.identity);
-                #endif
+#endif
                 blockObject.transform.position = absolutePosition;
-                blockObject.transform.rotation = Quaternion.Euler(-90,(isBig?-1:Random.Range(0,3))*90,0);
+                blockObject.transform.rotation = Quaternion.Euler(-90, (isBig ? -1 : Random.Range(0, 3)) * 90, 0);
             }
             else
             {
@@ -135,7 +157,7 @@ public class voxelMap : NetworkBehaviour {
         switch (theme)
         {
             case MapTheme.JUNGLE:
-                return (isBig)? jungleTheme.bigBlocks[Random.Range(0, jungleTheme.bigBlocks.Count)] : jungleTheme.smallBlocks[Random.Range(0, jungleTheme.smallBlocks.Count)];
+                return (isBig) ? jungleTheme.bigBlocks[Random.Range(0, jungleTheme.bigBlocks.Count)] : jungleTheme.smallBlocks[Random.Range(0, jungleTheme.smallBlocks.Count)];
             case MapTheme.CLOCK:
                 return (isBig) ? clockTheme.bigBlocks[Random.Range(0, clockTheme.bigBlocks.Count)] : clockTheme.smallBlocks[Random.Range(0, clockTheme.smallBlocks.Count)];
             case MapTheme.PASTEL:
@@ -151,7 +173,7 @@ public class voxelMap : NetworkBehaviour {
         {
             Vector3 inMatrixPos = child.position - offset;
 
-            if(IsWithinBounds(inMatrixPos))
+            if (IsWithinBounds(inMatrixPos))
             {
                 ABlock blockComponent = child.GetComponent<ABlock>();
 
@@ -174,17 +196,17 @@ public class voxelMap : NetworkBehaviour {
     {
         foreach (Transform child in transform)
         {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
             EditorApplication.delayCall += () => DestroyImmediate(child.gameObject);
-        #else
+#else
             Destroy(child.gameObject);
-        #endif
+#endif
         }
     }
 
     private bool IsWithinBounds(Vector3 position)
     {
-        Vector3 adjustedPosition = position ;
+        Vector3 adjustedPosition = position;
 
         return adjustedPosition.x >= 0 && adjustedPosition.x < width &&
             adjustedPosition.y >= 0 && adjustedPosition.y < height &&
@@ -193,7 +215,7 @@ public class voxelMap : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 3)
+        if (other.gameObject.layer == 3)
         {
             GameManager.instance.skyboxBlender.ChangeSkyboxTheme(mapTheme);
         }
@@ -201,7 +223,7 @@ public class voxelMap : NetworkBehaviour {
 
     private void OnDrawGizmos()
     {
-       float voxelSize = 1f;
+        float voxelSize = 1f;
 
         // Calculer l'origine de la boîte de gizmo
         Vector3 origin = transform.position;
@@ -222,7 +244,7 @@ public class voxelMap : NetworkBehaviour {
         public MapTheme mapTheme;
         public ABlockData[] blockDataArray;
 
-        public MapData(int width, int height, int depth, MapTheme theme,ABlockData[] blockDataArray)
+        public MapData(int width, int height, int depth, MapTheme theme, ABlockData[] blockDataArray)
         {
             this.width = width;
             this.height = height;
