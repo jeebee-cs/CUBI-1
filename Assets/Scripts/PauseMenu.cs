@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (ButtonDown("Cancel"))
         {
             if (inPauseMenu)
             {
@@ -48,7 +48,7 @@ public class PauseMenu : MonoBehaviour
     public void TweekAI(float difficulty)
     {
         handleText.text = difficultyTexts[(int)difficulty];
-        //We can add more modifiers to AI, PAUL!!
+        //We can add more modifiers to AI, PAUL!! - Gotchu budd ;)
         switch (difficulty)
         {
             case (0):

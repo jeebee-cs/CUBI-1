@@ -192,12 +192,21 @@ public class AI : MonoBehaviour
     void MoveToTarget()
     {
         // Move towards the target
-        transform.position = Vector3.MoveTowards(transform.position, currentTarget.transform.position, movementSpeed * Time.deltaTime);
-
+        if(currentTarget == null)
+        {
+            currentState = AIState.RandomMovement;
+        }
+        else transform.position = Vector3.MoveTowards(transform.position, currentTarget.transform.position, movementSpeed * Time.deltaTime);
         // Check if reached the target
         if (Vector3.Distance(transform.position, currentTarget.transform.position) <= 1f)
         {
             currentState = AIState.HoverAroundTarget;
+        }
+
+        if (Vector3.Distance(transform.position, playerToFleeFrom.transform.position) <= fleeDistance)
+        {
+            modifyTargetTimer = modifyTargetInterval;
+            currentState = AIState.Flee;
         }
     }
 

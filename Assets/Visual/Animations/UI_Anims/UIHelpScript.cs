@@ -6,10 +6,12 @@ public class UIHelpScript : MonoBehaviour
 {
     public Animator uiAnimator;
     // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
-        
+        uiAnimator.SetTrigger("Closed");
     }
+
 
     // Update is called once per frame
     void Update()
@@ -24,19 +26,22 @@ public class UIHelpScript : MonoBehaviour
             uiAnimator.ResetTrigger("Next");
             uiAnimator.SetTrigger("Previous");
         }
-        if (Input.GetAxis("Fire2") != 0.0)
+        if (Input.GetButtonDown("Fire2"))
         {
-            uiAnimator.SetTrigger("Called");
-            uiAnimator.ResetTrigger("Next");
-            uiAnimator.ResetTrigger("Previous");
-            uiAnimator.ResetTrigger("Closed");
-        }
-        if (Input.GetAxis("Cancel") != 0.0)
-        {
-            uiAnimator.SetTrigger("Closed");
-            uiAnimator.ResetTrigger("Next");
-            uiAnimator.ResetTrigger("Previous");
-            uiAnimator.ResetTrigger("Called");
+            if(uiAnimator.GetBool("Closed"))
+            {
+                uiAnimator.SetTrigger("Called");
+                uiAnimator.ResetTrigger("Next");
+                uiAnimator.ResetTrigger("Previous");
+                uiAnimator.ResetTrigger("Closed");
+            }
+
+            else{
+                uiAnimator.SetTrigger("Closed");
+                uiAnimator.ResetTrigger("Next");
+                uiAnimator.ResetTrigger("Previous");
+                uiAnimator.ResetTrigger("Called");
+            }
         }
 
     }
