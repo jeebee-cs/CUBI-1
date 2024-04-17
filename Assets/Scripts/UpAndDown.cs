@@ -9,6 +9,7 @@ public class UpAndDown : MonoBehaviour
     void Awake()
     {
         originalPosition = transform.position;
+        Debug.Log(originalPosition);
         StartCoroutine(UpAndDownCoroutine());
         randomSpeed = Random.Range(0.0007f, 0.001f);
     }

@@ -316,23 +316,24 @@ public class AI : NetworkBehaviour
         AIanim.SetBool("stole", false);
         modifyTargetTimer = modifyTargetInterval;
         Dream targetDream = currentTarget.GetComponent<Dream>();
-        targetDream.setDreamType(DreamType.BAD);
+        BadDreamServerRpc(targetDream.GetComponent<NetworkObject>());
 
         currentState = AIState.RandomMovement;
+    }
+    [ServerRpc(RequireOwnership = false)]
+    void BadDreamServerRpc(NetworkObjectReference currentTarget) {
+        currentTarget.TryGet(out NetworkObject currentTargetObject);
+        currentTargetObject.GetComponent<Dream>().setDreamType(DreamType.BAD);
+        BadDreamClientRpc(currentTarget);
+    }
+    [ClientRpc]
+    void BadDreamClientRpc(NetworkObjectReference currentTarget){
+        currentTarget.TryGet(out NetworkObject currentTargetObject);
+        currentTargetObject.GetComponent<Dream>().setDreamType(DreamType.BAD);
     }
 
     void OnDrawGizmos()
     {
-#if !UNITY_EDITOR
-        ForGizmo(transform.position, actualDirection);
-        ForGizmo(transform.position, randomDirection);
-#endif
-        Gizmos.color = Color.cyan;
-        if (playerToFleeFrom != null)
-            Gizmos.DrawWireSphere(playerToFleeFrom.transform.position, radiusAllowed);
 
-        Gizmos.color = Color.red;
-        if (playerToFleeFrom != null)
-            Gizmos.DrawWireSphere(playerToFleeFrom.transform.position, fleeDistance);
     }
 }
