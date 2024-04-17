@@ -10,12 +10,6 @@ public class SaveManager : MonoBehaviour
     public static string directory = "/SaveData/";
     public static string fileName = "GameData.txt";
     public GameObject playerObject;
-    int neutralDreams;
-    float totalScore;
-    string neutralDreamsUI;
-    Vector3 playerPosition;
-
-
 
     void Awake()
     {
@@ -57,24 +51,16 @@ public class SaveManager : MonoBehaviour
     private void Save()
     {
         GameManager gameManager = GameManager.instance;
-        playerPosition = playerObject.transform.position;
-        neutralDreams = gameManager.neutralDreamCollected;
-        totalScore = gameManager.dreamEnergy;
-        neutralDreamsUI = gameManager.uIManager.neutralDreams.text;
+
         string dir = Application.persistentDataPath + directory;
         Debug.Log(dir);
         if (!Directory.Exists(dir))
         {
             Directory.CreateDirectory(dir);
         }
-
-        SaveObject saveObject = new SaveObject
-        {
-            neutralDreams = neutralDreams,
-            totalScore = totalScore,
-            neutralDreamsUI = neutralDreamsUI,
-            playerPosition = playerPosition
-        };
+        
+        //gameManager.winLoose.voxelMaps
+        SaveCrystallised saveObject = new SaveCrystallised();
 
         string json = JsonUtility.ToJson(saveObject, true);
         SaveSystem.Save(json);
@@ -86,22 +72,14 @@ public class SaveManager : MonoBehaviour
         string saveString = SaveSystem.Load();
         if (saveString != null)
         {
-
-            SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
-
-            gameManager.uIManager.neutralDreams.text = saveObject.neutralDreams.ToString();
-            playerObject.transform.position = playerPosition;
+            SaveCrystallised saveObject = JsonUtility.FromJson<SaveCrystallised>(saveString);
         }
-
     }
 
 
-    private class SaveObject
+    private class SaveCrystallised
     {
-        public int neutralDreams;
-        public float totalScore;
-        public string neutralDreamsUI;
-        public Vector3 playerPosition;
+        
     }
 
 }

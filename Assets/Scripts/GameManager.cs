@@ -58,6 +58,10 @@ public class GameManager : NetworkBehaviour
     }
     void OnClientConnectedCallback(ulong id)
     {
+        if(id == 0){
+            SetDreamEnergyServerRpc(.1f);
+            SetNeutralDreamCollectedServerRpc(2);
+        }
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         _playerMovements = new List<PlayerMovements>();
         for (int i = 0; i < players.Length; i++)

@@ -12,6 +12,7 @@ public class WinLoose : NetworkBehaviour
     [SerializeField] private UnityEvent winning;
     [SerializeField] float winningScore = 1;
     [SerializeField] voxelMap[] _voxelMaps;
+    public voxelMap[] voxelMaps { get => _voxelMaps; }
     Coroutine resetGameCoroutine = null;
     private bool _gameFinished = false;
     [SerializeField] GameObject staticBlock;
@@ -104,7 +105,8 @@ public class WinLoose : NetworkBehaviour
         int voxelMapID = -1;
         for (int i = 0; i < _voxelMaps.Length; i++)
         {
-            if(block.voxelMap == _voxelMaps[i]) {
+            if (block.voxelMap == _voxelMaps[i])
+            {
                 voxelMapID = i;
             }
         }

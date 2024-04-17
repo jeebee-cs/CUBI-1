@@ -19,12 +19,12 @@ public class UpAndDown : MonoBehaviour
             while (transform.position.y < originalPosition.y + .05f)
             {
                 transform.position = transform.position + new Vector3(0, randomSpeed, 0);
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
             while (transform.position.y > originalPosition.y - .05f)
             {
                 transform.position = transform.position + new Vector3(0, -randomSpeed, 0);
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
             yield return null;
         }
